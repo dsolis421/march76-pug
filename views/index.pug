@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  include movingheader.pug
+  main
+    section.entry-section
+      .entry-nav
+        a(href="/about")
+          h1 i'm danny solis
+        h1 /
+        a(href="/gallery")
+          h1 gallery
+        h1 /
+        a(href="/blog")
+          h1 blog
+    footer#fadein-footer
+      a(href="/contact")
+        h3 contact

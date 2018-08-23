@@ -1,0 +1,166 @@
+/*
+LIGHT GREEN: #00cc44
+GREEN: #00802b
+DARK GREEN: #003311
+POWDER BLUE: #66b3ff
+*/
+@font-face {
+    font-family: quicksand;
+    src: url(/fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: julius;
+    src: url(/fonts/JuliusSansOne-Regular.ttf);
+}
+
+/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+  color: #0a290a;
+  background: #fff;
+  font-family: 'quicksand', sans-serif;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+  z-index: -1000;
+}
+
+h1,
+h2,
+h3,
+.logo-container span {
+  font-family: 'julius', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+a,
+p {
+  font-size: 20px;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  color: inherit;
+}
+
+p {
+  color: black;
+}
+
+header,
+footer {
+  background: #fff;
+  position: fixed;
+  width: 100vw;
+  transition: all 3s;
+  z-index: 100;
+}
+
+header {
+  height: 100px;
+}
+
+header > div {
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+}
+
+header > div span {
+  font-size: 50px;
+  line-height: 100px;
+}
+
+#moving-header {
+  top: calc(100vh/2 - 50px);
+}
+
+/*this padding hack was to get the svg to display in ie*/
+.logo-container {
+  background-image: url("../images/color_logo_only_transparent.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: content-box;
+}
+
+.entry-section {
+  display: none;
+  height: 100vh;
+  position: relative;
+}
+
+.entry-nav {
+  top: 50%;
+  position: absolute;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100vw
+}
+
+.entry-nav h1,
+footer h3 {
+  display: inline-block;
+}
+
+.entry-nav h1 {
+  line-height: 60px;
+}
+
+.entry-nav > h1,
+footer > h3 {
+  margin: 0 1%;
+}
+
+.subpage-main-section {
+  padding: 130px 10px 10px 10px;
+  text-align: left;
+}
+
+footer {
+  bottom: 0;
+  height: 50px;
+}
+
+#fadein-footer {
+  display: none;
+}
+
+footer h3 {
+  line-height: 50px;
+}
