@@ -5,12 +5,12 @@ DARK GREEN: #003311
 POWDER BLUE: #66b3ff
 */
 @font-face {
-    font-family: quicksand;
-    src: url(/fonts/Quicksand-Regular.ttf);
+    font-family: lowerFont;
+    src: url(/fonts/MPLUSRounded1c-Regular.ttf);
 }
 
 @font-face {
-    font-family: julius;
+    font-family: headerFont;
     src: url(/fonts/JuliusSansOne-Regular.ttf);
 }
 
@@ -39,7 +39,7 @@ time, mark, audio, video {
 body {
   color: #0a290a;
   background: #fff;
-  font-family: 'quicksand', sans-serif;
+  font-family: 'lowerFont', sans-serif;
   height: 100vh;
   text-align: center;
   width: 100%;
@@ -50,7 +50,7 @@ h1,
 h2,
 h3,
 .logo-container span {
-  font-family: 'julius', sans-serif;
+  font-family: 'headerFont', sans-serif;
 }
 
 h1 {
