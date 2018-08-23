@@ -120,6 +120,9 @@ header > div span {
 }
 
 .entry-section {
+  background: url("/images/jd-gipson-687771-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
   display: none;
   height: 100vh;
   position: relative;
