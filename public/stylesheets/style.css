@@ -173,6 +173,7 @@ footer > h3 {
 .subpage-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -182,6 +183,37 @@ footer > h3 {
 
 .subpage-main-image {
   width: 30%;
+}
+
+.gallery-column {
+  height: auto;
+  margin: 0 auto;
+  width: 49%;
+}
+
+.gallery-column figure {
+  position: relative;
+}
+
+.gallery-column figure img {
+  height: auto;
+  width: 100%;
+}
+
+.gallery-column figure figcaption {
+  background: rgba(0,0,0, .5);
+  bottom: 5px;
+  color: #fff;
+  height: auto;
+  position: absolute;
+  padding: 1%;
+  transition: all 1s;
+  width: 98%;
+  opacity: 0;
+}
+
+.gallery-column figure:hover figcaption {
+  opacity: 1;
 }
 
 footer {
@@ -195,4 +227,10 @@ footer {
 
 footer h3 {
   line-height: 50px;
+}
+
+@media screen and (max-width: 555px) {
+  .gallery-column {
+    width: 99%;
+  }
 }

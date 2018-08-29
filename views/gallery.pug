@@ -1,7 +1,31 @@
 extends layout
 
+block links
+  link(rel='stylesheet', href='/stylesheets/gallerystyle.css')
+
 block content
   include staticheader.pug
+  section.subpage-main-section
+    .subpage-row
+      .gallery-column
+        figure
+          img(src="images/totespets_gallery_tiger.jpg")
+          figcaption this is my sample image desc
+        figure
+          img(src="images/totespets_gallery_paisley.jpg")
+          figcaption this is my sample image desc
+      .gallery-column
+        figure
+          img(src="images/totespets_gallery_lulu.jpg")
+          figcaption this is my sample image desc
+        figure
+          img(src="images/totespets_indoor_cat_banner.jpg")
+          figcaption this is my sample image desc
+    #imageModal.gallery-modal
+      span.modal-close
+        i.fal.fa-expand-alt.fa-2x
+      img#enlargedImage.modal-content
+      #modalCaption
   footer
     a(href="/blog")
       h3 blog
@@ -11,3 +35,5 @@ block content
     h3 /
     a(href="/contact")
       h3 contact
+  block scripts
+    script(src='/javascripts/galleryscript.js')
