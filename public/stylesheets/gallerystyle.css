@@ -37,24 +37,6 @@ figure img {
   height: 150px;
 }
 
-.modal-content,
-#modalCaption {
-  -webkit-animation-name: galleryZoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: galleryZoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes galleryZoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes galleryZoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
 .modal-close {
   position: absolute;
   top: 15px;
