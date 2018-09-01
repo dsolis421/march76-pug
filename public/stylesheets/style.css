@@ -250,23 +250,11 @@ footer > h3 {
   float: left;
 }
 
-.date-block {
+.story-type-block {
   background: #b3cccc;
+  color: #fff;
   height: 100%;
   width: 15%;
-}
-
-.date-block span {
-  background: #fff;
-  display: block;
-  height: 20px;
-  text-align: center;
-}
-
-.date-number {
-  color: #fff;
-  height: 80%;
-  text-align: center;
 }
 
 .headline-block {
