@@ -7,6 +7,7 @@ var logger = require('morgan');
 
 /*models*/
 require('./models/blogs');
+require('./models/gallery');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 

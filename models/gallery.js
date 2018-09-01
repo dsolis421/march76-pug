@@ -10,7 +10,7 @@ const gallerySchema = new mongoose.Schema({
     required: false
   },
   'order': {
-    type Number,
+    type: Number,
     required: true
   },
   'camera': {
@@ -43,7 +43,7 @@ const gallerySchema = new mongoose.Schema({
   },
   'highres': {
     type: String,
-    required true
+    required: true
   },
   'category': {
     type: String,

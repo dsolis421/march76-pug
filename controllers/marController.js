@@ -1,5 +1,8 @@
 var mongoose = require('mongoose');
 
+const blogs = mongoose.model('blogs');
+const gallery = mongoose.model('gallery');
+
 exports.getGallery = (req, res) => {
   res.render('gallery', { title: 'march/76 / gallery'});
 }
@@ -13,5 +16,11 @@ exports.getContact = (req, res) => {
 }
 
 exports.getBlog = (req, res) => {
-  res.render('blog', { title: 'march/76 / blog'});
+  blogs.find({show: "y"}).sort({order: -1}).exec()
+  .then(posts => {
+    res.render('blog', { title: 'march/76 / blog', posts});
+  })
+  .catch(err => {
+    next(err);
+  });
 }

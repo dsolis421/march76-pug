@@ -2,6 +2,19 @@ extends layout
 
 block content
   include staticheader.pug
+  section#blog-list.subpage-main-section
+    each h in posts
+      .blog-block.group
+        .story-type-block
+          if h.type == "photo story"
+            h1 P 
+          else 
+            h1 B
+        .headline-block
+          a(href=`/blog/${h.quick}`)
+            h3= h.headline
+          h4= h.desc
+          span september 1, 2018
   footer
     a(href="/gallery")
       h3 gallery
