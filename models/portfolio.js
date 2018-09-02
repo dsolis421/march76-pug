@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-const gallerySchema = new mongoose.Schema({
+const portfolioSchema = new mongoose.Schema({
   'name': {
     type: String,
     required: true
@@ -29,7 +29,7 @@ const gallerySchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  'ISO': {
+  'iso': {
     type: String,
     required: false
   },
@@ -48,7 +48,11 @@ const gallerySchema = new mongoose.Schema({
   'category': {
     type: String,
     required: false
+  },
+  'show': {
+    type: String,
+    required: true
   }
 });
 
-module.exports = mongoose.model('gallery', gallerySchema);
+module.exports = mongoose.model('portfolio', portfolioSchema);

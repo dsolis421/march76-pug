@@ -1,10 +1,31 @@
 var mongoose = require('mongoose');
 
 const blogs = mongoose.model('blogs');
-const gallery = mongoose.model('gallery');
+const portfolio = mongoose.model('portfolio');
 
 exports.getGallery = (req, res) => {
-  res.render('gallery', { title: 'march/76 / gallery'});
+  portfolio.find({show: "y"}).exec()
+  /*.then(images => {
+    var set = images.length - 1;
+    var images1 = [];
+    var images2 = [];
+    for (x = 0; x <= set; x++) {
+      if (x <= set/2) {
+        images1.push(images[x]);
+      }
+      else {
+        images2.push(images[x]);
+      }
+    }
+    res.render('gallery', { title: 'march/76 / gallery', images1, images2 });
+  })*/
+  .then(pics => {
+    console.log(pics);
+    res.render('gallery', { title: 'march/76 / gallery', pics });
+  })
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getAbout = (req, res) => {
