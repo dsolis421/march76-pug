@@ -1,27 +1,25 @@
 var mongoose = require('mongoose');
 
 const blogs = mongoose.model('blogs');
-const portfolio = mongoose.model('portfolio');
+const gallerypics = mongoose.model('gallerypics');
 
 exports.getGallery = (req, res) => {
-  portfolio.find({show: "y"}).exec()
-  /*.then(images => {
-    var set = images.length - 1;
+  gallerypics.find({show: "y"}).sort({order: -1}).exec()
+  .then(images => {
+    var pics = images.length - 1;
     var images1 = [];
     var images2 = [];
-    for (x = 0; x <= set; x++) {
-      if (x <= set/2) {
+    for (var x = 0; x <= pics; x++) {
+      if (x <= (pics/2)) {
         images1.push(images[x]);
       }
       else {
         images2.push(images[x]);
       }
     }
+    //console.log(images1);
+    //console.log(images2);
     res.render('gallery', { title: 'march/76 / gallery', images1, images2 });
-  })*/
-  .then(pics => {
-    console.log(pics);
-    res.render('gallery', { title: 'march/76 / gallery', pics });
   })
   .catch(err => {
     next(err);

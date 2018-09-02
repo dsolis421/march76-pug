@@ -1,7 +1,7 @@
 $('.gallery-column figure img').click(function(){
   var imageSrc = $(this).attr('data-highres');
   $('#imageModal').fadeIn(700,"swing");
-  $('#enlargedImage').attr('src', imageSrc);
+  $('#enlargedImage').attr('src', "/images/" + imageSrc);
   $('#modalCaption').html('here is the caption');
 });
 
