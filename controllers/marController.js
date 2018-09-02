@@ -4,7 +4,7 @@ const blogs = mongoose.model('blogs');
 const gallerypics = mongoose.model('gallerypics');
 
 exports.getGallery = (req, res) => {
-  gallerypics.find({show: "y"}).sort({order: -1}).exec()
+  gallerypics.find({show: "y"}).sort({order: 1}).exec()
   .then(images => {
     var pics = images.length - 1;
     var images1 = [];

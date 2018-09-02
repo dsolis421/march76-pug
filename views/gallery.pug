@@ -10,18 +10,37 @@ block content
       .gallery-column
         each a in images1
           figure
-            img(src=`/images/${a.lowres}`,data-highres=`${a.highres}`,data-camera=`${a.camera}`,data-lense=`${a.lense}`, data-focallength=`${a.focallength}`, data-fstop=`${a.fstop}`, data-iso=`${a.iso}`, data-shutterspeed=`${a.shutterspeed}`, data-category=`${a.category}`)
+            img(src=`/images/${a.lowres}`,
+              data-name=`${a.name}`,
+              data-highres=`${a.highres}`,
+              data-camera=`${a.camera}`,
+              data-lense=`${a.lense}`,
+              data-focallength=`${a.focallength}`,
+              data-fstop=`${a.fstop}`,
+              data-iso=`${a.iso}`,
+              data-shutterspeed=`${a.shutterspeed}`,
+              data-category=`${a.category}`)
             figcaption= a.name
       .gallery-column
         each b in images2
           figure
-            img(src=`/images/${b.lowres}`,data-highres=`${b.highres}`,data-camera=`${b.camera}`,data-lense=`${b.lense}`,data-focallength=`${b.focallength}`, data-fstop=`${b.fstop}`,data-iso=`${b.iso}`,data-shutterspeed=`${b.shutterspeed}`,data-category=`${b.category}`)
+            img(src=`/images/${b.lowres}`,
+              data-name=`${b.name}`,
+              data-highres=`${b.highres}`,
+              data-camera=`${b.camera}`,
+              data-lense=`${b.lense}`,
+              data-focallength=`${b.focallength}`,
+              data-fstop=`${b.fstop}`,
+              data-iso=`${b.iso}`,
+              data-shutterspeed=`${b.shutterspeed}`,
+              data-category=`${b.category}`)
             figcaption= b.name
     #imageModal.gallery-modal
-      span.modal-close
-        i.fal.fa-expand-alt.fa-2x
       img#enlargedImage.modal-content
       #modalCaption
+        .image-details
+        .image-details
+        .image-details
   footer
     a(href="/blog")
       h3 blog

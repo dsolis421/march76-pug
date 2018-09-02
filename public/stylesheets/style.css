@@ -39,6 +39,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
@@ -112,13 +113,6 @@ header {
   height: 100px;
 }
 
-header > div {
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
-  width: 100vw;
-}
-
 header > div span {
   font-size: 50px;
   line-height: 100px;
@@ -135,6 +129,10 @@ header > div span {
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: content-box;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
 }
 
 .logo-container a {
@@ -211,6 +209,8 @@ footer > h3 {
 }
 
 .gallery-column figure img {
+  cursor: zoom-in;
+  transition: all .3s;
   height: auto;
   width: 100%;
 }
@@ -231,6 +231,54 @@ footer > h3 {
   opacity: 1;
 }
 
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.modal-content {
+  cursor: zoom-out;
+  margin: auto;
+  display: block;
+  height: auto;
+  max-height: 75%;
+  width: auto;
+  max-width: 75%;
+}
+
+#modalCaption {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  max-width: 700px;
+  color: #fff;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.image-details {
+  height: auto;
+  margin: 0 auto;
+  width: 30%;
+  text-align: left;
+}
+
+.image-details span {
+  display: block;
+}
+
 .group:after {
   content: "";
   display: table;
@@ -238,29 +286,27 @@ footer > h3 {
 }
 
 .blog-block {
-  border: 2px solid #b3cccc;
-  border-radius: 5px;
+  /*background: #0a290a;*/
+  border: 2px solid #0a290a;
+  border-radius: 10px;
   height: auto;
   margin: 10px auto;
   padding: 0 5px;
   width: 50%;
 }
 
-.blog-block > div {
-  float: left;
-}
-
-.story-type-block {
-  background: #b3cccc;
-  color: #fff;
-  height: 100%;
-  width: 15%;
-}
-
 .headline-block {
+  background: #fff;
   height: 100%;
-  padding: 20px 0 20px 20px;
+  margin: 0 auto;
+  padding: 20px;
   width: 80%;
+}
+
+.headline-block span {
+  display: block;
+  padding: 5px 0;
+  margin-top: 5px;
 }
 
 footer {
@@ -279,5 +325,9 @@ footer h3 {
 @media screen and (max-width: 555px) {
   .gallery-column {
     width: 99%;
+  }
+
+  .modal-content {
+      width: 100%;
   }
 }
