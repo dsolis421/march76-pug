@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  include staticheader.pug
+  section.subpage-main-section.blog-section
+    h2= blogpost[0].headline
+    article
+      each n in blogpost[0].story
+        h4= n.subheader
+        each x in n.text
+          p!= x
+  footer
+    a(href="/gallery")
+      h3 gallery
+    h3 /
+    a(href="/about")
+      h3 about me
+    h3 /
+    a(href="/contact")
+      h3 contact

@@ -43,3 +43,14 @@ exports.getBlog = (req, res) => {
     next(err);
   });
 }
+
+exports.getBlogPost = (req, res) => {
+  blogs.find({quick: req.params.quick}).exec()
+  .then(blogpost => {
+    console.log(blogpost);
+    res.render('blogpost', { title: 'march/76 / ' + blogpost[0].headline , blogpost });
+  })
+  .catch(err => {
+    next(err);
+  });
+}

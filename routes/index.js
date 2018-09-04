@@ -15,4 +15,6 @@ router.get('/contact', marController.getContact);
 
 router.get('/blog', marController.getBlog);
 
+router.get('/blog/:quick', marController.getBlogPost);
+
 module.exports = router;
