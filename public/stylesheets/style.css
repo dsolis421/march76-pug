@@ -121,6 +121,7 @@ header > div span {
 }
 
 #moving-header {
+  background: none;
   top: calc(100vh/2 - 50px);
 }
 
@@ -237,7 +238,7 @@ footer > h3 {
   display: none;
   position: fixed;
   z-index: 200;
-  padding-top: 100px;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100vw;
@@ -252,9 +253,9 @@ footer > h3 {
   margin: auto;
   display: block;
   height: auto;
-  max-height: 75%;
+  max-height: 80%;
   width: auto;
-  max-width: 75%;
+  max-width: 90%;
 }
 
 #modalCaption {
@@ -315,14 +316,28 @@ footer > h3 {
   text-align: center;
 }
 
-.blog-section article {
+.blog-section article,
+.contact-article {
   height: auto;
   margin: 30px auto 0 auto;
   width: 60%;
 }
 
-.blog-section article h4 {
+.blog-section article h4,
+.contact-article h4 {
   margin-top: 30px;
+}
+
+.contact-social {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+.contact-social a {
+  color: #b3cccc;
+  font-size: 30px;
+  margin: 0 20px;
 }
 
 footer {
@@ -331,6 +346,7 @@ footer {
 }
 
 #fadein-footer {
+  background: none;
   display: none;
 }
 
