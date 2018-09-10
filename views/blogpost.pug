@@ -10,12 +10,13 @@ block content
         each x in n.text
           p!= x
       a(href="/blog") Back to Blog
-  footer
+  footer.toggle-nav
+    span.icon
+      i.fal.fa-angle-up.fa-2x
     a(href="/gallery")
       h3 gallery
-    h3 /
     a(href="/about")
       h3 about me
-    h3 /
     a(href="/contact")
       h3 contact
+    p Copyright &copy 2018 All Rights Reserved

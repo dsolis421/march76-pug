@@ -145,8 +145,16 @@ header > div span {
   margin: 0 10%;
 }
 
+.logo-container a:nth-of-type(2) {
+  display: none;
+}
+
 #moving-header .logo-container a {
   opacity: 0;
+}
+
+#moving-header > div span {
+  transition: all .7s;
 }
 
 .entry-section {
@@ -342,7 +350,17 @@ footer > h3 {
 
 footer {
   bottom: 0;
-  height: 50px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.toggle-nav a {
+  display: inline;
+  margin: 0 1%;
+}
+
+footer p {
+  font-size: 15px;
 }
 
 #fadein-footer {
@@ -350,16 +368,90 @@ footer {
   display: none;
 }
 
-footer h3 {
-  line-height: 50px;
+.icon {
+  display: none;
 }
 
 @media screen and (max-width: 555px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  a,
+  p {
+    font-size: 18px;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  header > div span {
+    display: block;
+    line-height: 50px;
+    font-size: 40px;
+  }
+
+  #moving-header > div span {
+    line-height: 80px;
+  }
+
+  .logo-container a {
+    line-height: 30px;
+    font-size: 25px;
+  }
+
+  .logo-container a:nth-of-type(2) {
+    display: inline-block;
+  }
+
+  .logo-container a:first-of-type {
+    display: none;
+  }
+
+  .entry-nav > h1 {
+    display: none;
+  }
+
+  .entry-nav a {
+    display: block;
+  }
+
   .gallery-column {
     width: 99%;
   }
 
   .modal-content {
       width: 100%;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .toggle-nav {
+    height: auto;
+    transition: all .7s;
+  }
+
+  .toggle-nav a {
+    display: none;
+  }
+
+  .responsive a {
+    display: block;
+    margin: 5px auto;
   }
 }
