@@ -352,6 +352,7 @@ footer {
   bottom: 0;
   height: 70px;
   overflow: hidden;
+  padding-top: 8px;
 }
 
 .toggle-nav a {
@@ -361,6 +362,7 @@ footer {
 
 footer p {
   font-size: 15px;
+  margin-top: -1px;
 }
 
 #fadein-footer {
@@ -369,6 +371,7 @@ footer p {
 }
 
 .icon {
+  cursor: pointer;
   display: none;
 }
 

@@ -14,7 +14,9 @@ $(document).ready(function(){
     $('#moving-header').animate({"top": "0"}, 2000, "swing",function(){
       setTimeout(function(){
         $('.entry-section, #fadein-footer').fadeIn(1000,"swing");
-        $('#moving-header > div span').css({"line-height": "50px"});
+        if($(window).width() < 555){
+          $('#moving-header > div span').css({"line-height": "50px"});
+        }
         $('#moving-header .logo-container a').animate({"opacity": "1"}, 500);
       }, 200)
     });
