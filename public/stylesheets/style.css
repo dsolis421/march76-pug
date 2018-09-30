@@ -15,12 +15,23 @@ POWDER BLUE: #66b3ff
     font-style: normal;
 }
 
-@font-face {
+/*@font-face {
     font-family: headerFont;
     src: url('/fonts/JuliusSansOne-Regular.eot');
     src: url('/fonts/JuliusSansOne-Regular.eot?#iefix') format('embedded-opentype'),
       url('/fonts/JuliusSansOne-Regular.otf') format('opentype'),
       url('/fonts/JuliusSansOne-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+@font-face {
+    font-family: headerFont;
+    src: url('/fonts/Rosarivo-Regular.eot');
+    src: url('/fonts/Rosarivo-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Rosarivo-Regular.woff') format('woff'),
+      url('/fonts/Rosarivo-Regular.otf') format('opentype'),
+      url('/fonts/Rosarivo-Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -58,13 +69,18 @@ body {
   z-index: -1000;
 }
 
+article {
+  height: auto;
+  margin: 30px auto 0 auto;
+  width: 60%;
+}
+
 h1,
 h2,
 h3,
 h4,
 .logo-container span {
-  font-family: 'headerFont', sans-serif;
-  font-weight: bold;
+  font-family: 'headerFont', serif;
 }
 
 h1 {
@@ -202,11 +218,14 @@ footer > h3 {
 }
 
 .subpage-main-text {
+  height: auto;
+  margin: 0 auto;
   width: 70%;
 }
 
 .subpage-main-image {
-  width: 30%;
+  height: 400px;
+  width: 100%;
 }
 
 .gallery-column {
@@ -322,13 +341,6 @@ footer > h3 {
 
 .blog-section h2 {
   text-align: center;
-}
-
-.blog-section article,
-.contact-article {
-  height: auto;
-  margin: 30px auto 0 auto;
-  width: 60%;
 }
 
 .blog-section article h4,
