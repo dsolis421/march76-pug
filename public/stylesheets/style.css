@@ -166,6 +166,7 @@ header > div span {
 }
 
 #moving-header .logo-container a {
+  color: #0a290a;
   opacity: 0;
 }
 
@@ -174,7 +175,7 @@ header > div span {
 }
 
 .entry-section {
-  background: url("/images/jd-gipson-687771-unsplash.jpg");
+  background: url("/images/mar76-home.jpg");
   background-position: center;
   background-size: cover;
   color: #fff;
