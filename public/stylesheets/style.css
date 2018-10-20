@@ -225,6 +225,8 @@ footer > h3 {
 }
 
 .subpage-main-image {
+  background-position: center;
+  background-size: cover; 
   height: 400px;
   width: 100%;
 }
