@@ -1,5 +1,5 @@
 $('.gallery-column figure img').click(function(){
-  var imageSrc = $(this).attr('data-highres');
+  var imageSrc = $(this).attr('src');
   var imageName = $(this).attr('data-name');
   var imageCam = $(this).attr('data-camera');
   var imageLen = $(this).attr('data-lense');
@@ -8,7 +8,7 @@ $('.gallery-column figure img').click(function(){
   var imageIso = $(this).attr('data-iso');
   var imageShut = $(this).attr('data-shutterspeed');
   $('#imageModal').fadeIn(700,"swing");
-  $('#enlargedImage').attr('src', "/images/" + imageSrc);
+  $('#enlargedImage').attr('src', imageSrc);
   $('#modalCaption .image-details:first-of-type').html('<h3>' + imageName + '</h3>');
   $('#modalCaption .image-details:nth-of-type(2)').html('<span>Camera: ' + imageCam + '</span> \
     <span>Lense: ' + imageLen + '</span> \
