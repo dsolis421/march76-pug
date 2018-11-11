@@ -27,11 +27,11 @@ POWDER BLUE: #66b3ff
 
 @font-face {
     font-family: headerFont;
-    src: url('/fonts/Rosarivo-Regular.eot');
-    src: url('/fonts/Rosarivo-Regular.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/Rosarivo-Regular.woff') format('woff'),
-      url('/fonts/Rosarivo-Regular.otf') format('opentype'),
-      url('/fonts/Rosarivo-Regular.svg') format('svg');
+    src: url('/fonts/WildSpiritAlt.eot');
+    src: url('/fonts/WildSpiritAlt.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/WildSpiritAlt.woff') format('woff'),
+      url('/fonts/WildSpiritAlt.otf') format('opentype'),
+      url('/fonts/WildSpiritAlt.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -76,27 +76,28 @@ article {
 }
 
 h1,
-h2,
-h3,
-h4,
 .logo-container span {
   font-family: 'headerFont', serif;
 }
 
 h1 {
   font-size: 50px;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 40px;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 30px;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 25px;
+  font-weight: bold;
 }
 
 a,
@@ -404,7 +405,8 @@ footer p {
     font-size: 25px;
   }
 
-  h4 {
+  h4,
+  .contact-social {
     font-size: 20px;
   }
 
@@ -472,5 +474,9 @@ footer p {
   .responsive a {
     display: block;
     margin: 5px auto;
+  }
+
+  .blog-block {
+    width: 90%;
   }
 }
