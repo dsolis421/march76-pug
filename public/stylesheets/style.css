@@ -135,20 +135,16 @@ header {
 header > div span {
   font-size: 50px;
   line-height: 100px;
+  min-height: 20px;
+  max-height: auto;
 }
 
-#moving-header {
+#entry-header {
   background: none;
   top: calc(100vh/2 - 50px);
 }
 
-/*this padding hack was to get the svg to display in ie*/
 .logo-container {
-  background-image: url("../images/color_logo_only_transparent.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-sizing: content-box;
   height: 100%;
   margin: 0 auto;
   text-align: center;
@@ -166,12 +162,12 @@ header > div span {
   display: none;
 }
 
-#moving-header .logo-container a {
-  color: #0a290a;
+#entry-header .logo-container a {
+  color: #fff;
   opacity: 0;
 }
 
-#moving-header > div span {
+#entry-header > div span {
   transition: all .7s;
 }
 
@@ -185,6 +181,12 @@ header > div span {
   position: relative;
 }
 
+.entry-blend {
+  background: none;
+  height: 100%;
+  width: 100%;
+}
+
 .entry-nav {
   top: 50%;
   position: absolute;
@@ -193,16 +195,23 @@ header > div span {
   width: 100vw
 }
 
-.entry-nav h1,
+.entry-nav h1 {
+  color: #fff;
+  font-size: 250px;
+  font-weight: lighter;
+  margin-bottom: -80px;
+}
+
+.entry-nav h2,
 footer h3 {
   display: inline-block;
 }
 
-.entry-nav h1 {
+.entry-nav h2 {
   line-height: 60px;
 }
 
-.entry-nav > h1,
+.entry-nav > h2,
 footer > h3 {
   margin: 0 1%;
 }
@@ -251,7 +260,7 @@ footer > h3 {
 }
 
 .gallery-column figure figcaption {
-  background: rgba(0,0,0, .5);
+  background: rgba(0,0,0,.5);
   bottom: 5px;
   color: #fff;
   height: auto;
@@ -383,8 +392,13 @@ footer p {
 }
 
 #fadein-footer {
+  color: #fff;
   background: none;
   display: none;
+}
+
+#fadein-footer p {
+  color: #fff;
 }
 
 .icon {
@@ -423,10 +437,7 @@ footer p {
     display: block;
     line-height: 50px;
     font-size: 40px;
-  }
-
-  #moving-header > div span {
-    line-height: 80px;
+    margin-top: 10px;
   }
 
   .logo-container a {
@@ -442,7 +453,12 @@ footer p {
     display: none;
   }
 
-  .entry-nav > h1 {
+  .entry-nav h1 {
+    font-size: 150px;
+    margin-bottom: -50px;
+  }
+
+  .entry-nav > h2 {
     display: none;
   }
 
