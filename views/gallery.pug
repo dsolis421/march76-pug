@@ -8,6 +8,7 @@ block content
         each a in images1
           figure
             img(src=`/images/${a.lowres}`,
+              data-highres=`/images/${a.highres}`,
               data-name=`${a.name}`,
               data-camera=`${a.camera}`,
               data-lense=`${a.lense}`,
@@ -21,6 +22,7 @@ block content
         each b in images2
           figure
             img(src=`/images/${b.lowres}`,
+              data-highres=`/images/${b.highres}`,
               data-name=`${b.name}`,
               data-camera=`${b.camera}`,
               data-lense=`${b.lense}`,

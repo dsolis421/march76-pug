@@ -1,5 +1,5 @@
 $('.gallery-column figure img').click(function(){
-  var imageSrc = $(this).attr('src');
+  var imageSrc = $(this).attr('data-highres');
   var imageName = $(this).attr('data-name');
   var imageCam = $(this).attr('data-camera');
   var imageLen = $(this).attr('data-lense');
