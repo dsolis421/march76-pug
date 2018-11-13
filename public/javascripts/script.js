@@ -18,7 +18,7 @@ $(document).ready(function(){
           $('#entry-header > div span').css({"line-height": "50px"});
         }
         $('#entry-header .logo-container a').animate({"opacity": "1"}, 500);
-        $('.entry-blend').css({"background": "rgba(0,0,0,.8)"});
+        $('.entry-blend').css({"background": "rgba(0,0,0,.6)"});
       }, 100)
     });
   }, 200);
