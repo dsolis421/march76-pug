@@ -211,6 +211,10 @@ footer h3 {
   line-height: 60px;
 }
 
+.entry-nav > h2:nth-of-type(even) {
+  display: none
+}
+
 .entry-nav > h2,
 footer > h3 {
   margin: 0 1%;
@@ -458,8 +462,12 @@ footer p {
     margin-bottom: -50px;
   }
 
-  .entry-nav > h2 {
+  .entry-nav > h2:nth-of-type(odd) {
     display: none;
+  }
+
+  .entry-nav > h2:nth-of-type(even) {
+    display: block;
   }
 
   .entry-nav a {
