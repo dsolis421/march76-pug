@@ -366,6 +366,11 @@ footer > h3 {
   margin-top: 30px;
 }
 
+.blog-section figure img {
+  height: auto;
+  width: 100%;
+}
+
 .contact-social {
   font-size: 30px;
   text-align: center;
@@ -411,6 +416,12 @@ footer p {
 }
 
 @media screen and (max-width: 555px) {
+  article,
+  .blog-block,
+  .subpage-main-text {
+    width: 90%;
+  }
+
   h1 {
     font-size: 40px;
   }
@@ -500,7 +511,4 @@ footer p {
     margin: 5px auto;
   }
 
-  .blog-block {
-    width: 90%;
-  }
 }

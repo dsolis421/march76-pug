@@ -1,5 +1,14 @@
 extends layout
 
+block metas
+  meta(property="og:url", content=`https://march76.com/blog/${blogpost[0].quick}`)
+  meta(property="og:type", content="article")
+  meta(property="og:title", content=`${blogpost[0].headline}`)
+  meta(property="og:description", content=`${blogpost[0].desc}`)
+  meta(property="og:image", content='https://march76.com/images/m76-pageimage-wht.png')
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
+
 block content
   include staticheader.pug
   section.subpage-main-section.blog-section
