@@ -209,19 +209,16 @@ header {
 .entry-nav h2,
 footer h3 {
   display: inline-block;
+  margin: 0 1%;
 }
 
 .entry-nav h2 {
+  color: #fff;
   line-height: 60px;
 }
 
 .entry-nav > h2:nth-of-type(even) {
   display: none
-}
-
-.entry-nav > h2,
-footer > h3 {
-  margin: 0 1%;
 }
 
 .subpage-main-section {
