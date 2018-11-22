@@ -186,7 +186,7 @@ header {
 }
 
 .entry-blend {
-  background: none;
+  background: rgba(0,0,0,1);
   height: 100%;
   width: 100%;
 }
@@ -410,7 +410,8 @@ footer p {
   display: none;
 }
 
-#fadein-footer p {
+#fadein-footer p,
+#fadein-footer h3 {
   color: #fff;
 }
 
