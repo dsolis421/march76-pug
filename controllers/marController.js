@@ -19,7 +19,7 @@ exports.getGallery = (req, res) => {
     }
     //console.log(images1);
     //console.log(images2);
-    res.render('gallery', { title: 'March76 - Gallery', images1, images2 });
+    res.render('gallery', { title: 'march76 - Gallery', images1, images2 });
   })
   .catch(err => {
     next(err);
@@ -27,17 +27,17 @@ exports.getGallery = (req, res) => {
 }
 
 exports.getAbout = (req, res) => {
-  res.render('about', { title: 'March76 - About Me'});
+  res.render('about', { title: 'march76 - About Me'});
 }
 
 exports.getContact = (req, res) => {
-  res.render('contact', { title: 'March76 - Contact'});
+  res.render('contact', { title: 'march76 - Contact'});
 }
 
 exports.getBlog = (req, res) => {
   blogs.find({show: "y"}).sort({order: -1}).exec()
   .then(posts => {
-    res.render('blog', { title: 'March76 - Blog', posts});
+    res.render('blog', { title: 'march76 - Blog', posts});
   })
   .catch(err => {
     next(err);
@@ -48,7 +48,7 @@ exports.getBlogPost = (req, res) => {
   blogs.find({quick: req.params.quick}).exec()
   .then(blogpost => {
     console.log(blogpost);
-    res.render('blogpost', { title: 'March76 - ' + blogpost[0].headline , blogpost });
+    res.render('blogpost', { title: 'march76 - ' + blogpost[0].headline , blogpost });
   })
   .catch(err => {
     next(err);

@@ -136,7 +136,6 @@ header {
 
 #entry-header {
   background: none;
-  top: calc(100vh/2 - 50px);
 }
 
 .header-logo-container {
@@ -457,6 +456,10 @@ footer p {
     margin-top: 10px;
   }
 
+  #entry-header .header-social-container {
+    margin: 10px auto;
+  }
+
   #static-header .header-logo-container,
   #static-header .header-social-container {
     display: block;
@@ -473,7 +476,11 @@ footer p {
 
   .entry-nav h1 {
     font-size: 150px;
-    margin-bottom: -50px;
+    margin-bottom: -40px;
+  }
+
+  .entry-nav h2 {
+    line-height: 30px;
   }
 
   .entry-nav > h2:nth-of-type(odd) {
@@ -493,7 +500,7 @@ footer p {
   }
 
   .modal-content {
-      width: 100%;
+    width: 100%;
   }
 
   .icon {
