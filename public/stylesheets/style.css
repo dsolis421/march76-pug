@@ -271,7 +271,7 @@ footer h3 {
   position: absolute;
   padding: 1%;
   transition: all 1s;
-  width: 98%;
+  width: 100%;
   opacity: 0;
 }
 
