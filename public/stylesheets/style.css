@@ -317,6 +317,7 @@ footer h3 {
 }
 
 .image-details {
+  color: #fff;
   height: auto;
   margin: 0 auto;
   width: 30%;
@@ -325,6 +326,10 @@ footer h3 {
 
 .image-details span {
   display: block;
+}
+
+.image-details h3 {
+  color: #fff;
 }
 
 .group:after {
