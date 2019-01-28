@@ -385,8 +385,18 @@ footer h3 {
 }
 
 .blog-section .bio-block {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
   color: #737373;
   font-style: italic;
+}
+
+.blog-section .bio-block img {
+  display: block;
+  border-radius: 100%;
+  margin: 5px auto;
+  width: 150px;
+  height: 150px;
 }
 
 .contact-social {
