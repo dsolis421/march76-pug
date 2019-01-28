@@ -11,13 +11,13 @@ function respNavToggle() {
 $(document).ready(function(){
 
   setTimeout(function(){
-    $('.entry-section, #fadein-footer').fadeIn(1000,"swing");
+    $('.entry-nav, #fadein-footer').fadeIn(1000,"swing");
     if($(window).width() < 555){
       $('#entry-header > div span').css({"line-height": "50px"});
     }
     $('#entry-header .header-social-container a').animate({"opacity": "1"}, 500);
     $('.entry-blend').css({"background": "rgba(0,0,0,.7)"});
-  }, 100);
+  }, 500);
 
 
   $('.icon').click(function() {

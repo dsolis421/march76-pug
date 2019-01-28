@@ -179,18 +179,18 @@ header {
   background-position: center;
   background-size: cover;
   color: #fff;
-  display: none;
   height: 100vh;
   position: relative;
 }
 
 .entry-blend {
-  background: rgba(0,0,0,1);
+  background: rgba(0,0,0,.4);
   height: 100%;
   width: 100%;
 }
 
 .entry-nav {
+  display: none;
   top: 50%;
   position: absolute;
   -ms-transform: translateY(-50%);
@@ -371,9 +371,22 @@ footer h3 {
   margin-top: 30px;
 }
 
-.blog-section figure img {
+.blog-section article figure img {
   height: auto;
   width: 100%;
+}
+
+.blog-section article figure figcaption {
+  color: #737373;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.blog-section .bio-block {
+  color: #737373;
+  font-style: italic;
 }
 
 .contact-social {
