@@ -7,8 +7,9 @@ $('.gallery-column figure img').click(function(){
   var imageFstop = $(this).attr('data-fstop');
   var imageIso = $(this).attr('data-iso');
   var imageShut = $(this).attr('data-shutterspeed');
-  $('#imageModal').fadeIn(700,"swing");
+
   $('#enlargedImage').attr('src', imageSrc);
+  $('#imageModal').fadeIn(700,"swing");
   $('#modalCaption .image-details:first-of-type').html('<h3>' + imageName + '</h3>');
   $('#modalCaption .image-details:nth-of-type(2)').html('<span>Camera: ' + imageCam + '</span> \
     <span>Lense: ' + imageLen + '</span> \
