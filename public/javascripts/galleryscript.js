@@ -19,5 +19,7 @@ $('.gallery-column figure img').click(function(){
 });
 
 $('#imageModal').click(function(){
-  $('#imageModal').fadeOut(700,"swing");
+  $('#imageModal').fadeOut(700,"swing",function(){
+    $('#enlargedImage').removeAttr('src');
+  });
 });
