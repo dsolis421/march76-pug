@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 const blogs = mongoose.model('blogs');
 const gallerypics = mongoose.model('gallerypics');
+const moodboard = mongoose.model('boards');
 
 exports.getGallery = (req, res) => {
   gallerypics.find({show: "y"}).sort({order: 1}).exec()
@@ -20,6 +21,29 @@ exports.getGallery = (req, res) => {
     //console.log(images1);
     //console.log(images2);
     res.render('gallery', { title: 'march76 - Gallery', images1, images2 });
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getMoodboard = (req, res) => {
+  moodboard.find({name: req.params.name}).exec()
+  .then(board => {
+    var slength = board[0].samples.length - 1;
+    var collage1 = [];
+    var collage2 = [];
+    for (var x = 0; x <= slength; x++) {
+      if(x <= (slength/2)){
+        collage1.push(board[0].samples[x]);
+      }
+      else {
+        collage2.push(board[0].samples[x]);
+      }
+    }
+    var pallette = board[0].colorpallette;
+    var name = board[0].name;
+    res.render('board', {title: `march76 - Moodboard ` + board.name, name, collage1, collage2, pallette});
   })
   .catch(err => {
     next(err);

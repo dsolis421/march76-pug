@@ -411,6 +411,68 @@ footer h3 {
   margin: 0 20px;
 }
 
+.moodboard {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.moodboard-collage:first-of-type {
+  padding-top: 100px;
+}
+
+.moodboard-collage:last-of-type {
+  padding-bottom: 100px;
+}
+
+.moodboard-collage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.moodboard-collage figure {
+  display: block;
+  margin: 10px auto;
+}
+
+.moodboard-collage figure > img {
+  height: auto;
+  width: 300px;
+}
+
+.moodboard-pallette {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.moodboard-pallette > div {
+  height: 200px;
+  width: 200px;
+  margin: 10px auto;
+}
+
+.moodboard-pallette > div:not(:first-of-type) {
+  border: 1px solid #000;
+}
+
+
+
+.pallette-color {
+  padding: 2%;
+}
+
+.pallette-color > span:first-of-type {
+  color: #000;
+  display: block;
+}
+
+.pallette-color > span:last-of-type {
+  color: #fff;
+}
+
 footer {
   bottom: 0;
   height: 70px;
