@@ -15,16 +15,6 @@ POWDER BLUE: #66b3ff
     font-style: normal;
 }
 
-/*@font-face {
-    font-family: headerFont;
-    src: url('/fonts/JuliusSansOne-Regular.eot');
-    src: url('/fonts/JuliusSansOne-Regular.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/JuliusSansOne-Regular.otf') format('opentype'),
-      url('/fonts/JuliusSansOne-Regular.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}*/
-
 @font-face {
     font-family: headerFont;
     src: url('/fonts/WildSpiritAlt.eot');
@@ -212,16 +202,17 @@ footer h3 {
 }
 
 .entry-nav h3 {
-  background: #fff;
-  border-radius: 20px;
-  color: #000;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: #fff;
   line-height: 40px;
   padding: 0 25px;
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .entry-nav h3:hover {
-  border-radius: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .subpage-main-section {
