@@ -27,6 +27,36 @@ exports.getGallery = (req, res) => {
   });
 }
 
+exports.getGalleryPets = (req, res) => {
+  gallerypics.find({show: "y", category: "Pets"}).limit(3).exec()
+  .then(pets => {
+    next(pets);
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getGalleryPortraits = (req, res, next) => {
+  gallerypics.find({show: "y", category: "Portraits"}).limit(3).exec()
+  .then(portraits => {
+    next(next, portraits);
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getGalleryCreative = (req, res, next) => {
+  gallerypics.find({show: "y", category: "Portraits"}).limit(3).exec()
+  .then(portraits => {
+    next(next, portraits);
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
 exports.getMoodboard = (req, res) => {
   moodboard.find({name: req.params.name}).exec()
   .then(board => {
