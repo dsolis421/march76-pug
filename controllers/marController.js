@@ -4,8 +4,12 @@ const blogs = mongoose.model('blogs');
 const gallerypics = mongoose.model('gallerypics');
 const moodboard = mongoose.model('boards');
 
+var pets = [];
+var portraits = [];
+var creative = [];
+
 exports.getGallery = (req, res) => {
-  gallerypics.find({show: "y"}).sort({order: 1}).exec()
+  gallerypics.find({show: "y", category: req.params.cat}).sort({order: 1}).exec()
   .then(images => {
     var pics = images.length - 1;
     var images1 = [];
@@ -20,7 +24,45 @@ exports.getGallery = (req, res) => {
     }
     //console.log(images1);
     //console.log(images2);
-    res.render('gallery', { title: 'march76 - Gallery', images1, images2 });
+    res.render('gallerycategory', { title: 'march76 - ' + req.params.cat, images1, images2 });
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getGalleryPets = (req, res, next) => {
+  gallerypics.find({show: "y", category: "Pets", frontpage: "y"}).exec()
+  .then(returnedPets => {
+    pets = returnedPets;
+    next();
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getGalleryPortraits = (req, res, next) => {
+  gallerypics.find({show: "y", category: "Portraits", frontpage: "y"}).exec()
+  .then(returnedPortraits => {
+    portraits = returnedPortraits;
+    next();
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getGalleryCreative = (req, res, next) => {
+  gallerypics.find({show: "y", category: "Creative", frontpage: "y"}).exec()
+  .then(returnedCreative => {
+    creative = returnedCreative;
+    res.render('gallerylanding', {title: 'march78 - Gallery', pets, portraits, creative});
+  })
+  .then(() => {
+    pets = [];
+    portraits = [];
+    creative = [];
   })
   .catch(err => {
     next(err);

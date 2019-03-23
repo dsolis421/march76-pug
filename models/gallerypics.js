@@ -52,6 +52,10 @@ const gallerySchema = new mongoose.Schema({
   'show': {
     type: String,
     required: true
+  },
+  'frontpage': {
+    type: String,
+    required: false
   }
 });
 
