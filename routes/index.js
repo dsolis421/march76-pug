@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'march76' });
 });
 
-router.get('/gallery', marController.getGallery);
+router.get('/gallery/:cat', marController.getGallery);
+
+router.get('/gallery', marController.getGalleryPets, marController.getGalleryPortraits, marController.getGalleryCreative)
 
 router.get('/about', marController.getAbout);
 

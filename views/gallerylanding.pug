@@ -3,12 +3,13 @@ extends layout
 block content
   include newstaticheader.pug
   section.subpage-main-section
-    .subpage-row
-      .gallery-header
-        h4 Pets
-        a(href="http://")
-      .gallery-row
-        each a in pets
+    .gallery-header
+      h4 Pets
+      a(href="/gallery/Pets")
+        span See more...
+    .gallery-row
+      each a in pets
+        .gallery-sub-column
           figure
             img(src=`${a.lowres}`,
               data-highres=`${a.highres}`,
@@ -21,12 +22,13 @@ block content
               data-shutterspeed=`${a.shutterspeed}`,
               data-category=`${a.category}`)
             figcaption= a.name
-      .gallery-header
-        h4 Portraits
-        a(href="http://")
-         span See more...
-      .gallery-row
-        each b in portraits
+    .gallery-header
+      h4 Portraits
+      a(href="/gallery/Portraits")
+       span See more...
+    .gallery-row
+      each b in portraits
+        .gallery-sub-column
           figure
             img(src=`${b.lowres}`,
               data-highres=`${b.highres}`,
@@ -39,12 +41,13 @@ block content
               data-shutterspeed=`${b.shutterspeed}`,
               data-category=`${b.category}`)
             figcaption= b.name
-      .gallery-header
-        h4 Creative
-        a(href="http://")
-          span See more...
-      .gallery-row
-        each c in creative
+    .gallery-header
+      h4 Creative
+      a(href="/gallery/Creative")
+        span See more...
+    .gallery-row
+      each c in creative
+        .gallery-sub-column
           figure
             img(src=`${c.lowres}`,
               data-highres=`${c.highres}`,
