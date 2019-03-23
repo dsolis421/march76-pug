@@ -1,0 +1,80 @@
+extends layout
+
+block content
+  include newstaticheader.pug
+  section.subpage-main-section
+    .gallery-header
+      h4 Pets
+      a(href="/gallery/Pets")
+        span See more...
+    .gallery-row
+      each a in pets
+        .gallery-sub-column
+          figure
+            img(src=`${a.lowres}`,
+              data-highres=`${a.highres}`,
+              data-name=`${a.name}`,
+              data-camera=`${a.camera}`,
+              data-lense=`${a.lense}`,
+              data-focallength=`${a.focallength}`,
+              data-fstop=`${a.fstop}`,
+              data-iso=`${a.iso}`,
+              data-shutterspeed=`${a.shutterspeed}`,
+              data-category=`${a.category}`)
+            figcaption= a.name
+    .gallery-header
+      h4 Portraits
+      a(href="/gallery/Portraits")
+       span See more...
+    .gallery-row
+      each b in portraits
+        .gallery-sub-column
+          figure
+            img(src=`${b.lowres}`,
+              data-highres=`${b.highres}`,
+              data-name=`${b.name}`,
+              data-camera=`${b.camera}`,
+              data-lense=`${b.lense}`,
+              data-focallength=`${b.focallength}`,
+              data-fstop=`${b.fstop}`,
+              data-iso=`${b.iso}`,
+              data-shutterspeed=`${b.shutterspeed}`,
+              data-category=`${b.category}`)
+            figcaption= b.name
+    .gallery-header
+      h4 Creative
+      a(href="/gallery/Creative")
+        span See more...
+    .gallery-row
+      each c in creative
+        .gallery-sub-column
+          figure
+            img(src=`${c.lowres}`,
+              data-highres=`${c.highres}`,
+              data-name=`${c.name}`,
+              data-camera=`${c.camera}`,
+              data-lense=`${c.lense}`,
+              data-focallength=`${c.focallength}`,
+              data-fstop=`${c.fstop}`,
+              data-iso=`${c.iso}`,
+              data-shutterspeed=`${c.shutterspeed}`,
+              data-category=`${c.category}`)
+            figcaption= c.name
+    #imageModal.gallery-modal
+      img#enlargedImage.modal-content
+      #modalCaption
+        .image-details
+        .image-details
+        .image-details
+  footer.toggle-nav
+    span.icon
+      i.fal.fa-angle-up.fa-2x
+    a(href="/blog")
+      h3 Blog
+    a(href="/about")
+      h3 About Me
+    a(href="/contact")
+      h3 Contact
+    p Copyright &copy 2019 All Rights Reserved
+block scripts
+  script(src='/javascripts/galleryscript.js')
