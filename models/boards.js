@@ -16,6 +16,14 @@ const boardSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  'quick': {
+    type: String,
+    required: true
+  },
+  'desc': {
+    type: String,
+    required: false
+  },
   'samples': {
     type: [tnailSchema],
     required: false

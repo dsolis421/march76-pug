@@ -19,6 +19,6 @@ router.get('/blog', marController.getBlog);
 
 router.get('/blog/:quick', marController.getBlogPost);
 
-router.get('/boards/:name', marController.getMoodboard);
+router.get('/boards/:quick', marController.getMoodboard);
 
 module.exports = router;

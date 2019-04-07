@@ -70,7 +70,7 @@ exports.getGalleryCreative = (req, res, next) => {
 }
 
 exports.getMoodboard = (req, res) => {
-  moodboard.find({name: req.params.name}).exec()
+  moodboard.find({quick: req.params.quick}).exec()
   .then(board => {
     var slength = board[0].samples.length - 1;
     var collage1 = [];
@@ -85,7 +85,8 @@ exports.getMoodboard = (req, res) => {
     }
     var pallette = board[0].colorpallette;
     var name = board[0].name;
-    res.render('board', {title: `march76 - Moodboard ` + board.name, name, collage1, collage2, pallette});
+    var desc = board[0].desc;
+    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, name, desc, collage1, collage2, pallette});
   })
   .catch(err => {
     next(err);
