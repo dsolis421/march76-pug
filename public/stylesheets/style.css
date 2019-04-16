@@ -441,6 +441,11 @@ footer h3 {
   height: auto;
 }
 
+.moodboard-collage p {
+  display: block;
+  margin: 20px 0;
+}
+
 .moodboard-collage figure {
   display: block;
   margin: 10px auto;
@@ -611,6 +616,10 @@ footer p {
   .responsive a {
     display: block;
     margin: 5px auto;
+  }
+
+  .moodboard-collage {
+    text-align: center;
   }
 
 }
