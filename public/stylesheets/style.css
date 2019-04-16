@@ -618,8 +618,9 @@ footer p {
     margin: 5px auto;
   }
 
-  .moodboard-collage {
-    text-align: center;
+  .moodboard .moodboard-collage h2 {
+    display: box;
+    margin: 0 auto;
   }
 
 }
