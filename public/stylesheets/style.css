@@ -456,33 +456,33 @@ footer h3 {
   width: 300px;
 }
 
-.moodboard-pallette {
+.moodboard-palette {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: auto;
 }
 
-.moodboard-pallette > div {
+.moodboard-palette > div {
   height: 200px;
   width: 200px;
   margin: 10px auto;
 }
 
-.moodboard-pallette > div:not(:first-of-type) {
+.moodboard-palette > div:not(:first-of-type) {
   border: 1px solid #000;
 }
 
-.pallette-color {
+.palette-color {
   padding: 2%;
 }
 
-.pallette-color > span:first-of-type {
+.palette-color > span:first-of-type {
   color: #000;
   display: block;
 }
 
-.pallette-color > span:last-of-type {
+.palette-color > span:last-of-type {
   color: #fff;
 }
 
