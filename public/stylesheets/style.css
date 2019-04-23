@@ -545,7 +545,8 @@ footer p {
   }
 
   a,
-  p {
+  p,
+  .blog-section article figure figcaption {
     font-size: 18px;
   }
 
