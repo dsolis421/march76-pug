@@ -83,10 +83,10 @@ exports.getMoodboard = (req, res) => {
         collage2.push(board[0].samples[x]);
       }
     }
-    var pallette = board[0].colorpallette;
+    var palette = board[0].colorpalette;
     var name = board[0].name;
     var desc = board[0].desc;
-    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, name, desc, collage1, collage2, pallette});
+    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, name, desc, collage1, collage2, palette});
   })
   .catch(err => {
     next(err);

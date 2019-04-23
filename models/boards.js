@@ -28,7 +28,7 @@ const boardSchema = new mongoose.Schema({
     type: [tnailSchema],
     required: false
   },
-  'colorpallette': {
+  'colorpalette': {
     type: [String],
     required: false
   }
