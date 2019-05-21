@@ -75,6 +75,7 @@ exports.getMoodboard = (req, res) => {
     var slength = board[0].samples.length - 1;
     var collage1 = [];
     var collage2 = [];
+    var project = [];
     for (var x = 0; x <= slength; x++) {
       if(x <= (slength/2)){
         collage1.push(board[0].samples[x]);
@@ -86,7 +87,12 @@ exports.getMoodboard = (req, res) => {
     var palette = board[0].colorpalette;
     var name = board[0].name;
     var desc = board[0].desc;
-    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, name, desc, collage1, collage2, palette});
+    project.push(board[0].status);
+    project.push(board[0].schedule);
+    project.push(board[0].team);
+    project.push(board[0].location);
+    console.log(project);
+    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, project, name, desc, collage1, collage2, palette});
   })
   .catch(err => {
     next(err);

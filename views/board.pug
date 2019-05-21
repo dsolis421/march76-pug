@@ -3,9 +3,27 @@ extends layout
 block content
   include newstaticheader.pug
   section.moodboard
+    h2= name
+    p= desc
+    h4 Status
+    case project[0]
+      when 1
+        span.project-status(style="background:#393") Scheduled
+      when 2
+        span.project-status(style="background:#f90") Collaboratin
+      default
+        span.project-status(style="background:#f30") In Development
+    if project[1]
+      h4 Date/Time
+      span= project[1]
+    if project[2].length > 0
+      h4 Team
+      each t in project[2]
+        span.team-member= t.role + ": " + t.name
+    if project[3]
+      h4 Location
+      span= project[3]
     .moodboard-collage
-      h2= name
-      p= desc
       each a in collage1
         figure
           img(src=`${a.tnail}`)

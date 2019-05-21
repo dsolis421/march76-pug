@@ -93,7 +93,8 @@ h4 {
 }
 
 a,
-p {
+p,
+span {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -350,7 +351,6 @@ footer h3 {
 }
 
 .blog-block {
-  /*background: #0a290a;*/
   border: 2px solid #ccc;
   border-radius: 10px;
   height: auto;
@@ -425,10 +425,27 @@ footer h3 {
 .moodboard {
   width: 85%;
   margin: 0 auto;
+  padding-top: 100px
 }
 
-.moodboard-collage:first-of-type {
-  padding-top: 100px;
+.moodboard > p,
+.moodboard > h4 {
+  display: block;
+  margin: 20px 0;
+}
+
+.moodboard > h4 {
+  text-decoration: underline;
+}
+
+.team-member {
+  display: block;
+}
+
+.project-status {
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 15px;
 }
 
 .moodboard-collage:last-of-type {
@@ -440,11 +457,7 @@ footer h3 {
   flex-direction: row;
   flex-wrap: wrap;
   height: auto;
-}
-
-.moodboard-collage p {
-  display: block;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .moodboard-collage figure {
@@ -546,6 +559,7 @@ footer p {
 
   a,
   p,
+  span,
   .blog-section article figure figcaption {
     font-size: 18px;
   }
