@@ -94,7 +94,7 @@ h4 {
 
 a,
 p,
-span {
+.moodboard > span {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
