@@ -559,7 +559,7 @@ footer p {
 
   a,
   p,
-  span,
+  .moodboard > span,
   .blog-section article figure figcaption {
     font-size: 18px;
   }
