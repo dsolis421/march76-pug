@@ -7,10 +7,12 @@ block content
     p= desc
     h4 Status
     case project.status
+      when 0
+        span.project-status(style="background:#000") Completed
       when 1
         span.project-status(style="background:#393") Scheduled
       when 2
-        span.project-status(style="background:#f90") Collaboratin
+        span.project-status(style="background:#f90") Collaborating
       default
         span.project-status(style="background:#f30") In Development
     if project.schedule
