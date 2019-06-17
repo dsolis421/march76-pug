@@ -166,7 +166,7 @@ header {
 }
 
 .entry-section {
-  background: url("/images/m76-BlackSwan-28-wide.jpg");
+  background: url("/images/m76-BlackSwan-8-splash.jpg");
   background-position: right;
   background-size: cover;
   color: #fff;
@@ -606,6 +606,11 @@ footer p {
   .entry-nav a {
     display: block;
     margin-bottom: 20px;
+  }
+
+  .entry-section {
+    background: url("/images/m76-BlackSwan-18-IG.jpg");
+    background-position: top;
   }
 
   .gallery-column {
