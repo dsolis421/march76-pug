@@ -434,7 +434,7 @@ footer h3 {
   margin: 20px 0;
 }
 
-.moodboard > h4 {
+.moodboard h4 {
   text-decoration: underline;
 }
 
@@ -446,6 +446,14 @@ footer h3 {
   color: #fff;
   font-weight: bold;
   padding: 5px 15px;
+}
+
+.result-image {
+  display: block;
+  height: auto;
+  margin: 20px auto;
+  max-width: 1000px;
+  width: 90%;
 }
 
 .moodboard-collage:last-of-type {
@@ -533,6 +541,14 @@ footer p {
   display: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .entry-section {
+    background: url("/images/m76-BlackSwan-18-IG.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
 @media screen and (max-width: 700px) {
   article,
   .blog-block,
@@ -606,11 +622,6 @@ footer p {
   .entry-nav a {
     display: block;
     margin-bottom: 20px;
-  }
-
-  .entry-section {
-    background: url("/images/m76-BlackSwan-18-IG.jpg");
-    background-position: center;
   }
 
   .gallery-column {

@@ -91,6 +91,7 @@ exports.getMoodboard = (req, res) => {
     project.schedule = board[0].schedule;
     project.team = board[0].team;
     project.location = board[0].location;
+    project.result = board[0].resultimage;
     res.render('board', {title: `march76 - Moodboard - ` + board[0].name, project, name, desc, collage1, collage2, palette});
   })
   .catch(err => {

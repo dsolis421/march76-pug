@@ -25,6 +25,9 @@ block content
     if project.location
       h4 Location
       span= project.location
+    if project.result
+      img.result-image(src=project.result)
+    h4 Mood Board
     .moodboard-collage
       each a in collage1
         figure
@@ -32,7 +35,7 @@ block content
           figcaption= a.feeling
     .moodboard-palette
       div 
-        h4 Color palette
+        h4 Color Palette
       each x in palette
         .palette-color(style=`background:${x};`)
           span= x

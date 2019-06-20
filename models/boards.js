@@ -58,6 +58,10 @@ const boardSchema = new mongoose.Schema({
   'location': {
     type: String,
     required: false
+  },
+  'resultimage': {
+    type: String,
+    required: false
   }
 });
 
