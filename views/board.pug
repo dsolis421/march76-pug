@@ -28,6 +28,11 @@ block content
     if project.result
       img.result-image(src=project.result)
     h4 Mood Board
+    if project.notes.length > 0
+      .mood-notes
+        ul
+          each n in project.notes
+            li= n
     .moodboard-collage
       each a in collage1
         figure

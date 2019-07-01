@@ -62,6 +62,10 @@ const boardSchema = new mongoose.Schema({
   'resultimage': {
     type: String,
     required: false
+  },
+  'notes': {
+    type: [String],
+    required: false
   }
 });
 
