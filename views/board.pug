@@ -30,17 +30,14 @@ block content
     h4 Mood Board
     if project.notes.length > 0
       .mood-notes
-        ul
-          each n in project.notes
-            li= n
+        each n in project.notes
+          p= n
     .moodboard-collage
       each a in collage1
         figure
           img(src=`${a.tnail}`)
           figcaption= a.feeling
     .moodboard-palette
-      div 
-        h4 Color Palette
       each x in palette
         .palette-color(style=`background:${x};`)
           span= x
