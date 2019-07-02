@@ -493,7 +493,7 @@ footer h3 {
   margin: 10px auto;
 }
 
-.moodboard-palette > div:not(:first-of-type) {
+.moodboard-palette > div {
   border: 1px solid #000;
 }
 
