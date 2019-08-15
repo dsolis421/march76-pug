@@ -173,8 +173,8 @@ header {
 }
 
 .entry-section {
-  background: url("/images/m76-BlackSwan-8-splash.jpg");
-  background-position: right;
+  background: url("/images/m76-MFS-2-wallpaper.jpg");
+  background-position: center;
   background-size: cover;
   color: #fff;
   height: 100vh;
@@ -546,14 +546,6 @@ footer p {
 .icon {
   cursor: pointer;
   display: none;
-}
-
-@media screen and (max-width: 1200px) {
-  .entry-section {
-    background: url("/images/m76-BlackSwan-18-IG.jpg");
-    background-position: center;
-    background-size: cover;
-  }
 }
 
 @media screen and (max-width: 700px) {
