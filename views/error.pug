@@ -1,7 +1,12 @@
 extends layout
 
 block content
-  h2 Uh oh... Something is not in focus
-  h2= message
+  main
+    section.entry-section
+      .entry-blend
+        .entry-logo
+          h2= message
+          h4 Well that's not good
+          a(href="/") Try Again
   h4= error.status
   pre #{error.stack}

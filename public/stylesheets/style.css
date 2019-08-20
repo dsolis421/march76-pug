@@ -66,7 +66,8 @@ article {
 }
 
 h1,
-.header-logo-container span {
+.header-logo-container span,
+#entry-header .expanda-nav .toggle-nav a span {
   font-family: 'headerFont', serif;
 }
 
@@ -124,11 +125,73 @@ footer {
 }
 
 header {
-  height: 80px;
+  height: auto;
+  overflow: hidden;
 }
 
 #entry-header {
   background: none;
+  color: #fff;
+  text-align: left;
+}
+
+#entry-header .expanda-nav {
+  background: none;
+  line-height: 60px;
+  height: 70px;
+  padding: 10px;
+  width: 5%;
+}
+
+#static-header .header-logo-container {
+  display: inline-block;
+  float: left;
+}
+
+.icon {
+  cursor: pointer;
+  display: none;
+}
+
+.toggle-nav {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: all .7s;
+  width: 0;
+  overflow: hidden;
+}
+
+.toggle-nav a {
+  border-left: 1px none #000;
+  border-right: 1px none #000;
+  color: #fff;
+  display: none;
+  line-height: 50px;
+  padding: 0px 10px;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+.toggle-nav a h4 {
+  color: #fff;
+}
+
+.toggle-nav a:hover {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-radius: 20px;
+  transition: all .5s;
+}
+
+.toggle-nov a span {
+  font-size: 40px;
+  text-align: center;
+}
+
+.responsive a {
+  display: inline-block;
+  margin: 0px auto;
 }
 
 .header-logo-container {
@@ -149,29 +212,6 @@ header {
   text-decoration: none;
 }
 
-.header-social-container a {
-  line-height: 80px;
-  font-size: 30px;
-  margin: 0 10%;
-}
-
-#entry-header .header-social-container a {
-  color: #fff;
-  opacity: 0;
-}
-
-#static-header .header-logo-container {
-  display: inline-block;
-  float: left;
-}
-
-#static-header .header-social-container {
-  color: #ccc;
-  display: inline-block;
-  float: right;
-  width: 20%;
-}
-
 .entry-section {
   background: url("/images/m76-MFS-2-wallpaper.jpg");
   background-position: center;
@@ -188,7 +228,7 @@ header {
   width: 100%;
 }
 
-.entry-nav {
+.entry-logo {
   display: none;
   top: 50%;
   position: absolute;
@@ -197,31 +237,18 @@ header {
   width: 100vw
 }
 
-.entry-nav h1 {
+.entry-logo h1 {
   color: #fff;
   font-size: 250px;
   font-weight: lighter;
   margin-bottom: -60px;
 }
 
-.entry-nav h3,
-footer h3 {
-  display: inline-block;
-  margin: 0 1%;
-}
-
-.entry-nav h3 {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+.entry-logo h4 {
   color: #fff;
   line-height: 40px;
-  padding: 0 25px;
+  margin: 0 1%;
   transition: all .5s;
-}
-
-.entry-nav h3:hover {
-  border-radius: 20px;
-  cursor: pointer;
 }
 
 .subpage-main-section {
@@ -517,20 +544,26 @@ footer h3 {
 
 footer {
   bottom: 0;
-  height: 70px;
-  overflow: hidden;
+  height: 80px;
   padding-top: 8px;
-}
-
-.toggle-nav a {
-  display: inline;
-  margin: 0 1%;
 }
 
 footer p {
   font-size: 15px;
   margin-top: -1px;
 }
+
+.footer-social-container a {
+  line-height: 50px;
+  font-size: 30px;
+  margin: 0 10%;
+}
+
+#entry-footer .footer-social-container a {
+  color: #fff;
+  opacity: 0;
+}
+
 
 #fadein-footer {
   color: #fff;
@@ -541,11 +574,6 @@ footer p {
 #fadein-footer p,
 #fadein-footer h3 {
   color: #fff;
-}
-
-.icon {
-  cursor: pointer;
-  display: none;
 }
 
 @media screen and (max-width: 700px) {
@@ -595,34 +623,34 @@ footer p {
     font-size: 40px;
   }
 
-  #entry-header .header-social-container {
+  #entry-header .footer-social-container {
     margin: 10px auto;
   }
 
   #static-header .header-logo-container,
-  #static-header .header-social-container {
+  #static-header .footer-social-container {
     display: block;
     float: none;
     margin: 0 auto;
     width: 100%;
   }
 
-  .header-social-container a {
+  .footer-social-container a {
     line-height: 30px;
     font-size: 25px;
   }
 
-  .entry-nav h1 {
+  .entry-logo h1 {
     font-size: 150px;
     margin-bottom: -30px;
   }
 
-  .entry-nav h3 {
+  .entry-logo h3 {
     border-radius: 15px;
     line-height: 30px;
   }
 
-  .entry-nav a {
+  .entry-logo a {
     display: block;
     margin-bottom: 20px;
   }
@@ -633,24 +661,6 @@ footer p {
 
   .modal-content {
     width: 100%;
-  }
-
-  .icon {
-    display: block;
-  }
-
-  .toggle-nav {
-    height: auto;
-    transition: all .7s;
-  }
-
-  .toggle-nav a {
-    display: none;
-  }
-
-  .responsive a {
-    display: block;
-    margin: 5px auto;
   }
 
   .moodboard .moodboard-collage h2 {
