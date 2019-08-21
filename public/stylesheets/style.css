@@ -66,8 +66,7 @@ article {
 }
 
 h1,
-.header-logo-container span,
-#entry-header .expanda-nav .toggle-nav a span {
+.header-logo-container span {
   font-family: 'headerFont', serif;
 }
 
@@ -131,11 +130,25 @@ header {
 
 #entry-header {
   background: none;
-  color: #fff;
   text-align: left;
 }
 
-#entry-header .expanda-nav {
+#static-header {
+  background: rgba(255,255,255,.9);
+  text-align: left;
+}
+
+#entry-header,
+#entry-header .expanda-nav .toggle-nav a h4 {
+  color: #fff;
+}
+
+#static-header .expanda-nav span,
+#static-header .expanda-nav .toggle-nav a h4 {
+  color: #000;
+}
+
+.expanda-nav {
   background: none;
   line-height: 60px;
   height: 70px;
@@ -145,36 +158,36 @@ header {
 
 #static-header .header-logo-container {
   display: inline-block;
-  float: left;
 }
 
 .icon {
   cursor: pointer;
+  margin-left: 10px;
+}
+
+.icon.fadein-icon {
   display: none;
 }
 
 .toggle-nav {
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   transition: all .7s;
   width: 0;
   overflow: hidden;
+  text-align: center;
 }
 
 .toggle-nav a {
   border-left: 1px none #000;
   border-right: 1px none #000;
-  color: #fff;
   display: none;
   line-height: 50px;
   padding: 0px 10px;
   text-decoration: none;
   transition: all .5s;
-}
-
-.toggle-nav a h4 {
-  color: #fff;
+  margin: 0px auto;
 }
 
 .toggle-nav a:hover {
@@ -189,26 +202,16 @@ header {
   text-align: center;
 }
 
-.responsive a {
-  display: inline-block;
-  margin: 0px auto;
-}
-
 .header-logo-container {
-  height: 100%;
-  margin-top: 3px;
+  height: 50px;
   text-align: center;
-  padding: 0 2%;
   width: 20%;
-  font-size: 50px;
-  line-height: 80px;
-  min-height: 20px;
-  max-height: auto;
+  line-height: 50px;
 }
 
 .header-logo-container a,
 .header-logo-container span {
-  font-size: 50px;
+  font-size: 30px;
   text-decoration: none;
 }
 
