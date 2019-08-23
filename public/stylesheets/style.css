@@ -66,7 +66,7 @@ article {
 }
 
 h1,
-.header-logo-container span {
+.logo-container span {
   font-family: 'headerFont', serif;
 }
 
@@ -117,7 +117,7 @@ li {
 
 header,
 footer {
-  background: #fff;
+  background: rgba(255,255,255,.9);
   position: fixed;
   width: 100vw;
   z-index: 100;
@@ -126,16 +126,11 @@ footer {
 header {
   height: auto;
   overflow: hidden;
+  text-align: left;
 }
 
 #entry-header {
   background: none;
-  text-align: left;
-}
-
-#static-header {
-  background: rgba(255,255,255,.9);
-  text-align: left;
 }
 
 #entry-header,
@@ -150,14 +145,10 @@ header {
 
 .expanda-nav {
   background: none;
-  line-height: 60px;
+  line-height: 50px;
   height: 70px;
   padding: 10px;
-  width: 5%;
-}
-
-#static-header .header-logo-container {
-  display: inline-block;
+  width: 10%;
 }
 
 .icon {
@@ -172,8 +163,8 @@ header {
 .toggle-nav {
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  transition: all .7s;
+  flex-wrap: wrap;
+  transition: all .3s;
   width: 0;
   overflow: hidden;
   text-align: center;
@@ -183,7 +174,7 @@ header {
   border-left: 1px none #000;
   border-right: 1px none #000;
   display: none;
-  line-height: 50px;
+  line-height: 40px;
   padding: 0px 10px;
   text-decoration: none;
   transition: all .5s;
@@ -191,26 +182,29 @@ header {
 }
 
 .toggle-nav a:hover {
+  border-radius: 20px;
+}
+
+#entry-header .expanda-nav .toggle-nav a:hover {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
-  border-radius: 20px;
-  transition: all .5s;
 }
 
-.toggle-nov a span {
-  font-size: 40px;
-  text-align: center;
+#static-header .expanda-nav .toggle-nav a:hover {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
-.header-logo-container {
+.logo-container {
   height: 50px;
-  text-align: center;
-  width: 20%;
   line-height: 50px;
+  display: inline-block;
+  margin-left: 20px;
+  width: 10%;
 }
 
-.header-logo-container a,
-.header-logo-container span {
+.logo-container a,
+.logo-container span {
   font-size: 30px;
   text-decoration: none;
 }
@@ -244,14 +238,17 @@ header {
   color: #fff;
   font-size: 250px;
   font-weight: lighter;
-  margin-bottom: -60px;
+  margin-bottom: -105px;
+}
+
+.entry-logo h2 {
+  color: #fff;
 }
 
 .entry-logo h4 {
   color: #fff;
   line-height: 40px;
-  margin: 0 1%;
-  transition: all .5s;
+  margin-top: 20px;
 }
 
 .subpage-main-section {
@@ -283,6 +280,11 @@ header {
   height: 400px;
   margin: 30px 0;
   width: 100%;
+}
+
+.gallery-header h4 {
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .gallery-column {
@@ -579,7 +581,7 @@ footer p {
   color: #fff;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
   article,
   .blog-block,
   .subpage-main-text {
@@ -612,26 +614,36 @@ footer p {
 
   header {
     height: auto;
+    overflow: visible;
   }
 
-  .header-logo-container {
+  .expanda-nav {
+    width: 90%;
+  }
+
+  .toggle-nav {
     display: block;
-    line-height: 50px;
-    font-size: 40px;
-    margin-top: 10px;
   }
 
-  .header-logo-container a,
-  .header-logo-container span {
-    font-size: 40px;
+  .logo-container {
+    width: 50%;
   }
 
-  #entry-header .footer-social-container {
+  /*.expanded {
+    height: 100vh;
+  }*/
+
+  .toggle-nav a {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .footer-social-container {
     margin: 10px auto;
   }
 
-  #static-header .header-logo-container,
-  #static-header .footer-social-container {
+  .footer-social-container {
     display: block;
     float: none;
     margin: 0 auto;
@@ -670,5 +682,4 @@ footer p {
     display: box;
     margin: 0 auto;
   }
-
 }
