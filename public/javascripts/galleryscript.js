@@ -10,13 +10,13 @@ $('.gallery-column figure img, .gallery-sub-column figure img').click(function()
 
   $('#enlargedImage').attr('src', imageSrc);
   $('#imageModal').fadeIn(700,"swing");
-  $('#modalCaption .image-details:first-of-type').html('<h3>' + imageName + '</h3>');
-  $('#modalCaption .image-details:nth-of-type(2)').html('<span>Camera: ' + imageCam + '</span> \
-    <span>Lense: ' + imageLen + '</span> \
-    <span>Focal Length: ' + imageFocal + '</span>');
-  $('#modalCaption .image-details:last-of-type').html('<span>F-stop: ' + imageFstop + '</span> \
-    <span>ISO: ' + imageIso + '</span> \
-    <span>Speed: ' + imageShut + '</span>');
+  $('#modalCaption .image-details:first-of-type').html('<h4>' + imageName + '</h4>');
+  $('#modalCaption .image-details:nth-of-type(2)').html('<span>' + imageCam + '</span> \
+    <span>' + imageLen + '</span> \
+    <span>' + imageFocal + '</span>');
+  $('#modalCaption .image-details:last-of-type').html('<span>' + imageFstop + '</span> \
+    <span>ISO ' + imageIso + '</span> \
+    <span>' + imageShut + '</span>');
 });
 
 $('#imageModal').click(function(){

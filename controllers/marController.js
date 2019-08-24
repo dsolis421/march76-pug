@@ -69,9 +69,12 @@ exports.getGalleryCreative = (req, res, next) => {
   });
 }
 
-exports.getMoodboard = (req, res) => {
+exports.getMoodboard = (req, res, next) => {
   moodboard.find({quick: req.params.quick}).exec()
   .then(board => {
+    if(board == []){
+      next();
+    }
     var slength = board[0].samples.length - 1;
     var collage1 = [];
     var collage2 = [];

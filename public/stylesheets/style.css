@@ -372,14 +372,14 @@ header {
   height: auto;
   margin: 0 auto;
   width: 30%;
-  text-align: left;
+  text-align: center;
 }
 
 .image-details span {
   display: block;
 }
 
-.image-details h3 {
+.image-details h4 {
   color: #fff;
 }
 
