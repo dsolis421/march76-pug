@@ -1,5 +1,13 @@
 extends layout
 
+block metas
+  meta(property="og:url", content=`https://march76.com/blog`)
+  meta(property="og:site_name", content="March 76")
+  meta(property="og:description", content=`My name is Danny Solis. Thank you, for taking the time to visit my portfolio site.`)
+  meta(property="og:image", content='https://march76.com/images/m76-pageimage-wht.png')
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
+
 block content
   include newstaticheader.pug
   section.subpage-main-section
