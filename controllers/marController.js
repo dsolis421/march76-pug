@@ -124,7 +124,6 @@ exports.getBlog = (req, res) => {
 exports.getBlogPost = (req, res) => {
   blogs.find({quick: req.params.quick}).exec()
   .then(blogpost => {
-    console.log(blogpost);
     res.render('blogpost', { title: 'march76 - ' + blogpost[0].headline , blogpost });
   })
   .catch(err => {

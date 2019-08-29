@@ -4,7 +4,7 @@ const marController = require('../controllers/marController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'march76' });
+  res.render('index', { title: 'march76 - Creative Photography by Danny Solis' });
 });
 
 router.get('/gallery/:cat', marController.getGallery);
