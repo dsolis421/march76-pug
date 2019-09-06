@@ -101,7 +101,7 @@ exports.getMoodboard = (req, res, next) => {
     project.result = board[0].resultimage;
     project.notes = board[0].notes;
     project.image = board[0].promoImage ? board[0].promoImage : "/images/m76-pageimage-wht.png";
-    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, project, collage1, collage2});
+    res.render('board', {title: `march76 - Mood Board - ` + board[0].name, project, collage1, collage2});
   })
   .catch(err => {
     next(err);
