@@ -2,16 +2,16 @@ extends layout
 
 block metas
   meta(property="og:site_name", content="March 76")
-  meta(property="og:description", content=`${desc}`)
-  meta(property="og:image", content='https://march76.com/images/m76-pageimage-wht.png')
+  meta(property="og:description", content=`${project.descShort}`)
+  meta(property="og:image", content=`${project.image}`)
   meta(name="twitter:card", content="summary_large_image")
-  meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
+  meta(name="twitter:image:src", content=`${project.image}`)
 
 block content
   include newstaticheader.pug
   section.moodboard
-    h2= name
-    p= desc
+    h2= project.name
+    p= project.descFull
     h4 Status
     case project.status
       when 0
@@ -45,7 +45,7 @@ block content
           img(src=`${a.tnail}`)
           figcaption= a.feeling
     .moodboard-palette
-      each x in palette
+      each x in project.palette
         .palette-color(style=`background:${x};`)
           span= x
           span= x

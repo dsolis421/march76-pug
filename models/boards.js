@@ -66,6 +66,10 @@ const boardSchema = new mongoose.Schema({
   'notes': {
     type: [String],
     required: false
+  },
+  'promoImage': {
+    type: String,
+    required: false
   }
 });
 

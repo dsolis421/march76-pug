@@ -87,16 +87,21 @@ exports.getMoodboard = (req, res, next) => {
         collage2.push(board[0].samples[x]);
       }
     }
-    var palette = board[0].colorpalette;
+    /*var palette = board[0].colorpalette;
     var name = board[0].name;
-    var desc = board[0].desc;
+    var desc = board[0].desc.substring(0,50) + "...";*/
+    project.name = board[0].name
+    project.palette = board[0].colorpalette;
+    project.descShort = board[0].desc.substring(0,50) + "...";
+    project.descFull = board[0].desc;
     project.status = board[0].status;
     project.schedule = board[0].schedule;
     project.team = board[0].team;
     project.location = board[0].location;
     project.result = board[0].resultimage;
     project.notes = board[0].notes;
-    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, project, name, desc, collage1, collage2, palette});
+    project.image = board[0].promoImage ? board[0].promoImage : "/images/m76-pageimage-wht.png";
+    res.render('board', {title: `march76 - Moodboard - ` + board[0].name, project, collage1, collage2});
   })
   .catch(err => {
     next(err);
