@@ -13,8 +13,10 @@ block metas
 block content
   include newstaticheader.pug
   section.moodboard
-    h2= project.name
-    p= project.descFull
+    .moodboard-hero-header(style=`background-image: url(${project.image})`)
+      .moodboard-hero-blend
+        h2= project.name
+        p= project.descFull
     h4 Status
     case project.status
       when 0

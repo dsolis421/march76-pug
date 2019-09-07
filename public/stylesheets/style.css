@@ -465,7 +465,27 @@ header {
 .moodboard {
   width: 85%;
   margin: 0 auto;
-  padding-top: 100px
+  padding-top: 100px;
+}
+
+.moodboard-hero-header {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
+.moodboard-hero-blend {
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  padding: 5%;
+  width: 100%;
+}
+
+.moodboard-hero-blend h2,
+.moodboard-hero-blend p {
+  color: #fff;
 }
 
 .moodboard > p,
