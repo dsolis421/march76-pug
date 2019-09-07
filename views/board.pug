@@ -1,6 +1,9 @@
 extends layout
 
 block metas
+  meta(property="og:title", content=`march76 - Mood Board - ${project.name}`)
+  meta(property="og:url", content=`https://march76.com/boards/${project.quick}`)
+  meta(property="og:type", content="blog")
   meta(property="og:site_name", content="March 76")
   meta(property="og:description", content=`${project.descShort}`)
   meta(property="og:image", content=`${project.image}`)

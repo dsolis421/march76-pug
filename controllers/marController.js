@@ -90,9 +90,10 @@ exports.getMoodboard = (req, res, next) => {
     /*var palette = board[0].colorpalette;
     var name = board[0].name;
     var desc = board[0].desc.substring(0,50) + "...";*/
-    project.name = board[0].name
+    project.name = board[0].name;
+    project.quick = board[0].quick;
     project.palette = board[0].colorpalette;
-    project.descShort = board[0].desc.substring(0,50) + "...";
+    project.descShort = board[0].desc.substring(0,100) + "...";
     project.descFull = board[0].desc;
     project.status = board[0].status;
     project.schedule = board[0].schedule;
@@ -100,7 +101,7 @@ exports.getMoodboard = (req, res, next) => {
     project.location = board[0].location;
     project.result = board[0].resultimage;
     project.notes = board[0].notes;
-    project.image = board[0].promoImage ? board[0].promoImage : "/images/m76-pageimage-wht.png";
+    project.image = board[0].promoImage ? board[0].promoImage : "https://march76.com/images/m76-pageimage-wht.png";
     res.render('board', {title: `march76 - Mood Board - ` + board[0].name, project, collage1, collage2});
   })
   .catch(err => {
