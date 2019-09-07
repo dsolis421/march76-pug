@@ -472,13 +472,13 @@ header {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 300px;
+  height: auto;
   width: 100%;
 }
 
 .moodboard-hero-blend {
   background: rgba(0,0,0,.5);
-  height: 100%;
+  height: auto;
   padding: 5%;
   width: 100%;
 }
