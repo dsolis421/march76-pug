@@ -16,7 +16,7 @@ block content
     .moodboard-hero-header(style=`background-image: url(${project.image})`)
       .moodboard-hero-blend
         h2= project.name
-        p= project.descFull
+        p!= project.descFull
     h4 Status
     case project.status
       when 0
@@ -29,7 +29,7 @@ block content
         span.project-status(style="background:#f30") In Development
     if project.schedule
       h4 Date/Time
-      span= project.schedule
+      span!= project.schedule
     if project.team.length > 0
       h4 Team
       each t in project.team
@@ -43,7 +43,7 @@ block content
     if project.notes.length > 0
       .mood-notes
         each n in project.notes
-          p= n
+          p!= n
     .moodboard-collage
       each a in collage1
         figure
