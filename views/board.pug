@@ -36,7 +36,7 @@ block content
         span.team-member= t.role + ": " + t.name
     if project.location
       h4 Location
-      span= project.location
+      span!= project.location
     if project.result
       img.result-image(src=project.result)
     h4 Mood Board
