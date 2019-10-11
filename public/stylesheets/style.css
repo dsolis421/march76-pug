@@ -105,7 +105,8 @@ a:focus {
 }
 
 p,
-li {
+li,
+br {
   color: black;
   margin: 10px 0;
 }
