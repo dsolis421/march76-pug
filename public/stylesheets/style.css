@@ -569,6 +569,15 @@ header {
   color: #fff;
 }
 
+.listed-board {
+  margin: 20px auto;
+  text-align: left;
+}
+
+.listed-board a {
+  margin-right: 2%;
+}
+
 footer {
   bottom: 0;
   height: 70px;

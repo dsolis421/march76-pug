@@ -69,6 +69,17 @@ exports.getGalleryCreative = (req, res, next) => {
   });
 }
 
+exports.getBoardsList = (req, res, next) => {
+  moodboard.find().sort({status: -1}).exec()
+  .then(list => {
+    console.log(list);
+    res.render('boardlist', {title: 'march78 - Mood Board List', list});
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
 exports.getMoodboard = (req, res, next) => {
   moodboard.find({quick: req.params.quick}).exec()
   .then(board => {
