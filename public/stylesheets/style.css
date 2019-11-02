@@ -570,12 +570,20 @@ header {
 }
 
 .listed-board {
-  margin: 20px auto;
+  margin: 40px auto;
   text-align: left;
 }
 
 .listed-board a {
   margin-right: 2%;
+}
+
+.listed-board span {
+  float: right;
+}
+
+.moodboard-list {
+  padding-bottom: 100px;
 }
 
 footer {

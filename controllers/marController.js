@@ -8,6 +8,7 @@ var pets = [];
 var portraits = [];
 var creative = [];
 
+//gets overall, shortened view of the gallery
 exports.getGallery = (req, res) => {
   gallerypics.find({show: "y", category: req.params.cat}).sort({order: 1}).exec()
   .then(images => {
@@ -31,6 +32,7 @@ exports.getGallery = (req, res) => {
   });
 }
 
+//gets a specific gallery for pets
 exports.getGalleryPets = (req, res, next) => {
   gallerypics.find({show: "y", category: "Pets", frontpage: "y"}).exec()
   .then(returnedPets => {
@@ -42,6 +44,7 @@ exports.getGalleryPets = (req, res, next) => {
   });
 }
 
+//gets a specific gallery for portraits
 exports.getGalleryPortraits = (req, res, next) => {
   gallerypics.find({show: "y", category: "Portraits", frontpage: "y"}).exec()
   .then(returnedPortraits => {
@@ -53,6 +56,7 @@ exports.getGalleryPortraits = (req, res, next) => {
   });
 }
 
+//gets a specific gallery for creative images
 exports.getGalleryCreative = (req, res, next) => {
   gallerypics.find({show: "y", category: "Creative", frontpage: "y"}).exec()
   .then(returnedCreative => {
@@ -69,10 +73,11 @@ exports.getGalleryCreative = (req, res, next) => {
   });
 }
 
+//gets a listing of mood boards for display
 exports.getBoardsList = (req, res, next) => {
   moodboard.find().sort({status: -1}).exec()
   .then(list => {
-    console.log(list);
+    /*console.log(list);*/
     res.render('boardlist', {title: 'march78 - Mood Board List', list});
   })
   .catch(err => {
@@ -80,6 +85,7 @@ exports.getBoardsList = (req, res, next) => {
   });
 }
 
+//gets an individual mood board for display
 exports.getMoodboard = (req, res, next) => {
   moodboard.find({quick: req.params.quick}).exec()
   .then(board => {
@@ -120,14 +126,17 @@ exports.getMoodboard = (req, res, next) => {
   });
 }
 
+//gets bio page
 exports.getAbout = (req, res) => {
   res.render('about', { title: 'march76 - About Me'});
 }
 
+//gets contact info page
 exports.getContact = (req, res) => {
   res.render('contact', { title: 'march76 - Contact'});
 }
 
+//gets listing of blog posts
 exports.getBlog = (req, res) => {
   blogs.find({show: "y"}).sort({order: -1}).exec()
   .then(posts => {
@@ -138,6 +147,7 @@ exports.getBlog = (req, res) => {
   });
 }
 
+//gets individual blog post
 exports.getBlogPost = (req, res) => {
   blogs.find({quick: req.params.quick}).exec()
   .then(blogpost => {
