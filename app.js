@@ -9,6 +9,7 @@ var logger = require('morgan');
 require('./models/blogs');
 require('./models/gallerypics');
 require('./models/boards');
+require('./models/m76galleries');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 

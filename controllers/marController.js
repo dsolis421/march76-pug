@@ -3,13 +3,14 @@ var mongoose = require('mongoose');
 const blogs = mongoose.model('blogs');
 const gallerypics = mongoose.model('gallerypics');
 const moodboard = mongoose.model('boards');
+const gallerycollection = mongoose.model('m76galleries');
 
-var pets = [];
+/*var pets = [];
 var portraits = [];
-var creative = [];
+var creative = [];*/
 
 //gets overall, shortened view of the gallery
-exports.getGallery = (req, res) => {
+/*exports.getGallery = (req, res) => {
   gallerypics.find({show: "y", category: req.params.cat}).sort({order: 1}).exec()
   .then(images => {
     var pics = images.length - 1;
@@ -30,10 +31,55 @@ exports.getGallery = (req, res) => {
   .catch(err => {
     next(err);
   });
+}*/
+
+exports.getGalleries = (req, res) => {
+  gallerycollection.find({show: "y"}, { name: 1, frontpageimage: 1, quick: 1}).sort({order: 1}).exec()
+  .then(galleries => {
+    var pics = galleries.length - 1;
+    var collections1 = [];
+    var collections2 = [];
+    for (var x = 0; x <= pics; x++) {
+      if (x <= (pics/2)) {
+        collections1.push(galleries[x]);
+      }
+      else {
+        collections2.push(galleries[x]);
+      }
+    }
+    res.render('newgallerylanding', { title: 'march76 - Gallery', collections1, collections2 });
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getCollectionImages = (req, res, next) => {
+  gallerycollection.find({quick: req.params.collection}).exec()
+  .then(collectionimages => {
+    var pics = collectionimages[0].images.length - 1;
+    var images1 = [];
+    var images2 = [];
+    var collectionheader = {};
+    for (var x = 0; x <= pics; x++) {
+      if (x <= (pics/2)) {
+        images1.push(collectionimages[0].images[x]);
+      }
+      else {
+        images2.push(collectionimages[0].images[x]);
+      }
+    };
+    collectionheader.name = collectionimages[0].name;
+    collectionheader.desc = collectionimages[0].description;
+    res.render('gallerycollection', { title: 'march76 - ' + collectionimages[0].name, collectionheader, images1, images2 });
+  })
+  .catch(err => {
+    next(err);
+  });
 }
 
 //gets a specific gallery for pets
-exports.getGalleryPets = (req, res, next) => {
+/*exports.getGalleryPets = (req, res, next) => {
   gallerypics.find({show: "y", category: "Pets", frontpage: "y"}).exec()
   .then(returnedPets => {
     pets = returnedPets;
@@ -42,10 +88,10 @@ exports.getGalleryPets = (req, res, next) => {
   .catch(err => {
     next(err);
   });
-}
+}*/
 
 //gets a specific gallery for portraits
-exports.getGalleryPortraits = (req, res, next) => {
+/*exports.getGalleryPortraits = (req, res, next) => {
   gallerypics.find({show: "y", category: "Portraits", frontpage: "y"}).exec()
   .then(returnedPortraits => {
     portraits = returnedPortraits;
@@ -54,10 +100,10 @@ exports.getGalleryPortraits = (req, res, next) => {
   .catch(err => {
     next(err);
   });
-}
+}*/
 
 //gets a specific gallery for creative images
-exports.getGalleryCreative = (req, res, next) => {
+/*exports.getGalleryCreative = (req, res, next) => {
   gallerypics.find({show: "y", category: "Creative", frontpage: "y"}).exec()
   .then(returnedCreative => {
     creative = returnedCreative;
@@ -71,7 +117,7 @@ exports.getGalleryCreative = (req, res, next) => {
   .catch(err => {
     next(err);
   });
-}
+}*/
 
 //gets a listing of mood boards for display
 exports.getBoardsList = (req, res, next) => {
