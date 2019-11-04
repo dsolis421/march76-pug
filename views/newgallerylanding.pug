@@ -11,18 +11,19 @@ block metas
 block content
   include newstaticheader.pug
   section.subpage-main-section
-    .gallery-column
-      each a in collections1
-        a(href=`/gallery/${a.quick}`)
+    .subpage-row
+      .gallery-column
+        each a in collections1
           .gallery-collection(style=`background-image: url(${a.frontpageimage})`)
-            .gallery-collection-hover
-              h2= a.name
-    .gallery-column
-      each b in collections2
-        a(href=`/gallery/${b.quick}`)
+            a(href=`/gallery/${a.quick}`)
+              .gallery-collection-hover
+                h2= a.name
+      .gallery-column
+        each b in collections2
           .gallery-collection(style=`background-image: url(${b.frontpageimage})`)
-            .gallery-collection-hover
-              h2= b.name
+            a(href=`/gallery/${b.quick}`)
+              .gallery-collection-hover
+                h2= b.name
   include staticfooter.pug
 block scripts
   script(src='/javascripts/galleryscript.js')
