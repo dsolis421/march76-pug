@@ -71,6 +71,7 @@ exports.getCollectionImages = (req, res, next) => {
     };
     collectionheader.name = collectionimages[0].name;
     collectionheader.desc = collectionimages[0].description;
+    collectionheader.team = collectionimages[0].creativeteam;
     res.render('gallerycollection', { title: 'march76 - ' + collectionimages[0].name, collectionheader, images1, images2 });
   })
   .catch(err => {

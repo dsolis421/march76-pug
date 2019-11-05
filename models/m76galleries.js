@@ -43,6 +43,17 @@ const imageSchema = new mongoose.Schema({
   }
 });
 
+const projectTeam = new mongoose.Schema({
+  'artistname': {
+    type: String,
+    required: true
+  },
+  'role': {
+    type: String,
+    required: true
+  }
+});
+
 const collectionSchema = new mongoose.Schema({
   'name': {
     type: String,
@@ -58,6 +69,10 @@ const collectionSchema = new mongoose.Schema({
   },
   'description': {
     type: String,
+    required: false
+  },
+  'creativeteam': {
+    type: [projectTeam],
     required: false
   },
   'order': {

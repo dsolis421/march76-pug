@@ -334,10 +334,11 @@ header {
 }
 
 .gallery-collection {
+  background-position: center;
   background-size: cover;
   height: 600px;
   width: 400px;
-  margin: 0 auto;
+  margin: 5px auto;
   transition: all 1s;
 }
 
