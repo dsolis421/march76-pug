@@ -297,14 +297,14 @@ header {
 .gallery-sub-column {
   height: auto;
   margin: 0 auto;
-  width: 400px;
+  width: 600px;
 }
 
 .gallery-column figure,
 .gallery-sub-column figure {
   position: relative;
   margin: 0 auto;
-  width: 400px;
+  width: 600px;
 }
 
 .gallery-column figure img,
@@ -336,8 +336,8 @@ header {
 .gallery-collection {
   background-position: center;
   background-size: cover;
-  height: 600px;
-  width: 400px;
+  height: 900px;
+  width: 600px;
   margin: 5px auto;
   transition: all 1s;
 }
@@ -345,8 +345,8 @@ header {
 .gallery-collection-hover {
   background: rgba(0,0,0,.5);
   color: #fff;
-  height: 600px;
-  width: 400px;
+  height: 900px;
+  width: 600px;
   text-align: center;
   opacity: 0;
   position: relative;
