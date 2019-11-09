@@ -13,7 +13,7 @@ router.get('/gallery/:collection', marController.getCollectionImages);
 
 //router.get('/gallery', marController.getGalleryPets, marController.getGalleryPortraits, marController.getGalleryCreative)
 
-router.get('/gallery', marController.getGalleries);
+router.get('/portfolio', marController.getGalleries);
 
 router.get('/about', marController.getAbout);
 

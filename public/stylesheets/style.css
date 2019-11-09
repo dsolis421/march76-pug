@@ -206,12 +206,19 @@ header {
 }
 
 .entry-section {
-  background: url("/images/m76-MFS-2-wallpaper.jpg");
   background-position: center;
   background-size: cover;
   color: #fff;
   height: 100vh;
   position: relative;
+}
+
+.entry-section-success {
+  background: url("/images/m76-MFS-2-wallpaper.jpg");
+}
+
+.entry-section-error {
+  background: url("/images/m76-MFS-2-wallpaper-unfocused.jpg");
 }
 
 .entry-blend {
