@@ -749,6 +749,17 @@ footer p {
     width: 99%;
   }
 
+  .gallery-column figure,
+  .gallery-sub-column figure {
+    width: 100%;
+  }
+
+  .gallery-collection,
+  .gallery-collection-hover {
+    height: 450px;
+    width: 300px;
+  }
+
   .modal-content {
     width: 100%;
   }
