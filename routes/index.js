@@ -27,6 +27,6 @@ router.get('/boards/list', marController.getBoardsList);
 
 router.get('/boards/:quick', marController.getMoodboard);
 
-router.post('boards/:quick', marController.addMoodComment);
+router.post('/boards/:quick', marController.addMoodComment);
 
 module.exports = router;

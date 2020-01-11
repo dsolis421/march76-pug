@@ -10,10 +10,12 @@ require('./models/blogs');
 require('./models/gallerypics');
 require('./models/boards');
 require('./models/m76galleries');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
+
+//routes
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

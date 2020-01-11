@@ -635,7 +635,7 @@ header {
 }
 
 .moodboard-comment-form {
-  visibility: hidden;
+  display: none;
 }
 
 .moodboard-comment-form input,

@@ -27,6 +27,18 @@ function respNavToggle() {
   }
 }
 
+function resetCommentForm() {
+  $('.comment-name, .comment-text').val('');
+  $('.moodboard-comment-form').fadeOut(400,"swing");
+}
+
+function addNewComment(comment) {
+  var quick = $('.moodboard-comment-form').attr('data-board');
+  $.post('/boards/'+quick, comment, function() {
+    resetCommentForm();
+  });
+}
+
 $(document).ready(function(){
 
   setTimeout(function(){
@@ -44,4 +56,26 @@ $(document).ready(function(){
     console.log('click the add comment button');
     $('.moodboard-comment-form').fadeIn(400,"swing");
   });
+
+  $('.comment-submit').click(function() {
+    console.log('click the submit comment button');
+    if($('.comment-name').val() === '' || $('.comment-text').val() === '') {
+      console.log('no comment to send');
+      return
+    } else {
+      var comment = {};
+      comment.name = $('.comment-name').val();
+      comment.commenttext = $('.comment-text').val();
+      console.log('created a comment to send',comment);
+      addNewComment(comment);
+    }
+  });
+
+  $('.comment-cancel').click(function(){
+    console.log('click the cancel comment button');
+    $('.moodboard-comment-form').fadeOut(400,"swing");
+    $('.comment-name, .comment-text').val('');
+  });
+
+
 });
