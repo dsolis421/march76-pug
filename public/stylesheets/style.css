@@ -570,7 +570,9 @@ header {
 }
 
 .listed-board {
+  background: #f2f2f2;
   margin: 40px auto;
+  padding: 10px;
   text-align: left;
 }
 
@@ -703,6 +705,10 @@ footer p {
   .moodboard .moodboard-collage h2 {
     display: box;
     margin: 0 auto;
+  }
+
+  .listed-board {
+    padding: 5px;
   }
 
   /*.footer-social-container {

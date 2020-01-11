@@ -2,6 +2,7 @@ var $footernav = $('.expanda-nav > div:last-of-type');
 
 function respNavToggle() {
   if($footernav.attr('class') === "toggle-nav") {
+    //$('.logo-container').fadeOut(400,"swing");
     $footernav.addClass('expanded');
     if($(window).width() < 1200){
       $('.expanda-nav').animate({"height":"100vh","width":"100%"},300);
@@ -24,6 +25,7 @@ function respNavToggle() {
       $('#entry-header .expanda-nav').animate({"width":"10%"}, 350).css({"background":"none"});
       $('#static-header .expanda-nav').animate({"width":"10%"}, 350);
     }
+    //$('.logo-container').fadeIn(400,"swing");
   }
 }
 
