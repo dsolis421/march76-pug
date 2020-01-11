@@ -20,15 +20,15 @@ block content
     h4 Status
     case project.status
       when 0
-        span.project-status(style="background:#000") Completed
+        span.project-status(style="background:#f30") In Development
       when 1
-        span.project-status(style="background:#393") Scheduled
-      when 2
         span.project-status(style="background:#f90") Collaborating
+      when 2
+        span.project-status(style="background:#393") Scheduled
       when 3
         span.project-status(style="background:#09c") Post Production
       default
-        span.project-status(style="background:#f30") In Development
+        span.project-status(style="background:#000") Completed
     if project.schedule
       h4 Date/Time
       span!= project.schedule
@@ -61,4 +61,24 @@ block content
         figure
           img(src=`${b.tnail}`)
           figcaption= b.feeling
+    .moodboard-comments-section
+      h4 Leave a comment
+        span
+          i.fas.fa-comment-dots
+      form.moodboard-comment-form
+        input(type="text" name="commentname" placeholder="Name...").comment-name
+        br
+        textarea(type="text" name="commenttext" placeholder="Comment...").comment-text
+        br
+        span.comment-submit Submit
+        span.comment-cancel Cancel
+    if project.comments.length > 0
+      each c in project.comments
+        .moodboard-comment
+          h5= c.name
+          span= c.date
+          quote= c.quotetext
+          p= c.commenttext
+          span
+            i.fas.fa-reply
   include staticfooter.pug

@@ -40,4 +40,8 @@ $(document).ready(function(){
     respNavToggle();
   });
 
+  $('.fa-comment-dots').click(function() {
+    console.log('click the add comment button');
+    $('.moodboard-comment-form').fadeIn(400,"swing");
+  });
 });

@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, center, input, textarea
 dl, dt, dd, ol, ul,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -89,6 +89,8 @@ h4 {
 a,
 p,
 li,
+input,
+textarea,
 .moodboard > span {
   font-size: 20px;
   text-rendering: optimizeLegibility;
@@ -520,6 +522,7 @@ header {
   width: 85%;
   margin: 0 auto;
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .moodboard-hero-header {
@@ -622,8 +625,47 @@ header {
   color: #fff;
 }
 
-.listed-board {
+.moodboard-comments-section h4 > span {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.fa-comment-dots {
+  cursor: pointer;
+}
+
+.moodboard-comment-form {
+  visibility: hidden;
+}
+
+.moodboard-comment-form input,
+.moodboard-comment-form textarea {
+  border: 2px solid #000;
+  font-family: 'lowerFont', sans-serif;
+  width: 300px;
+}
+
+.moodboard-comment-form .comment-text {
+  height: 200px;
+}
+
+.comment-submit {
+  background: #000;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.comment-submit ,
+.comment-cancel {
+  border: 2px solid #000;
+  padding: 5px 10px;
+}
+
+.listed-board,
+.moodboard-comment {
+  background: #f2f2f2;
   margin: 40px auto;
+  padding: 10px;
   text-align: left;
 }
 
@@ -698,6 +740,8 @@ footer p {
 
   a,
   p,
+  input,
+  textarea,
   .moodboard > span,
   .blog-section article figure figcaption {
     font-size: 18px;

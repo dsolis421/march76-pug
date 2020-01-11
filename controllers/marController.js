@@ -166,6 +166,7 @@ exports.getMoodboard = (req, res, next) => {
     project.result = board[0].resultimage;
     project.notes = board[0].notes;
     project.image = board[0].promoImage ? board[0].promoImage : "https://march76.com/images/m76-pageimage-wht.png";
+    project.comments = board[0].comments ? board[0].comments : [];
     res.render('board', {title: `march76 - Mood Board - ` + board[0].name, project, collage1, collage2});
   })
   .catch(err => {
@@ -199,6 +200,18 @@ exports.getBlogPost = (req, res) => {
   blogs.find({quick: req.params.quick}).exec()
   .then(blogpost => {
     res.render('blogpost', { title: 'march76 - ' + blogpost[0].headline , blogpost });
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+//adds a comment to the moodboard
+exports.addMoodComment = (req, res) => {
+  moodboard.find({quick: req.params.quick}).exec()
+  .then(board => {
+    console.log('adding comment at controller');
+    board.comments.push({commentname: req.body.name, commenttext: req.body.commenttext, date: new Date()})
   })
   .catch(err => {
     next(err);
