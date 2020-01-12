@@ -61,7 +61,7 @@ block content
         figure
           img(src=`${b.tnail}`)
           figcaption= b.feeling
-    #moodboard-comments-container
+    #moodboard-comments
       .moodboard-comments-section
         h4 Leave a comment
           span
@@ -73,13 +73,15 @@ block content
           br
           span.comment-submit Submit
           span.comment-cancel Cancel
-        if project.comments.length > 0
-          each c in project.comments
-            .moodboard-comment
-              h5= c.commentname
-              span= c.date
-              quote= c.quotetext
-              p= c.commenttext
-              span
-                i.fas.fa-reply
+        #moodboard-comments-container
+          #moodboard-comments-listing
+            if project.comments.length > 0
+              each c in project.comments
+                .moodboard-comment
+                  h5= c.commentname
+                  span= c.date
+                  quote= c.quotetext
+                  p= c.commenttext
+                  span
+                    i.fas.fa-reply
   include staticfooter.pug

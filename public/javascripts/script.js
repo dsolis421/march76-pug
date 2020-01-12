@@ -29,7 +29,7 @@ function respNavToggle() {
 
 function scrollToComments() {
   $('html, body').animate({
-    scrollTop: $('#moodboard-comments-container').offset().top - 80
+    scrollTop: $('#moodboard-comments').offset().top - 80
   },400,"swing");
 }
 
@@ -42,44 +42,12 @@ function addNewComment(comment) {
   var quick = $('.moodboard-comment-form').attr('data-board');
   $.post('/boards/'+quick, comment, function() {
     resetCommentForm();
-    $('#moodboard-comments-container').load('/boards/alex .moodboard-comments-section', function(){
-      $('.fa-comment-dots').click(function() {
-        $('.moodboard-comment-form').fadeIn(400,"swing");
-        scrollToComments();
-      });
-
-      $('.comment-submit').click(function() {
-        if($('.comment-name').val() === '' || $('.comment-text').val() === '') {
-          return
-        } else {
-          var comment = {};
-          comment.name = $('.comment-name').val();
-          comment.commenttext = $('.comment-text').val();
-          addNewComment(comment);
-        }
-      });
-
-      $('.comment-cancel').click(function(){
-        $('.moodboard-comment-form').fadeOut(400,"swing");
-        $('.comment-name, .comment-text').val('');
-      });
-    });
+    $('#moodboard-comments-container').load('/boards/alex #moodboard-comments-listing');
     scrollToComments();
   });
 }
 
-$(document).ready(function(){
-
-  setTimeout(function(){
-    $('.entry-blend').animate({"opacity": "1"}, 1000);
-    $('.entry-logo, #fadein-footer, #entry-header .icon.fadein-icon').fadeIn(1500,"swing");
-    $('#fadein-footer *').animate({"opacity": "1"}, 1500);
-  }, 700);
-
-  $('.icon').click(function() {
-    respNavToggle();
-  });
-
+function setCommentHandlers() {
   $('.fa-comment-dots').click(function() {
     $('.moodboard-comment-form').fadeIn(400,"swing");
     scrollToComments();
@@ -94,11 +62,36 @@ $(document).ready(function(){
       comment.commenttext = $('.comment-text').val();
       addNewComment(comment);
     }
+    $('#moodboard-comments-listing').ready(function(){
+      flashNewComment();
+    });
   });
 
   $('.comment-cancel').click(function(){
     $('.moodboard-comment-form').fadeOut(400,"swing");
     $('.comment-name, .comment-text').val('');
   });
+  console.log('set comment handlers ran');
+}
 
+function flashNewComment() {
+  $('.moodboard-comment:first-of-type').css({'background':'#cce6ff'});
+  setTimeout(function(){
+    $('.moodboard-comment:first-of-type').css({'background':'#f2f2f2'})
+  },5000);
+}
+
+$(document).ready(function(){
+
+  setTimeout(function(){
+    $('.entry-blend').animate({"opacity": "1"}, 1000);
+    $('.entry-logo, #fadein-footer, #entry-header .icon.fadein-icon').fadeIn(1500,"swing");
+    $('#fadein-footer *').animate({"opacity": "1"}, 1500);
+  }, 700);
+
+  $('.icon').click(function() {
+    respNavToggle();
+  });
+
+  setCommentHandlers();
 });

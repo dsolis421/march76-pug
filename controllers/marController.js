@@ -211,7 +211,6 @@ exports.addMoodComment = (req, res, next) => {
   var date = new Date();
   moodboard.find({quick: req.params.quick}).exec()
   .then(board => {
-    console.log('adding comment to the db', board[0].comments);
     board[0].comments.unshift({commentname: req.body.name, commenttext: req.body.commenttext, date: date});
     board[0].save();
   })
