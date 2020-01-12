@@ -27,6 +27,12 @@ function respNavToggle() {
   }
 }
 
+function scrollToComments() {
+  $('html, body').animate({
+    scrollTop: $('#moodboard-comments-container').offset().top - 80
+  },400,"swing");
+}
+
 function resetCommentForm() {
   $('.comment-name, .comment-text').val('');
   $('.moodboard-comment-form').fadeOut(400,"swing");
@@ -36,6 +42,29 @@ function addNewComment(comment) {
   var quick = $('.moodboard-comment-form').attr('data-board');
   $.post('/boards/'+quick, comment, function() {
     resetCommentForm();
+    $('#moodboard-comments-container').load('/boards/alex .moodboard-comments-section', function(){
+      $('.fa-comment-dots').click(function() {
+        $('.moodboard-comment-form').fadeIn(400,"swing");
+        scrollToComments();
+      });
+
+      $('.comment-submit').click(function() {
+        if($('.comment-name').val() === '' || $('.comment-text').val() === '') {
+          return
+        } else {
+          var comment = {};
+          comment.name = $('.comment-name').val();
+          comment.commenttext = $('.comment-text').val();
+          addNewComment(comment);
+        }
+      });
+
+      $('.comment-cancel').click(function(){
+        $('.moodboard-comment-form').fadeOut(400,"swing");
+        $('.comment-name, .comment-text').val('');
+      });
+    });
+    scrollToComments();
   });
 }
 
@@ -47,35 +76,29 @@ $(document).ready(function(){
     $('#fadein-footer *').animate({"opacity": "1"}, 1500);
   }, 700);
 
-
   $('.icon').click(function() {
     respNavToggle();
   });
 
   $('.fa-comment-dots').click(function() {
-    console.log('click the add comment button');
     $('.moodboard-comment-form').fadeIn(400,"swing");
+    scrollToComments();
   });
 
   $('.comment-submit').click(function() {
-    console.log('click the submit comment button');
     if($('.comment-name').val() === '' || $('.comment-text').val() === '') {
-      console.log('no comment to send');
       return
     } else {
       var comment = {};
       comment.name = $('.comment-name').val();
       comment.commenttext = $('.comment-text').val();
-      console.log('created a comment to send',comment);
       addNewComment(comment);
     }
   });
 
   $('.comment-cancel').click(function(){
-    console.log('click the cancel comment button');
     $('.moodboard-comment-form').fadeOut(400,"swing");
     $('.comment-name, .comment-text').val('');
   });
-
 
 });

@@ -61,24 +61,25 @@ block content
         figure
           img(src=`${b.tnail}`)
           figcaption= b.feeling
-    .moodboard-comments-section#moodcomments
-      h4 Leave a comment
-        span
-          i.fas.fa-comment-dots
-      form.moodboard-comment-form(data-board=`${project.quick}`)
-        input(type="text" name="commentname" placeholder="Name...").comment-name
-        br
-        textarea(type="text" name="commenttext" placeholder="Comment...").comment-text
-        br
-        span.comment-submit Submit
-        span.comment-cancel Cancel
-    if project.comments.length > 0
-      each c in project.comments
-        .moodboard-comment
-          h5= c.commentname
-          span= c.date
-          quote= c.quotetext
-          p= c.commenttext
+    #moodboard-comments-container
+      .moodboard-comments-section
+        h4 Leave a comment
           span
-            i.fas.fa-reply
+            i.fas.fa-comment-dots
+        form.moodboard-comment-form(data-board=`${project.quick}`)
+          input(type="text" name="commentname" placeholder="Name...").comment-name
+          br
+          textarea(type="text" name="commenttext" placeholder="Comment...").comment-text
+          br
+          span.comment-submit Submit
+          span.comment-cancel Cancel
+        if project.comments.length > 0
+          each c in project.comments
+            .moodboard-comment
+              h5= c.commentname
+              span= c.date
+              quote= c.quotetext
+              p= c.commenttext
+              span
+                i.fas.fa-reply
   include staticfooter.pug

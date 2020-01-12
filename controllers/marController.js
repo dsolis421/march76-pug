@@ -208,13 +208,12 @@ exports.getBlogPost = (req, res) => {
 
 //adds a comment to the moodboard
 exports.addMoodComment = (req, res, next) => {
-  console.log('add comment at the controller - addMoodComment');
   var date = new Date();
   moodboard.find({quick: req.params.quick}).exec()
   .then(board => {
     console.log('adding comment to the db', board[0].comments);
     board[0].comments.unshift({commentname: req.body.name, commenttext: req.body.commenttext, date: date});
-    return board[0].save();
+    board[0].save();
   })
   .then(() => {
     return res.status(201).send({error: false});
