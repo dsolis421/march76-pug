@@ -82,6 +82,8 @@ block content
                   span= c.date
                   quote= c.quotetext
                   p= c.commenttext
-                  span
+                  span(onClick=`replyToComment(\"${c.commenttext}\")`)
                     i.fas.fa-reply
   include staticfooter.pug
+block scripts
+  script(src='/javascripts/commentscripts.js')

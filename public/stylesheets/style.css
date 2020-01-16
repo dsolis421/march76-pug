@@ -682,6 +682,10 @@ header {
   padding-bottom: 100px;
 }
 
+.moodboard-comment > span[data-quote] {
+  cursor: pointer;
+}
+
 footer {
   bottom: 0;
   height: 70px;
