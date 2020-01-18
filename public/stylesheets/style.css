@@ -27,7 +27,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center, input, textarea
-dl, dt, dd, ol, ul,
+dl, dt, dd, ol, ul, br,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -620,9 +620,6 @@ header {
   color: #fff;
 }
 
-<<<<<<< HEAD
-.listed-board {
-=======
 .moodboard-comments-section h4 > span {
   display: inline-block;
   margin-left: 20px;
@@ -644,6 +641,7 @@ header {
 }
 
 .moodboard-comment-form #quote-reply {
+  cursor: pointer;
   height: auto;
   width: 50%;
 }
@@ -667,7 +665,6 @@ header {
 
 .listed-board,
 .moodboard-comment {
->>>>>>> newgallery
   background: #f2f2f2;
   margin: 40px auto;
   padding: 10px;
@@ -757,6 +754,7 @@ footer p {
   a,
   p,
   input,
+  blockquote,
   textarea,
   .moodboard > span,
   .blog-section article figure figcaption {
@@ -855,6 +853,15 @@ footer p {
   .footer-social-container a {
     line-height: 30px;
     font-size: 25px;
+  }
+
+  .moodboard-comment-form input,
+  .moodboard-comment-form textarea {
+    width: 90%;
+  }
+
+  .moodboard-comment-form #quote-reply {
+    width: 90%;
   }
 
 }
