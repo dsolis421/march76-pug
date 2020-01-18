@@ -11,14 +11,18 @@ block content
           a(href=`/boards/${x.quick}`)= x.name
           case x.status
             when 0
-              span.project-status(style="background:#000") Completed
+              span.project-status(style="background:#f30") In Development
             when 1
-              span.project-status(style="background:#393") Scheduled
-            when 2
               span.project-status(style="background:#f90") Collaborating
+            when 2
+              span.project-status(style="background:#393") Scheduled
             when 3
               span.project-status(style="background:#09c") Post Production
             default
+<<<<<<< HEAD
               span.project-status(style="background:#f30") In Development
+=======
+              span.project-status(style="background:#000") Completed
+>>>>>>> newgallery
           p!= x.desc
   include staticfooter.pug

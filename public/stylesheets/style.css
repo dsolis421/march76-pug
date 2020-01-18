@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, center, input, textarea
 dl, dt, dd, ol, ul,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -89,6 +89,9 @@ h4 {
 a,
 p,
 li,
+input,
+textarea,
+blockquote,
 .moodboard > span {
   font-size: 20px;
   text-rendering: optimizeLegibility;
@@ -177,18 +180,12 @@ header {
   margin: 0px auto;
 }
 
-.toggle-nav a:hover {
-  border-radius: 20px;
-}
-
 #entry-header .expanda-nav .toggle-nav a:hover {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 #static-header .expanda-nav .toggle-nav a:hover {
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .logo-container {
@@ -206,12 +203,19 @@ header {
 }
 
 .entry-section {
-  background: url("/images/m76-MFS-2-wallpaper.jpg");
   background-position: center;
   background-size: cover;
   color: #fff;
   height: 100vh;
   position: relative;
+}
+
+.entry-section-success {
+  background: url("/images/m76-MFS-2-wallpaper.jpg");
+}
+
+.entry-section-error {
+  background: url("/images/m76-MFS-2-wallpaper-unfocused.jpg");
 }
 
 .entry-blend {
@@ -297,12 +301,14 @@ header {
 .gallery-sub-column {
   height: auto;
   margin: 0 auto;
-  width: 400px;
+  width: 600px;
 }
 
 .gallery-column figure,
 .gallery-sub-column figure {
   position: relative;
+  margin: 0 auto;
+  width: 600px;
 }
 
 .gallery-column figure img,
@@ -329,6 +335,45 @@ header {
 .gallery-column figure:hover figcaption,
 .gallery-sub-column figure:hover figcaption {
   opacity: 1;
+}
+
+.gallery-collection {
+  background-position: center;
+  background-size: cover;
+  height: 900px;
+  width: 600px;
+  margin: 5px auto;
+  transition: all 1s;
+}
+
+.gallery-collection-hover {
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  height: 900px;
+  width: 600px;
+  text-align: center;
+  opacity: 0;
+  position: relative;
+  transition: all 1s;
+}
+
+.gallery-collection-hover:hover {
+  opacity: 1;
+}
+
+.gallery-collection-hover h2 {
+  color: #fff;
+  display: block;
+  padding-left: 1em;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.gallery-collection-header {
+  margin-bottom: 30px;
 }
 
 .gallery-modal {
@@ -451,6 +496,11 @@ header {
   height: 150px;
 }
 
+.contact-article ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
 .contact-social {
   font-size: 30px;
   text-align: center;
@@ -467,6 +517,7 @@ header {
   width: 85%;
   margin: 0 auto;
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .moodboard-hero-header {
@@ -569,7 +620,54 @@ header {
   color: #fff;
 }
 
+<<<<<<< HEAD
 .listed-board {
+=======
+.moodboard-comments-section h4 > span {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.fa-comment-dots {
+  cursor: pointer;
+}
+
+.moodboard-comment-form {
+  display: none;
+}
+
+.moodboard-comment-form input,
+.moodboard-comment-form textarea {
+  border: 2px solid #000;
+  font-family: 'lowerFont', sans-serif;
+  width: 600px;
+}
+
+.moodboard-comment-form #quote-reply {
+  height: auto;
+  width: 50%;
+}
+
+.moodboard-comment-form .comment-text {
+  height: 200px;
+}
+
+.comment-submit {
+  background: #000;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.comment-submit ,
+.comment-cancel {
+  border: 2px solid #000;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.listed-board,
+.moodboard-comment {
+>>>>>>> newgallery
   background: #f2f2f2;
   margin: 40px auto;
   padding: 10px;
@@ -586,6 +684,17 @@ header {
 
 .moodboard-list {
   padding-bottom: 100px;
+}
+
+.moodboard-comment > span[data-quote] {
+  cursor: pointer;
+}
+
+.moodboard-comment blockquote {
+  border-left: 2px solid #ccc;
+  margin-top: 10px;
+  padding-left: 5px;
+  font-style: italic;
 }
 
 footer {
@@ -647,6 +756,8 @@ footer p {
 
   a,
   p,
+  input,
+  textarea,
   .moodboard > span,
   .blog-section article figure figcaption {
     font-size: 18px;
@@ -696,6 +807,17 @@ footer p {
 
   .gallery-column {
     width: 99%;
+  }
+
+  .gallery-column figure,
+  .gallery-sub-column figure {
+    width: 100%;
+  }
+
+  .gallery-collection,
+  .gallery-collection-hover {
+    height: 450px;
+    width: 300px;
   }
 
   .modal-content {

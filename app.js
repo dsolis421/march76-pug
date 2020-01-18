@@ -9,10 +9,13 @@ var logger = require('morgan');
 require('./models/blogs');
 require('./models/gallerypics');
 require('./models/boards');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+require('./models/m76galleries');
 
 var app = express();
+
+//routes
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

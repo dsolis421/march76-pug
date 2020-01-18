@@ -37,7 +37,6 @@ $(document).ready(function(){
     $('#fadein-footer *').animate({"opacity": "1"}, 1500);
   }, 700);
 
-
   $('.icon').click(function() {
     respNavToggle();
   });

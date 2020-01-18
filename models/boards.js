@@ -22,6 +22,25 @@ const teamSchema = new mongoose.Schema({
   }
 });
 
+const commentSchema = new mongoose.Schema({
+  'commentname': {
+    type: String,
+    required: false
+  },
+  'commenttext': {
+    type: String,
+    required: true
+  },
+  'quotetext': {
+    type: String,
+    required: false
+  },
+  'date': {
+    type: Date,
+    required: false
+  }
+});
+
 const boardSchema = new mongoose.Schema({
   'name': {
     type: String,
@@ -69,6 +88,10 @@ const boardSchema = new mongoose.Schema({
   },
   'promoImage': {
     type: String,
+    required: false
+  },
+  'comments': {
+    type: [commentSchema],
     required: false
   }
 });
