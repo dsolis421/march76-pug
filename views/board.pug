@@ -69,6 +69,8 @@ block content
         form.moodboard-comment-form(data-board=`${project.quick}`)
           input(type="text" name="commentname" placeholder="Name...").comment-name
           br
+          blockquote#quote-reply
+          br
           textarea(type="text" name="commenttext" placeholder="Comment...").comment-text
           br
           span.comment-submit Submit
@@ -80,8 +82,8 @@ block content
                 .moodboard-comment
                   h5= c.commentname
                   span= c.date
-                  quote= c.quotetext
-                  p= c.commenttext
+                  blockquote!= c.quotetext
+                  p!= c.commenttext
                   span(onClick=`replyToComment(\"${c.commenttext}\")`)
                     i.fas.fa-reply
   include staticfooter.pug

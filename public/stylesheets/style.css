@@ -91,6 +91,7 @@ p,
 li,
 input,
 textarea,
+blockquote,
 .moodboard > span {
   font-size: 20px;
   text-rendering: optimizeLegibility;
@@ -179,18 +180,12 @@ header {
   margin: 0px auto;
 }
 
-.toggle-nav a:hover {
-  border-radius: 20px;
-}
-
 #entry-header .expanda-nav .toggle-nav a:hover {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 #static-header .expanda-nav .toggle-nav a:hover {
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .logo-container {
@@ -642,7 +637,12 @@ header {
 .moodboard-comment-form textarea {
   border: 2px solid #000;
   font-family: 'lowerFont', sans-serif;
-  width: 300px;
+  width: 600px;
+}
+
+.moodboard-comment-form #quote-reply {
+  height: auto;
+  width: 50%;
 }
 
 .moodboard-comment-form .comment-text {
@@ -684,6 +684,13 @@ header {
 
 .moodboard-comment > span[data-quote] {
   cursor: pointer;
+}
+
+.moodboard-comment blockquote {
+  border-left: 2px solid #ccc;
+  margin-top: 10px;
+  padding-left: 5px;
+  font-style: italic;
 }
 
 footer {

@@ -6,7 +6,16 @@ function scrollToComments() {
 
 function resetCommentForm() {
   $('.comment-name, .comment-text').val('');
+  $('#quote-reply').html('');
   $('.moodboard-comment-form').fadeOut(400,"swing");
+}
+
+function prepNewComment(quote) {
+  $('.moodboard-comment-form').fadeIn(400,"swing");
+  scrollToComments();
+  if(quote) {
+    $('#quote-reply').html(quote);
+  }
 }
 
 function addNewComment(comment) {
@@ -19,9 +28,9 @@ function addNewComment(comment) {
 }
 
 function setCommentHandlers() {
+
   $('.fa-comment-dots').click(function() {
-    $('.moodboard-comment-form').fadeIn(400,"swing");
-    scrollToComments();
+    prepNewComment();
   });
 
   $('.comment-submit').click(function() {
@@ -29,6 +38,7 @@ function setCommentHandlers() {
       return
     } else {
       var comment = {};
+      comment.quote = $('#quote-reply').html();
       comment.name = $('.comment-name').val();
       comment.commenttext = $('.comment-text').val();
       addNewComment(comment);
@@ -51,6 +61,7 @@ function flashNewComment() {
 
 function replyToComment(quote) {
   console.log('trying to reply' + quote);
+  prepNewComment(quote);
 }
 
 $(document).ready(function(){
