@@ -79,12 +79,12 @@ block content
           #moodboard-comments-listing
             if project.comments.length > 0
               each c in project.comments
-                .moodboard-comment
+                .moodboard-comment(data-key=`${c._id}`)
                   h5= c.commentname
                   span= c.date
                   blockquote!= c.quotetext
                   p!= c.commenttext
-                  span(onClick=`replyToComment(\"${c.commenttext}\")`)
+                  span(onClick=`replyToComment(\"${c._id}\")`)
                     i.fas.fa-reply
   include staticfooter.pug
 block scripts
