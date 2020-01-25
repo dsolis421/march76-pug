@@ -54,7 +54,7 @@ exports.getCollectionImages = (req, res, next) => {
 
 //gets a listing of mood boards for display
 exports.getBoardsList = (req, res, next) => {
-  moodboard.find().sort({status: -1}).exec()
+  moodboard.find().sort({status: 1}).exec()
   .then(list => {
     /*console.log(list);*/
     res.render('boardlist', {title: 'march78 - Mood Board List', list});
