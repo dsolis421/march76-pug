@@ -10,19 +10,19 @@ function resetCommentForm() {
   $('.moodboard-comment-form').fadeOut(400,"swing");
 }
 
-function prepNewComment(quote) {
+function prepNewComment(replyto) {
   $('.moodboard-comment-form').fadeIn(400,"swing");
   scrollToComments();
-  if(quote) {
-    $('#quote-reply').html(quote);
+  if(replyto) {
+    $('#quote-reply').html(replyto);
   }
 }
 
 function addNewComment(comment) {
   var quick = $('.moodboard-comment-form').attr('data-board');
-  $.post('/boards/'+quick, comment, function() {
+  $.post('/boards/' + quick, comment, function() {
     resetCommentForm();
-    $('#moodboard-comments-container').load('/boards/alex #moodboard-comments-listing',flashNewComment());
+    $('#moodboard-comments-container').load('/boards/' + quick + ' #moodboard-comments-listing',flashNewComment());
     scrollToComments();
   });
 }
@@ -60,8 +60,10 @@ function flashNewComment() {
 }
 
 function replyToComment(quote) {
-  console.log('trying to reply' + quote);
-  prepNewComment(quote);
+  //console.log('trying to reply => ' + quote);
+  var replyto = $('.moodboard-comment[data-key="' + quote + '"] p').html();
+  //console.log('replyto = ' + replyto);
+  prepNewComment(replyto);
 }
 
 $(document).ready(function(){
