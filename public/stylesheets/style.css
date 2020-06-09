@@ -203,14 +203,6 @@ header {
   text-decoration: none;
 }
 
-.entry-section {
-  background-position: center;
-  background-size: cover;
-  color: #fff;
-  height: 100vh;
-  position: relative;
-}
-
 .entry-section-success {
   background: url("/images/m76-MFS-2-wallpaper.jpg");
 }
@@ -219,8 +211,16 @@ header {
   background: url("/images/m76-MFS-2-wallpaper-unfocused.jpg");
 }
 
+.entry-section {
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
 .entry-blend {
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,0,.4);
   height: 100%;
   opacity: 0;
   width: 100%;
