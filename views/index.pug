@@ -11,11 +11,27 @@ block metas
   meta(name="keywords", content="danny solis, austin texas photographer, danny solis photographer")
 
 block content
-  include movingheader.pug
   main
-    section.entry-section.entry-section-success
-      .entry-blend
-        .entry-logo
-          h1 march76
-          h4 Creative Photography by Danny Solis
-  include entryfooter.pug
+    include sidenav.pug
+    section.main-content
+      section.entry-section.entry-section-success
+        .entry-blend
+          .entry-logo
+            h1 march76
+            h4 Creative Photography by Danny Solis
+      section.entry-section.entry-about
+        article
+          h2 About
+          p My name is Danny Solis.  I'm a creative photographer in Austin, TX.  I specialize in fashion, beauty, headshots, and commercial products.
+      section.entry-section.entry-beauty
+        article
+          h2 Beauty
+          p Value Proposition
+      section.entry-section.entry-portrait
+        article
+          h2 Portraits
+          p Value Proposition
+      section.entry-section.entry-product
+        article
+          h2 Product
+          p Value Proposition

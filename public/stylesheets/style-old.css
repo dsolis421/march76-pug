@@ -54,12 +54,6 @@ body {
   z-index: -1000;
 }
 
-main {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
 article {
   height: auto;
   margin: 0 auto;
@@ -149,7 +143,7 @@ header {
   color: #000;
 }
 
-/*.expanda-nav {
+.expanda-nav {
   background: none;
   line-height: 50px;
   height: 70px;
@@ -158,16 +152,15 @@ header {
 }
 
 .icon {
-  background: #000;
   cursor: pointer;
   margin-left: 10px;
 }
 
 .icon.fadein-icon {
   display: none;
-}*/
+}
 
-/*.toggle-nav {
+.toggle-nav {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -186,7 +179,7 @@ header {
   text-decoration: none;
   transition: all .5s;
   margin: 0px auto;
-}*/
+}
 
 #entry-header .expanda-nav .toggle-nav a:hover {
   border-bottom: 1px solid #fff;
@@ -196,36 +189,17 @@ header {
   border-bottom: 1px solid #000;
 }
 
-.side-nav {
-  width: 300px;
-  height: 100%;
-  position: fixed;
-  left: 0;
-}
-
-.side-nav-menu h3 {
-  margin: 20px 0;
-}
-
-.side-nav-menu h3.highlighted {
-  background: #000;
-  color: #fff;
-}
-
-.main-content {
-  width: calc(100vw - 320px);
-  margin-left: 300px;
-}
-
 .logo-container {
-  height: 100px;
-  line-height: 100px;
-  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  margin-left: 20px;
+  width: 10%;
 }
 
 .logo-container a,
 .logo-container span {
-  font-size: 80px;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -235,14 +209,6 @@ header {
 
 .entry-section-error {
   background: url("/images/m76-MFS-2-wallpaper-unfocused.jpg");
-}
-
-.entry-about {
-  background: url("https://photos.smugmug.com/photos/i-z9PVGnM/0/72c1a98a/X3/i-z9PVGnM-X3.jpg");
-}
-
-.entry-beauty {
-  background: url("https://photos.smugmug.com/photos/i-Q4hmjGB/3/f261852c/X3/i-Q4hmjGB-X3.jpg");
 }
 
 .entry-section {
@@ -266,7 +232,7 @@ header {
   position: absolute;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 100%;
+  width: 100vw
 }
 
 .entry-logo h1 {
@@ -284,15 +250,6 @@ header {
   color: #fff;
   line-height: 40px;
   margin-top: 20px;
-}
-
-.entry-section article {
-  background: #fff;
-  color: #000;
-  height: 25%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 
 .subpage-main-section {
