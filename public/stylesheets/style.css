@@ -217,8 +217,8 @@ header {
   margin-left: 300px;
 }
 
-.logo-container {
-  height: 100px;
+.side-nav.logo-container {
+  height: 10%;
   line-height: 100px;
   width: 100%;
 }
@@ -229,6 +229,14 @@ header {
   text-decoration: none;
 }
 
+.side-nav .side-nav-menu {
+  height: 60%;
+}
+
+.side-nav .footer-social-container {
+  height: 30%;
+}
+
 .entry-section-success {
   background: url("/images/m76-MFS-2-wallpaper.jpg");
 }
@@ -237,20 +245,32 @@ header {
   background: url("/images/m76-MFS-2-wallpaper-unfocused.jpg");
 }
 
-.entry-about {
-  background: url("https://photos.smugmug.com/photos/i-z9PVGnM/0/72c1a98a/X3/i-z9PVGnM-X3.jpg");
-}
-
 .entry-beauty {
   background: url("https://photos.smugmug.com/photos/i-Q4hmjGB/3/f261852c/X3/i-Q4hmjGB-X3.jpg");
+}
+
+.entry-product {
+  background: url("https://photos.smugmug.com/photos/i-HNcDCwc/0/d66e8d14/O/i-HNcDCwc.jpg");
 }
 
 .entry-section {
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 100vh;
   position: relative;
+}
+
+.entry-section.entry-section-success,
+.entry-section.entry-section-error,
+.entry-section.entry-beauty,
+.entry-section.entry-portrait,
+.entry-section.entry-product {
+  height: 100vh;
+}
+
+.entry-section.entry-about,
+.entry-section.entry-contact {
+  height: 500px;
 }
 
 .entry-blend {
@@ -287,12 +307,15 @@ header {
 }
 
 .entry-section article {
-  background: #fff;
+  background: linear-gradient(90deg,rgba(255,255,255,.5),rgba(255,255,255,.8),rgba(255,255,255,.5));
   color: #000;
   height: 25%;
-  width: 100%;
+  -ms-transform: translateY(-50%);
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 10%;
+  width: 100%;
 }
 
 .subpage-main-section {
