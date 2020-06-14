@@ -1,0 +1,21 @@
+extends layout
+
+block metas
+  meta(property="og:url", content=`https://march76.com/`)
+  meta(property="og:type", content="website")
+  meta(property="og:site_name", content="March 76")
+  meta(property="og:description", content=`Danny Solis is a creative photographer based in Austin, TX. His website showcases his work and shares stories of his creative endeavers.`)
+  meta(property="og:image", content='https://march76.com/images/m76-pageimage-wht.png')
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
+  meta(name="keywords", content="danny solis, austin texas photographer, danny solis photographer")
+
+block content
+  include movingheader.pug
+  main
+    section.entry-section.entry-section-success
+      .entry-blend
+        .entry-logo
+          h1 march76
+          h4 Creative Photography by Danny Solis
+  include entryfooter.pug
