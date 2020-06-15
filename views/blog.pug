@@ -9,7 +9,6 @@ block metas
   meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
     
 block content
-  include newstaticheader.pug
   section.subpage-main-section
     each h in posts
       .blog-block.group
@@ -18,4 +17,3 @@ block content
             h3= h.headline
           h4= h.desc
           span= h.date
-  include staticfooter.pug

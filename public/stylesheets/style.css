@@ -45,6 +45,8 @@ time, mark, audio, video {
 }
 
 body {
+  display: flex;
+  flex-direction: row;
   color: #000;
   background: #fff;
   font-family: 'lowerFont', sans-serif;
@@ -52,6 +54,11 @@ body {
   text-align: center;
   width: 100%;
   z-index: -1000;
+}
+
+main {
+  width: calc(100vw - 300px);
+  margin-left: 300px;
 }
 
 article {
@@ -117,88 +124,38 @@ br {
 
 header,
 footer {
-  background: rgba(255,255,255,.9);
-  width: 100%;
+  background: #fff;
+  width: 300px;
   z-index: 100;
 }
 
 header {
-  height: auto;
+  height: 100%;
   overflow: hidden;
-  text-align: left;
+  padding: 20px 2%;
   position: fixed;
 }
 
-#static-header .expanda-nav span,
-#static-header .expanda-nav .toggle-nav a h4 {
-  color: #000;
-}
-
-.expanda-nav {
-  display: flex;
-  flex-direction: row;
-  background: none;
-  line-height: 50px;
-  height: 70px;
-  padding: 10px;
+.side-nav-container {
+  height: 100%;
   width: 100%;
 }
 
-.icon {
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.icon.fadein-icon {
-  display: none;
-}
-
-.toggle-nav {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  transition: all .3s;
-  width: 0;
-  overflow: hidden;
+.side-nav-container .logo-container {
+  height: 20%;
+  display: inline-block;
   text-align: center;
+  width: 100%;
 }
 
-.toggle-nav a {
-  border-left: 1px none #000;
-  border-right: 1px none #000;
-  display: none;
-  line-height: 40px;
-  padding: 0px 10px;
+.side-nav-container .logo-container span {
+  font-size: 50px;
   text-decoration: none;
-  transition: all .5s;
-  margin: 0px auto;
 }
 
-#entry-header .expanda-nav a {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-#entry-header .expanda-nav a:hover {
-  border-bottom: 1px solid #fff;
-}
-
-#static-header .expanda-nav a:hover {
-  border-bottom: 1px solid #000;
-}
-
-.logo-container {
-  height: 50px;
-  line-height: 50px;
-  display: inline-block;
-  margin-left: 20px;
-  width: 10%;
-}
-
-.logo-container a,
-.logo-container span {
-  font-size: 30px;
-  text-decoration: none;
+.side-nav-container .side-nav-menu {
+  height: 50%;
+  width: 100%;
 }
 
 .entry-section-success {
@@ -740,32 +697,10 @@ header {
   font-style: italic;
 }
 
-footer {
-  bottom: 0;
-  height: 70px;
-  padding-top: 5px;
-}
-
-footer p {
-  font-size: 15px;
-  margin-top: -10px;
-}
-
 .footer-social-container a {
   line-height: 50px;
   font-size: 30px;
   margin: 0 10%;
-}
-
-#fadein-footer {
-  color: #fff;
-  background: none;
-  display: none;
-}
-
-#fadein-footer p,
-#fadein-footer h3 {
-  color: #fff;
 }
 
 @media screen and (max-width: 1200px) {
@@ -805,14 +740,6 @@ footer p {
   header {
     height: auto;
     overflow: visible;
-  }
-
-  .expanda-nav {
-    width: 90%;
-  }
-
-  .toggle-nav {
-    display: block;
   }
 
   .logo-container {
@@ -866,14 +793,6 @@ footer p {
 
   .listed-board {
     padding: 5px;
-  }
-
-  footer {
-    height: 60px;
-  }
-
-  footer p {
-    margin-top: 0px;
   }
 
   .footer-social-container {

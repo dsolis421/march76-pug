@@ -11,7 +11,6 @@ block metas
   meta(name="twitter:image:src", content=`${project.image}`)
 
 block content
-  include newstaticheader.pug
   section.moodboard
     .moodboard-hero-header(style=`background-image: url(${project.image})`)
       .moodboard-hero-blend
@@ -86,6 +85,5 @@ block content
                   p!= c.commenttext
                   span(onClick=`replyToComment(\"${c._id}\")`)
                     i.fas.fa-reply
-  include staticfooter.pug
 block scripts
   script(src='/javascripts/commentscripts.js')

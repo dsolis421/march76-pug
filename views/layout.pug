@@ -11,8 +11,9 @@ html
     script(src="/javascripts/fontawesome-all.min.js")
     block links  
   body
-    block content
-      
+    include sidenav.pug
+    main
+      block content
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="/javascripts/script.js")
     block scripts

@@ -1,7 +1,6 @@
 extends layout
 
 block content
-  include newstaticheader.pug
   section.moodboard
     .moodboard-hero-header
       h2 Mood Board Listing
@@ -21,4 +20,3 @@ block content
             default
               span.project-status(style="background:#000") Completed
           p!= x.desc
-  include staticfooter.pug

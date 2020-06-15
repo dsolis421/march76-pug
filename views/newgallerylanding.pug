@@ -9,7 +9,6 @@ block metas
   meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
 
 block content
-  include newstaticheader.pug
   section.subpage-main-section
     .subpage-row
       .gallery-column
@@ -24,6 +23,5 @@ block content
             a(href=`/gallery/${b.quick}`)
               .gallery-collection-hover
                 h2= b.name
-  include staticfooter.pug
 block scripts
   script(src='/javascripts/galleryscript.js')
