@@ -118,7 +118,7 @@ br {
 header,
 footer {
   background: rgba(255,255,255,.9);
-  width: 100vw;
+  width: 100%;
   z-index: 100;
 }
 
@@ -129,26 +129,19 @@ header {
   position: fixed;
 }
 
-#entry-header {
-  background: none;
-}
-
-#entry-header,
-#entry-header .expanda-nav .toggle-nav a h4 {
-  color: #fff;
-}
-
 #static-header .expanda-nav span,
 #static-header .expanda-nav .toggle-nav a h4 {
   color: #000;
 }
 
 .expanda-nav {
+  display: flex;
+  flex-direction: row;
   background: none;
   line-height: 50px;
   height: 70px;
   padding: 10px;
-  width: 10%;
+  width: 100%;
 }
 
 .icon {
@@ -181,11 +174,16 @@ header {
   margin: 0px auto;
 }
 
-#entry-header .expanda-nav .toggle-nav a:hover {
+#entry-header .expanda-nav a {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#entry-header .expanda-nav a:hover {
   border-bottom: 1px solid #fff;
 }
 
-#static-header .expanda-nav .toggle-nav a:hover {
+#static-header .expanda-nav a:hover {
   border-bottom: 1px solid #000;
 }
 
@@ -205,7 +203,7 @@ header {
 
 .entry-section-success {
   background: url("/images/m76-MFS-2-wallpaper.jpg");
-  height: 70vh;
+  height: 400px;
 }
 
 .entry-section-error {
@@ -279,16 +277,6 @@ header {
   font-size: 250px;
   font-weight: lighter;
   margin-bottom: -105px;
-}
-
-.entry-logo h2 {
-  color: #fff;
-}
-
-.entry-logo h4 {
-  color: #fff;
-  line-height: 40px;
-  margin-top: 20px;
 }
 
 .entry-section article {
