@@ -143,19 +143,24 @@ header {
 
 .side-nav-container .logo-container {
   height: 20%;
-  display: inline-block;
   text-align: center;
   width: 100%;
 }
 
+.side-nav-container .side-nav-menu a,
 .side-nav-container .logo-container span {
   font-size: 50px;
   text-decoration: none;
 }
 
 .side-nav-container .side-nav-menu {
-  height: 50%;
+  height: 60%;
   width: 100%;
+}
+
+.side-nav-container .side-nav-menu a {
+  display: block;
+  margin: 10% auto;
 }
 
 .entry-section-success {
@@ -249,12 +254,17 @@ header {
 }
 
 .subpage-main-section {
-  padding: 100px 2% 90px 2%;
+  padding: 10px 2%;
   text-align: left;
 }
 
 .subpage-main-section > h3 {
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.subpage-main-intro {
+  padding: 1% 5%;
   text-align: center;
 }
 
