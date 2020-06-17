@@ -15,6 +15,8 @@ router.get('/about', marController.getAbout);
 
 router.get('/contact', marController.getContact);
 
+router.get('/get-started', marController.getStarted);
+
 router.get('/blog', marController.getBlog);
 
 router.get('/blog/:quick', marController.getBlogPost);

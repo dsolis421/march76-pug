@@ -148,7 +148,8 @@ header {
 }
 
 .side-nav-container .side-nav-menu a,
-.side-nav-container .logo-container span {
+.side-nav-container .logo-container a,
+.side-nav-container .logo-container a span {
   font-size: 50px;
   text-decoration: none;
 }
@@ -470,7 +471,8 @@ header {
 }
 
 .blog-section article h4,
-.contact-article h4 {
+.contact-article h4,
+.get-started-article h4 {
   margin-top: 30px;
 }
 
@@ -503,9 +505,22 @@ header {
   height: 150px;
 }
 
-.contact-article ul {
+.contact-article ul,
+.get-started-article ul {
   list-style: none;
   padding-left: 1em;
+}
+
+.product-offer-include {
+  margin: 40px 0;
+}
+
+.product-offer-include span {
+  font-size: 50px;
+}
+
+.product-offer-include span:nth-of-type(2) {
+  margin: 0 5%;
 }
 
 .contact-social {

@@ -125,6 +125,11 @@ exports.getBlog = (req, res) => {
   });
 }
 
+//gets get started page
+exports.getStarted = (req, res) => {
+  res.render('getstarted', { title: 'march76 - Get Started'});
+}
+
 //gets individual blog post
 exports.getBlogPost = (req, res) => {
   blogs.find({quick: req.params.quick}).exec()
