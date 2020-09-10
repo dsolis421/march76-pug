@@ -11,11 +11,11 @@
 
 @font-face {
     font-family: headerFont;
-    src: url('/fonts/WildSpiritAlt.eot');
-    src: url('/fonts/WildSpiritAlt.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/WildSpiritAlt.woff') format('woff'),
-      url('/fonts/WildSpiritAlt.otf') format('opentype'),
-      url('/fonts/WildSpiritAlt.svg') format('svg');
+    src: url('/fonts/Berringer-Aged.eot');
+    src: url('/fonts/Berringer-Aged.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Berringer-Aged.woff') format('woff'),
+      url('/fonts/Berringer-Aged.otf') format('opentype'),
+      url('/fonts/Berringer-Aged.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
