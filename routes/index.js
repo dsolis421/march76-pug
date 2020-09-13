@@ -7,9 +7,13 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'march76 - Creative Photography by Danny Solis' });
 });
 
-router.get('/gallery/:collection', marController.getCollectionImages);
+/*router.get('/gallery/:collection', marController.getCollectionImages);*/
 
-router.get('/portfolio', marController.getGalleries);
+/*router.get('/portfolio', marController.getGalleries);*/
+
+router.get('/portfolio', marController.getPortfolio);
+
+router.get('/portfolio/:category', marController.getCategoryImages);
 
 router.get('/about', marController.getAbout);
 
