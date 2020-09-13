@@ -5,8 +5,7 @@ const gallerypics = mongoose.model('gallerypics');
 const moodboard = mongoose.model('boards');
 const gallerycollection = mongoose.model('m76galleries');
 
-
-exports.getGalleries = (req, res) => {
+/*exports.getGalleries = (req, res) => {
   gallerycollection.find({show: "y"}, { name: 1, frontpageimage: 1, quick: 1}).sort({order: 1}).exec()
   .then(galleries => {
     var pics = galleries.length - 1;
@@ -25,27 +24,19 @@ exports.getGalleries = (req, res) => {
   .catch(err => {
     next(err);
   });
+}*/
+
+//gets bio page
+exports.getPortfolio = (req, res) => {
+  res.render('portfoliolanding', {title: 'march76 - Portfolio'});
 }
 
-exports.getCollectionImages = (req, res, next) => {
-  gallerycollection.find({quick: req.params.collection}).exec()
-  .then(collectionimages => {
-    var pics = collectionimages[0].images.length - 1;
-    var images1 = [];
-    var images2 = [];
-    var collectionheader = {};
-    for (var x = 0; x <= pics; x++) {
-      if (x <= (pics/2)) {
-        images1.push(collectionimages[0].images[x]);
-      }
-      else {
-        images2.push(collectionimages[0].images[x]);
-      }
-    };
-    collectionheader.name = collectionimages[0].name;
-    collectionheader.desc = collectionimages[0].description;
-    collectionheader.team = collectionimages[0].creativeteam;
-    res.render('gallerycollection', { title: 'march76 - ' + collectionimages[0].name, collectionheader, images1, images2 });
+exports.getCategoryImages = (req, res, next) => {
+  gallerycollection.find({category: req.params.category}).exec()
+  .then(images => {
+    var categoryimages = images[0];
+    console.log(categoryimages);
+    res.render('portfoliocategory', { title: 'march76 - Category', categoryimages });
   })
   .catch(err => {
     next(err);
