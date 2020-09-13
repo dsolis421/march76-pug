@@ -9,14 +9,18 @@ block metas
   meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
 
 block content
-  section.subpage-main-section
+  section
     h1 Portfolio
     h3 Select a category to filter image samples
     .portfolio-filter-menu
-      span.portfolio-filter-menu-option Beauty
-      span.portfolio-filter-menu-option Portrait
-      span.portfolio-filter-menu-option Headshot
-      span.portfolio-filter-menu-option Product
+      span.portfolio-filter-menu-option 
+        a(href="/portfolio/beauty") Beauty
+      span.portfolio-filter-menu-option
+        a(href="/portfolio/portrait") Portrait
+      span.portfolio-filter-menu-option 
+        a(href="/portfolio/headshot") Headshot
+      span.portfolio-filter-menu-option
+        a(href="/portofolio/product") Product
   section.subpage-main-section.portfolio-overview-grid
     .tall-frame-one
       img(src="https://photos.smugmug.com/photos/i-pPvjrkW/0/93840391/XL/i-pPvjrkW-XL.jpg")
