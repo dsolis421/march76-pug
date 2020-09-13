@@ -35,7 +35,7 @@ exports.getCategoryImages = (req, res, next) => {
   gallerycollection.find({category: req.params.category}).exec()
   .then(images => {
     var categoryimages = images[0];
-    console.log(categoryimages);
+    /*console.log(categoryimages);*/
     res.render('portfoliocategory', { title: 'march76 - Category', categoryimages });
   })
   .catch(err => {
