@@ -141,10 +141,6 @@ header {
   float: left;
 }
 
-.logo-container > span {
-  margin-right: 20px;
-}
-
 .logo-container > a > span {
   font-size: 30px;
   line-height: 80px;
@@ -166,6 +162,13 @@ header {
 .toggle-nav a:hover {
   background-color: #fff;
   color: #333;
+}
+
+.toggle-nav-down {
+  line-height: 80px;
+  float: right;
+  display: none;
+  padding-top: 4px;
 }
 
 .landing-hero h1 {
@@ -314,12 +317,14 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: repeat(12, 200px);
-  grid-gap: 1rem;
+  grid-gap: 1px;
   grid-auto-flow: dense;
   padding: 2rem;
 }
 
-.portfolio-category-grid > figure:nth-child(3n) {
+.portfolio-category-grid > figure:nth-child(3),
+.portfolio-category-grid > figure:nth-child(6),
+.portfolio-category-grid > figure:nth-child(9) {
   grid-column: span 1; /* Spans two columns */
   grid-row: span 2; /* Spans two rows */
 }
@@ -731,4 +736,76 @@ footer {
     width: 90%;
   }
 
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    padding: 0 3%;
+    width: 100vw;
+  }
+
+  .toggle-nav {
+    float: none;
+    display: none;
+    flex-direction: none;
+    clear: right;
+  }
+
+  .toggle-nav a {
+    display: block;
+    margin: 0 auto;
+    padding: .5rem;
+  }
+
+  .toggle-nav-down {
+    display: inline-block;
+  }
+
+  .landing-hero h1 {
+    font-size: 70px;
+    margin-bottom: -20px;
+  }
+
+  .landing-section-grid,
+  .about-article-grid,
+  .portfolio-overview-grid {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .grid-skew-right {
+    grid-template-areas:
+      'singleframethree singleframefour'
+      'wideframetwo wideframetwo'
+      'wideframeone wideframeone'
+      'singleframeone singleframetwo';
+  }
+
+  .grid-skew-left {
+    grid-template-areas:
+      'singleframethree singleframefour'
+      'wideframetwo wideframetwo'
+      'wideframeone wideframeone'
+      'singleframeone singleframetwo';
+  }
+
+  .portfolio-overview-grid {
+    grid-template-areas:
+      'wideframeone wideframeone'
+      'wideframeone wideframeone'
+      'tallframeone tallframetwo'
+      'tallframeone tallframetwo'
+      'singleframeone singleframetwo'
+      'wideframetwo wideframetwo'
+      'wideframetwo wideframetwo'
+      'singleframethree singleframefour'
+      'tallframethree tallframefour '
+      'tallframethree tallframefour'
+      'wideframethree wideframethree'
+      'wideframethree wideframethree';
+  }
+
+  .portfolio-category-grid {
+    padding: 1%;
+  }
 }
