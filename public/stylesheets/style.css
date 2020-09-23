@@ -718,6 +718,11 @@ footer {
     font-size: 18px;
   }
 
+  .landing-hero h1 {
+    font-size: 100px;
+    margin-bottom: -20px;
+  }
+
   .moodboard .moodboard-collage h2 {
     display: box;
     margin: 0 auto;
@@ -738,10 +743,10 @@ footer {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 670px) {
   header {
     padding: 0 3%;
-    width: 100vw;
+    width: 100%;
   }
 
   .toggle-nav {
