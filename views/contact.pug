@@ -11,16 +11,55 @@ block metas
 block content
   section.subpage-main-section
     h1 Contact Me
-    article.contact-article
-      h4 Let's connect
-      p I'm on Instagram and Twitter, posting photos and the occassional funny meme. Give me a follow to get a behind-the-scenes look at my work and shenanigans.
-      .contact-social
-        a(href="https://www.instagram.com/dannysolisatx")
-          i.fab.fa-instagram
-        a(href="https://www.twitter.com/dannysolisatx")
-          i.fab.fa-twitter  
-      h4 Send me an email
-      p The best way to reach me is via email. Send me a message with your photo needs and potential timeframe. 
-        |Be sure to leave your name and best return contact info. I will respond in one business day.
-      .contact-social
-        span danny@march76.com
+    article.contact-article.contact-page-grid
+      .single-frame-one
+        h4 Let's connect
+        p I'm on Instagram and Twitter, posting photos and the occassional funny meme. Give me a follow to get a behind-the-scenes look at my work and shenanigans.
+        .contact-social
+          a(href="https://www.instagram.com/dannysolisatx")
+            i.fab.fa-instagram
+          a(href="https://www.twitter.com/dannysolisatx")
+            i.fab.fa-twitter
+      .single-frame-two  
+        h4 Send me an email
+        p The best way to reach me is via email. Send me a message with your photo needs and potential timeframe. 
+          |Be sure to leave your name and best return contact info. I will respond in one business day.
+        .contact-social
+          span danny@march76.com
+      .contact-form-container.tall-frame-one
+        h4 Let's get this project started
+        form
+          label(for='contactname') My name is Danny, what's yours?
+          br
+          input#contactname(type='text', name='contactname', required)
+          br
+          label(for='contactemail') Where can I email you?
+          br
+          input#contactemail(type='email', name='contactemail', required)
+          br
+          label(for='contactphone') What's the best phone number to reach you? (Optional)
+          br
+          input#contactphone(type='text', name='contactphone')
+          br
+          label(for='contactphotoreq') What type of photos do you need?
+          br
+          select#contactphotoreq(name='contactphotoreq')
+            option(value='none', selected) Select...
+            option(value='Beauty') Beauty
+            option(value='Portrait') Portrait
+            option(value='Headshot') Headshot
+            option(value='Commercial/Product') Commercial/Product
+            option(value='General Question') I just have a question
+          br
+          label.contact-business-field(for='contactbusname') What's the name of your business?
+          br.contact-business-field
+          input#contactbusname.contact-business-field(type='text', name='contactbusname')
+          br.contact-business-field
+          label.contact-business-field(for='contactbussite') Do you have a website or social media page?
+          br.contact-business-field
+          input#contactbussite.contact-business-field(type='text', name='contactbussite')
+          br.contact-business-field
+          label(for='contacttext') Tell me more about your project or feel free to ask any questions...
+          br
+          textarea#contacttext(type='text', name='contacttext')
+          span#contactformsend Send
