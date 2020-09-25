@@ -90,6 +90,10 @@ const collectionSchema = new mongoose.Schema({
   'images': {
     type: [imageSchema],
     required: true
+  },
+  'category': {
+    type: String,
+    required: false
   }
 });
 

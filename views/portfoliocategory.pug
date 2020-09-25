@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  section
+    h1= categoryimages.name
+    p= categoryimages.description
+    .portfolio-filter-menu
+      span.portfolio-filter-menu-option 
+        a(href="/portfolio/beauty") Beauty
+      span.portfolio-filter-menu-option
+        a(href="/portfolio/portrait") Portrait
+      span.portfolio-filter-menu-option 
+        a(href="/portfolio/headshot") Headshot
+      span.portfolio-filter-menu-option
+        a(href="/portofolio/product") Product
+    .portfolio-category-grid
+      each a in categoryimages.images
+        figure
+          img(src=`${a.lowres}`,
+            data-highres=`${a.highres}`,
+            data-name=`${a.imagename}`,
+            data-camera=`${a.camera}`,
+            data-lense=`${a.lens}`,
+            data-focallength=`${a.focallength}`,
+            data-fstop=`${a.fstop}`,
+            data-iso=`${a.iso}`,
+            data-shutterspeed=`${a.shutterspeed}`)
+    #imageModal.gallery-modal
+      img#enlargedImage.modal-content
+      #modalCaption
+        .image-details
+        .image-details
+        .image-details
+
+block scripts
+  script(src='/javascripts/galleryscript.js')

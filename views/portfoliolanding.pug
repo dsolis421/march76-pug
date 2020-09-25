@@ -1,0 +1,48 @@
+extends layout
+
+block metas
+  meta(property="og:url", content=`https://march76.com/gallery`)
+  meta(property="og:site_name", content="March 76")
+  meta(property="og:description", content=`Danny Solis is a creative photographer based in Austin, TX.  His gallery is a cross-section of his best work.`)
+  meta(property="og:image", content='https://march76.com/images/m76-pageimage-wht.png')
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content='https://march76.com/images/m76-pageimage-wht.png')
+
+block content
+  section
+    h1 Portfolio
+    h3 Select a category to filter image samples
+    .portfolio-filter-menu
+      span.portfolio-filter-menu-option 
+        a(href="/portfolio/beauty") Beauty
+      span.portfolio-filter-menu-option
+        a(href="/portfolio/portrait") Portrait
+      span.portfolio-filter-menu-option 
+        a(href="/portfolio/headshot") Headshot
+      span.portfolio-filter-menu-option
+        a(href="/portofolio/product") Product
+  section.portfolio-overview-grid
+    .tall-frame-one
+      img(src="https://photos.smugmug.com/photos/i-pPvjrkW/0/93840391/XL/i-pPvjrkW-XL.jpg")
+    .tall-frame-two
+      img(src="https://photos.smugmug.com/photos/i-SKWGx6K/0/078988d0/XL/i-SKWGx6K-XL.jpg")
+    .tall-frame-three
+      img(src="https://photos.smugmug.com/photos/i-TvxgZ6p/0/06420fbb/XL/i-TvxgZ6p-XL.jpg")
+    .tall-frame-four
+      img(src="https://photos.smugmug.com/photos/i-dFFShQk/0/21b1f88e/XL/i-dFFShQk-XL.jpg")
+    .wide-frame-one
+      img(src="https://photos.smugmug.com/photos/i-nh57nFk/0/30c0352e/XL/i-nh57nFk-XL.jpg")
+    .wide-frame-two
+      img(src="https://photos.smugmug.com/photos/i-X4HGc4d/0/a6772c5e/XL/i-X4HGc4d-XL.jpg")
+    .wide-frame-three
+      img(src="https://photos.smugmug.com/photos/i-JMPzBqN/0/69b4d3fc/XL/i-JMPzBqN-XL.jpg")
+    .single-frame-one
+      img(src="https://photos.smugmug.com/photos/i-cfmMRTC/3/3a066429/M/i-cfmMRTC-M.jpg")
+    .single-frame-two
+      img(src="https://photos.smugmug.com/photos/i-Tqtgb24/0/1791412c/M/i-Tqtgb24-M.jpg")
+    .single-frame-three
+      img(src="https://photos.smugmug.com/photos/i-RW6Frcz/0/fdfede6f/M/i-RW6Frcz-M.jpg")
+    .single-frame-four
+      img(src="https://photos.smugmug.com/photos/i-RbM39J9/0/8f4353bd/M/i-RbM39J9-M.jpg")
+block scripts
+  script(src='/javascripts/galleryscript.js')

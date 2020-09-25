@@ -11,8 +11,10 @@ html
     script(src="/javascripts/fontawesome-all.min.js")
     block links  
   body
-    block content
-      
+    include staticheader.pug
+    main
+      block content
+    include staticfooter.pug  
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="/javascripts/script.js")
     block scripts

@@ -1,4 +1,4 @@
-$('.gallery-column figure img, .gallery-sub-column figure img').click(function(){
+$('.portfolio-category-grid figure img').click(function(){
   var imageSrc = $(this).attr('data-highres');
   var imageName = $(this).attr('data-name');
   var imageCam = $(this).attr('data-camera');
