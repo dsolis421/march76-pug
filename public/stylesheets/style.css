@@ -97,8 +97,10 @@ h4 {
 a,
 p,
 li,
+label,
 input,
 textarea,
+select,
 blockquote,
 .moodboard > span {
   font-size: 20px;
@@ -119,6 +121,7 @@ a:focus {
 
 p,
 li,
+label,
 br {
   margin: 10px 0;
 }
@@ -135,6 +138,12 @@ header {
   padding: 0 1%;
   position: fixed;
   width: 100%;
+}
+
+form input,
+form textarea,
+form select {
+  border: 2px solid #ccc;
 }
 
 .logo-container {
@@ -222,7 +231,8 @@ header {
 
 .landing-section-grid,
 .about-article-grid,
-.portfolio-overview-grid {
+.portfolio-overview-grid,
+.contact-page-grid {
   display: grid;
   grid-gap: 1px;
   grid-auto-flow: dense;
@@ -309,7 +319,7 @@ header {
     'wideframeone wideframeone tallframeone tallframetwo'
     'singleframeone wideframetwo wideframetwo singleframetwo'
     'singleframethree wideframetwo wideframetwo singleframefour'
-    'tallframethree tallframefour wideframethree wideframethree '
+    'tallframethree tallframefour wideframethree wideframethree'
     'tallframethree tallframefour wideframethree wideframethree';
 }
 
@@ -469,6 +479,18 @@ header {
   height: 150px;
 }
 
+.contact-page-grid {
+  justify-items: center;
+  grid-template-areas:
+    'tallframeone singleframeone'
+    'tallframeone singleframetwo';
+}
+
+.contact-page-grid > div:not(.tall-frame-one) {
+  justify-self: end;
+  width: 50%;
+}
+
 .contact-social {
   font-size: 30px;
   text-align: center;
@@ -480,6 +502,29 @@ header {
   color: #ccc;
   font-size: 30px;
   margin: 0 20px;
+}
+
+.contact-form-container form input {
+  width: 400px;
+}
+
+.contact-form-container form textarea {
+  width: 400px;
+  height: 200px;
+}
+
+.contact-business-field {
+  display: none;
+}
+
+#contactformsend {
+  display: block;
+  background: #333;
+  color: white;
+  margin-top: 20px;
+  padding: 5px 15px;
+  text-align: center;
+  width: 200px;
 }
 
 .moodboard {
@@ -710,6 +755,7 @@ footer {
 
   a,
   p,
+  label,
   input,
   blockquote,
   textarea,
@@ -786,6 +832,7 @@ footer {
 
   a,
   p,
+  label,
   input,
   blockquote,
   textarea,
