@@ -23,4 +23,11 @@ $(document).ready(function(){
     respNavToggle();
   });
 
+  $('#contactphotoreq').change(function(){
+    console.log('photo request = ' + $('#contactphotoreq').val());
+    if($('#contactphotoreq').val() == 'Commercial/Product') {
+      $('.contact-business-field').fadeIn();
+    }
+  });
+
 });
