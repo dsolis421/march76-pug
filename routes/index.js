@@ -29,4 +29,6 @@ router.get('/boards/:quick', marController.getMoodboard);
 
 router.post('/boards/:quick', marController.addMoodComment);
 
+router.post('/contact/submit', marController.newContactSubmit);
+
 module.exports = router;
