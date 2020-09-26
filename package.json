@@ -14,13 +14,14 @@
     "http-errors": "^1.6.2",
     "mongoose": "^5.2.12",
     "morgan": "^1.9.1",
+    "nodemailer": "^6.4.11",
     "pug": "^2.0.4",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "nodemon": "^1.19.4"
+    "nodemon": "^2.0.4"
   },
   "proxy": "https://www.march76.com/"
 }
