@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
+const emailer = require('../services/emailer');
 
 const blogs = mongoose.model('blogs');
 const gallerypics = mongoose.model('gallerypics');
 const moodboard = mongoose.model('boards');
 const gallerycollection = mongoose.model('m76galleries');
+
 
 /*exports.getGalleries = (req, res) => {
   gallerycollection.find({show: "y"}, { name: 1, frontpageimage: 1, quick: 1}).sort({order: 1}).exec()
@@ -141,4 +143,11 @@ exports.addMoodComment = (req, res, next) => {
   .catch(err => {
     next(err);
   });
+}
+
+exports.newContactSubmit = async (req, res) => {
+  var emailResponseData = req.body;
+  console.log('email response data received on server, sending to emailer');
+  await emailer.contactResponse(emailResponseData);
+  return res.status(202).send({error: false});
 }
