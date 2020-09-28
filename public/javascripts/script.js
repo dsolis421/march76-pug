@@ -4,6 +4,8 @@ function clearFormValues() {
   $('form > input, form > textarea').val('');
   $('select').val('none');
   $('.contact-business-field').fadeOut();
+  $('form').trigger("reset");
+  $('#contactformsend').empty().text('Send')
 }
 
 function respNavToggle() {
@@ -19,20 +21,16 @@ function respNavToggle() {
 
 function sendContactData(contactData) {
   $.post("/contact/submit", contactData, function(data,status,xhr) {
-    if(status == "success") {
-      clearFormValues();
-      alert("Your message has been sent!");
-    } else if (status == "error") {
-      alert("Oops, something happened try again")
-    } else if (status == "timeout") {
-      alart("Our site appears to be down, try again later")
-    }
+    window.location.href = "/contact/thankyou"
+  })
+  .fail(function(response) {
+    alert('something bad happened');
   });
 }
 
 $(document).ready(function(){
   clearFormValues()
-  
+
   /*setTimeout(function(){
     $('.entry-blend').animate({"opacity": "1"}, 1000);
     $('.entry-logo, #fadein-footer, #entry-header .icon.fadein-icon').fadeIn(1500,"swing");
@@ -44,14 +42,14 @@ $(document).ready(function(){
   });
 
   $('#contactphotoreq').change(function(){
-    console.log('photo request = ' + $('#contactphotoreq').val());
     if($('#contactphotoreq').val() == 'Commercial/Product') {
       $('.contact-business-field').fadeIn();
     }
   });
 
   $('#contactformsend').click(function() {
-    console.log('clicked contact send');
+    const validEmail = contactemail.checkValidity();
+    const validName = contactname.checkValidity();
     var contactSendData = {
       contactname: $('#contactname').val(),
       contactemail: $('#contactemail').val(),
@@ -61,6 +59,12 @@ $(document).ready(function(){
       contactbussite: $('#contactbussite').val(),
       contacttext: $('#contacttext').val()
     }
-    sendContactData(contactSendData);
+    if (validEmail && validName) {
+      console.log('Creating photo request: ' + $('#contactphotoreq').val());
+      sendContactData(contactSendData);
+      $('#contactformsend').empty().html('<i class="fal fa-sync-alt"></i>')
+    } else {
+      console.log('Required information missing or invalid');
+    }
   });
 });
