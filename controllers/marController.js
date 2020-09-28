@@ -33,6 +33,7 @@ exports.getPortfolio = (req, res) => {
   res.render('portfoliolanding', {title: 'march76 - Portfolio'});
 }
 
+//gets series of pics for category basen on selection from portfolio page
 exports.getCategoryImages = (req, res, next) => {
   gallerycollection.find({category: req.params.category}).exec()
   .then(images => {
@@ -145,9 +146,19 @@ exports.addMoodComment = (req, res, next) => {
   });
 }
 
-exports.newContactSubmit = async (req, res) => {
+//reecieves new contact message and sends response email
+exports.newContactSubmit = (req, res) => {
   var emailResponseData = req.body;
-  console.log('email response data received on server, sending to emailer');
-  await emailer.contactResponse(emailResponseData);
-  return res.status(202).send({error: false});
+  //call emailer service
+  emailer.contactResponse(emailResponseData)
+  .then(() => {
+    console.log('successful response');
+    return res.status(201).send({error: false});
+  })
+  .catch(err => {
+    console.log('emailer error: ',err);
+    return res.status(500).send({error: true});
+  });
+  //res.render('contactthankyou',{title: 'march76 - Contact Thank You'})
+  //return res.status(202).send({error: false});
 }
