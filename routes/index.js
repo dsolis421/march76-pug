@@ -27,6 +27,8 @@ router.get('/boards/list', marController.getBoardsList);
 
 router.get('/boards/:quick', marController.getMoodboard);
 
+router.get('/contact/thankyou', (req, res, next) => res.render('contactthankyou', { title: 'march76 - Contact Thank You'}));
+
 router.post('/boards/:quick', marController.addMoodComment);
 
 router.post('/contact/submit', marController.newContactSubmit);
