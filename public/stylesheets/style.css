@@ -236,11 +236,17 @@ form select {
 .portfolio-overview-grid,
 .contact-page-grid {
   display: grid;
+  justify-content: center;
+  justify-items: center;
   grid-gap: 1px;
   grid-auto-flow: dense;
   width: 90%;
   margin: 0px auto;
   padding: 2rem;
+}
+
+.landing-section-grid {
+  grid-template-columns: 19% 19% 19% 19% 19%;
 }
 
 .grid-skew-right {
@@ -405,6 +411,7 @@ form select {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1rem;
+  justify-items: center;
   padding: 2%;
 }
 
@@ -849,6 +856,8 @@ footer {
   p,
   label,
   input,
+  textarea,
+  select,
   blockquote,
   textarea,
   .moodboard > span,
@@ -885,6 +894,10 @@ footer {
     padding: 1%;
   }
 
+  .landing-section-grid {
+    grid-template-columns: 49% 49%;
+  }
+
   .grid-skew-right {
     grid-template-areas:
       'singleframethree singleframefour'
@@ -919,5 +932,22 @@ footer {
 
   .portfolio-category-grid {
     padding: 1%;
+  }
+
+  .contact-page-grid {
+    grid-template-areas:
+      'tallframeone'
+      'singleframeone'
+      'singleframetwo';
+  }
+
+  .contact-page-grid > div:not(.tall-frame-one) {
+    justify-self: center;
+    width: 90%;
+  }
+
+  .contact-form-container form input,
+  .contact-form-container form textarea{
+    width: 100%;
   }
 }
