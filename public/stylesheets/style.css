@@ -182,11 +182,6 @@ form select {
   padding-top: 4px;
 }
 
-.landing-hero h1 {
-  font-size: 200px;
-  margin-bottom: -70px;
-}
-
 .single-frame-one {
   grid-area: singleframeone;
 }
@@ -240,25 +235,26 @@ form select {
   justify-items: center;
   grid-gap: 1px;
   grid-auto-flow: dense;
-  width: 90%;
+  width: 95%;
   margin: 0px auto;
   padding: 2rem;
 }
 
-.landing-section-grid {
-  grid-template-columns: 19% 19% 19% 19% 19%;
+.landing-hero h1 {
+  font-size: 200px;
+  margin-bottom: -60px;
 }
 
 .grid-skew-right {
   grid-template-areas:
-    'singleframethree singleframefour wideframetwo wideframetwo wideframetwo'
-    'singleframeone singleframetwo wideframeone wideframeone wideframeone';
+    'singleframethree singleframefour wideframetwo wideframetwo'
+    'singleframeone singleframetwo wideframeone wideframeone';
 }
 
 .grid-skew-left {
   grid-template-areas:
-    'wideframetwo wideframetwo wideframetwo singleframeone singleframetwo'
-    'wideframeone wideframeone wideframeone singleframethree singleframefour';
+    'wideframetwo wideframetwo singleframeone singleframetwo'
+    'wideframeone wideframeone singleframethree singleframefour';
 }
 
 .landing-section-grid > div:not(.landing-value-offer) {
