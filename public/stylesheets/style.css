@@ -232,7 +232,6 @@ form select {
 .contact-page-grid {
   display: grid;
   justify-content: center;
-  justify-items: center;
   grid-gap: 1px;
   grid-auto-flow: dense;
   width: 95%;
@@ -302,6 +301,10 @@ form select {
   background-repeat: no-repeat;
   width: 100%;
   height: 400px;
+}
+
+.faq-span-question {
+  margin-top: 40px;
 }
 
 .portfolio-filter-menu {
