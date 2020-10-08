@@ -1,32 +1,11 @@
 var mongoose = require('mongoose');
 const emailer = require('../services/emailer');
+const jetemailer = require('../services/jetemailer');
 
 const blogs = mongoose.model('blogs');
 const gallerypics = mongoose.model('gallerypics');
 const moodboard = mongoose.model('boards');
 const gallerycollection = mongoose.model('m76galleries');
-
-
-/*exports.getGalleries = (req, res) => {
-  gallerycollection.find({show: "y"}, { name: 1, frontpageimage: 1, quick: 1}).sort({order: 1}).exec()
-  .then(galleries => {
-    var pics = galleries.length - 1;
-    var collections1 = [];
-    var collections2 = [];
-    for (var x = 0; x <= pics; x++) {
-      if (x <= (pics/2)) {
-        collections1.push(galleries[x]);
-      }
-      else {
-        collections2.push(galleries[x]);
-      }
-    }
-    res.render('newgallerylanding', { title: 'march76 - Gallery', collections1, collections2 });
-  })
-  .catch(err => {
-    next(err);
-  });
-}*/
 
 //gets bio page
 exports.getPortfolio = (req, res) => {
@@ -146,19 +125,17 @@ exports.addMoodComment = (req, res, next) => {
   });
 }
 
-//reecieves new contact message and sends response email
+//recieves new contact message and sends response email
 exports.newContactSubmit = (req, res) => {
   var emailResponseData = req.body;
-  //call emailer service
-  emailer.contactResponse(emailResponseData)
+  console.log('calling jetemailer from controller');
+  jetemailer.jetEmailResponse(emailResponseData)
   .then(() => {
-    console.log('successful response');
+    console.log('successful response from jetmailer');
     return res.status(201).send({error: false});
   })
   .catch(err => {
-    console.log('emailer error: ',err);
+    console.log('emailer error from jetmailer: ',err);
     return res.status(500).send({error: true});
   });
-  //res.render('contactthankyou',{title: 'march76 - Contact Thank You'})
-  //return res.status(202).send({error: false});
 }
