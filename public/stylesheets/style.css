@@ -45,7 +45,7 @@ time, mark, audio, video {
 }
 
 body {
-  color: #000;
+  color: #333;
   background: #fff;
   font-family: 'lowerFont', sans-serif;
   height: auto;
@@ -155,6 +155,18 @@ form select {
 .logo-container > a > span {
   font-size: 30px;
   line-height: 80px;
+}
+
+.get-started-button {
+  display: block;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+  height: auto;
+  text-align: center;
+  padding: 5px 15px;
+  margin: 30px auto;
+  width: 200px;
 }
 
 .toggle-nav {
@@ -291,6 +303,7 @@ form select {
 }
 
 .landing-value-offer a,
+.subpage-main-section p a,
 .subpage-main-text p a {
   text-decoration: underline;
 }
@@ -314,7 +327,7 @@ form select {
 .portfolio-filter-menu-option {
   display: inline-block;
   margin: 0 1%;
-  background: #000;
+  background: #333;
   color: #fff;
   padding: 1%;
   text-align: center;
@@ -362,7 +375,7 @@ form select {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background-color: #000;
+  background-color: #333;
   background-color: rgba(0, 0, 0, .9);
 }
 
@@ -472,11 +485,11 @@ form select {
 }
 
 .blog-section .bio-block {
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
   color: #737373;
   font-style: italic;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .blog-section .bio-block img {
@@ -485,6 +498,15 @@ form select {
   margin: 5px auto;
   width: 150px;
   height: 150px;
+}
+
+.back-to-blog-anchor {
+  display: block;
+  margin-top: 30px;
+}
+
+.fa-long-arrow-left {
+  margin-right: 10px;
 }
 
 .contact-page-grid {
@@ -645,7 +667,7 @@ form select {
 }
 
 .moodboard-palette > div {
-  border: 1px solid #000;
+  border: 1px solid #333;
 }
 
 .palette-color {
@@ -676,7 +698,7 @@ form select {
 
 .moodboard-comment-form input,
 .moodboard-comment-form textarea {
-  border: 2px solid #000;
+  border: 2px solid #333;
   font-family: 'lowerFont', sans-serif;
   width: 600px;
 }
@@ -692,14 +714,14 @@ form select {
 }
 
 .comment-submit {
-  background: #000;
+  background: #333;
   color: #fff;
   margin-right: 20px;
 }
 
 .comment-submit ,
 .comment-cancel {
-  border: 2px solid #000;
+  border: 2px solid #333;
   cursor: pointer;
   padding: 5px 10px;
 }
