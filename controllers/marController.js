@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
-const emailer = require('../services/emailer');
-const jetemailer = require('../services/jetemailer');
 
+const jetemailer = require('../services/jetemailer');
 const blogs = mongoose.model('blogs');
 const gallerypics = mongoose.model('gallerypics');
 const moodboard = mongoose.model('boards');
@@ -18,7 +17,7 @@ exports.getCategoryImages = (req, res, next) => {
   .then(images => {
     var categoryimages = images[0];
     /*console.log(categoryimages);*/
-    res.render('portfoliocategory', { title: 'march76 - Category', categoryimages });
+    res.render('portfoliocategory', { title: 'march76 - ' + categoryimages.name, categoryimages });
   })
   .catch(err => {
     next(err);
