@@ -22,7 +22,7 @@ var jetemailersend = (reqEmailData) => {
         ],
         "Cc" : [
           {
-            "Email": "danny@march76.com",
+            "Email": process.env.EMAIL_ACCT,
             "Name": "Danny Solis"
           }
         ],
