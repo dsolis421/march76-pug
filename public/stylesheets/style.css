@@ -157,18 +157,6 @@ form select {
   line-height: 80px;
 }
 
-.get-started-button {
-  display: block;
-  background: #333;
-  color: #fff;
-  font-weight: bold;
-  height: auto;
-  text-align: center;
-  padding: 5px 15px;
-  margin: 30px auto;
-  width: 200px;
-}
-
 .toggle-nav {
   float: right;
   display: flex;
@@ -510,15 +498,12 @@ form select {
 }
 
 .contact-page-grid {
-  justify-items: center;
+  justify-content: space-around;
+  grid-template-columns: 40% 40%;
   grid-template-areas:
-    'tallframeone singleframeone'
-    'tallframeone singleframetwo';
-}
-
-.contact-page-grid > div:not(.tall-frame-one) {
-  justify-self: end;
-  width: 50%;
+    'singleframeone tallframeone'
+    'singleframetwo tallframeone'
+    'singleframethree tallframeone';
 }
 
 .contact-social {
@@ -831,6 +816,16 @@ footer {
       'singleframetwo';
   }
 
+  .contact-page-grid {
+    grid-template-areas:
+      'singleframeone'
+      'tallframeone'
+      'singleframetwo'
+      'singleframethree';
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+
   .moodboard .moodboard-collage h2 {
     display: box;
     margin: 0 auto;
@@ -953,13 +948,6 @@ footer {
 
   .portfolio-category-grid {
     padding: 1%;
-  }
-
-  .contact-page-grid {
-    grid-template-areas:
-      'tallframeone'
-      'singleframeone'
-      'singleframetwo';
   }
 
   .contact-page-grid > div:not(.tall-frame-one) {
