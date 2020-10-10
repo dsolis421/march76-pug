@@ -17,6 +17,7 @@ block content
       each a in categoryimages.images
         figure
           img(src=`${a.lowres}`,
+            alt=`${a.alttext}`,
             data-highres=`${a.highres}`,
             data-name=`${a.imagename}`,
             data-camera=`${a.camera}`,
