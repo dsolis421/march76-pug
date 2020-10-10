@@ -40,6 +40,10 @@ const imageSchema = new mongoose.Schema({
   'highres': {
     type: String,
     required: true
+  },
+  'alttext': {
+    type: String,
+    required: false
   }
 });
 
