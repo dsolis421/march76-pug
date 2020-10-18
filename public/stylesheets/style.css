@@ -214,6 +214,14 @@ form select {
   grid-area: tallframefour;
 }
 
+.tall-frame-five {
+  grid-area: tallframefive;
+}
+
+.tall-frame-six {
+  grid-area: tallframesix;
+}
+
 .wide-frame-one {
   grid-area: wideframeone;
 }
@@ -224,6 +232,14 @@ form select {
 
 .wide-frame-three {
   grid-area: wideframethree;
+}
+
+.wide-frame-four {
+  grid-area: wideframefour;
+}
+
+.wide-frame-five {
+  grid-area: wideframefive;
 }
 
 .landing-section-grid,
@@ -322,13 +338,18 @@ form select {
 }
 
 .portfolio-overview-grid {
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
     'wideframeone wideframeone tallframeone tallframetwo'
     'wideframeone wideframeone tallframeone tallframetwo'
-    'singleframeone wideframetwo wideframetwo singleframetwo'
-    'singleframethree wideframetwo wideframetwo singleframefour'
+    'wideframetwo wideframetwo singleframefour singleframefour'
+    /*'singleframeone wideframetwo wideframetwo singleframetwo'
+    'singleframethree wideframetwo wideframetwo singleframefour'*/
     'tallframethree tallframefour wideframethree wideframethree'
-    'tallframethree tallframefour wideframethree wideframethree';
+    'tallframethree tallframefour wideframethree wideframethree'
+    'singleframeone singleframeone singleframethree singleframethree'
+    'tallframefive tallframesix wideframefour wideframefour'
+    'tallframefive tallframesix wideframefour wideframefour';
 }
 
 .portfolio-category-grid {
@@ -931,6 +952,7 @@ footer {
   }
 
   .portfolio-overview-grid {
+    grid-template-columns: 50% 50%;
     grid-template-areas:
       'wideframeone wideframeone'
       'wideframeone wideframeone'
@@ -939,8 +961,12 @@ footer {
       'singleframeone singleframetwo'
       'wideframetwo wideframetwo'
       'wideframetwo wideframetwo'
+      'tallframefive tallframesix'
+      'tallframefive tallframesix'
+      'wideframefour wideframefour'
+      'wideframefour wideframefour'
       'singleframethree singleframefour'
-      'tallframethree tallframefour '
+      'tallframethree tallframefour'
       'tallframethree tallframefour'
       'wideframethree wideframethree'
       'wideframethree wideframethree';
