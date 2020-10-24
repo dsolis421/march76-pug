@@ -1,4 +1,4 @@
-extends layout
+extends internallayout
 
 block metas
   meta(property="og:url", content=`https://march76.com/gallery`)
@@ -9,46 +9,45 @@ block metas
   meta(name="twitter:image:src", content='https://photos.smugmug.com/photos/i-nRmF6sV/0/e9575663/XL/i-nRmF6sV-XL.png')
 
 block content
-  section
-    h1 Portfolio
-    //h3 Select a category to filter image samples
-    //.portfolio-filter-menu
-      span.portfolio-filter-menu-option 
-        a(href="/portfolio/beauty") Beauty
-      span.portfolio-filter-menu-option
-        a(href="/portfolio/portrait") Portrait
-      span.portfolio-filter-menu-option 
-        a(href="/portfolio/headshot") Headshot
-      span.portfolio-filter-menu-option
-        a(href="/portfolio/product") Product
-  section.portfolio-overview-grid
-    .tall-frame-one
-      img(src="https://photos.smugmug.com/photos/i-pPvjrkW/0/93840391/XL/i-pPvjrkW-XL.jpg")
-    .tall-frame-two
-      img(src="https://photos.smugmug.com/photos/i-SKWGx6K/0/078988d0/XL/i-SKWGx6K-XL.jpg")
-    .tall-frame-three
-      img(src="https://photos.smugmug.com/photos/i-TvxgZ6p/0/06420fbb/XL/i-TvxgZ6p-XL.jpg")
-    .tall-frame-four
-      img(src="https://photos.smugmug.com/photos/i-dFFShQk/0/21b1f88e/XL/i-dFFShQk-XL.jpg")
-    .tall-frame-five
-      img(src="https://photos.smugmug.com/photos/i-ztfdDTs/0/841d8d05/X2/i-ztfdDTs-X2.jpg")
-    .tall-frame-six
-      img(src="https://photos.smugmug.com/photos/i-PJcVWbv/0/1287ad8b/X2/i-PJcVWbv-X2.jpg")
-    .wide-frame-one
-      img(src="https://photos.smugmug.com/photos/i-nh57nFk/0/30c0352e/XL/i-nh57nFk-XL.jpg")
-    .wide-frame-two
-      img(src="https://photos.smugmug.com/photos/i-X4HGc4d/0/a6772c5e/XL/i-X4HGc4d-XL.jpg")
-    .wide-frame-three
-      img(src="https://photos.smugmug.com/photos/i-JMPzBqN/0/69b4d3fc/XL/i-JMPzBqN-XL.jpg")
-    .wide-frame-four
-      img(src="https://photos.smugmug.com/photos/i-nh57nFk/0/30c0352e/XL/i-nh57nFk-XL.jpg")
-    .single-frame-one
-      img(src="https://photos.smugmug.com/photos/i-cfmMRTC/3/3a066429/M/i-cfmMRTC-M.jpg")
-    .single-frame-two
-      img(src="https://photos.smugmug.com/photos/i-Tqtgb24/0/1791412c/M/i-Tqtgb24-M.jpg")
-    .single-frame-three
-      img(src="https://photos.smugmug.com/photos/i-RW6Frcz/0/fdfede6f/M/i-RW6Frcz-M.jpg")
-    .single-frame-four
-      img(src="https://photos.smugmug.com/photos/i-RbM39J9/0/8f4353bd/M/i-RbM39J9-M.jpg")
+  h1 Portfolio
+  .portfolio-image-grid
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-JMPzBqN/0/69b4d3fc/XL/i-JMPzBqN-XL.jpg" alttext="haley nicole modeling isolde concept, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-TvxgZ6p/0/06420fbb/XL/i-TvxgZ6p-XL.jpg" alttext="alex jensen modeling timeless concept, taken by Danny Solis")    
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-nh57nFk/0/30c0352e/XL/i-nh57nFk-XL.jpg" alttext="alex jensen modeling wrapped in blue concept, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-SVh8DhN/0/9dbc955f/X2/i-SVh8DhN-X2.jpg" alttext="alex jensen modeling black swan concept, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-dFFShQk/0/21b1f88e/XL/i-dFFShQk-XL.jpg" alttext="woman posing in swimsuit, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-pPvjrkW/0/93840391/XL/i-pPvjrkW-XL.jpg" alttext="portrait of danielle poe modeling, taken by Danny Solis")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-btrz63F/0/7208e571/M/i-btrz63F-M.jpg" alttext="man playing bass guitar at concert, taken by Danny Solis") 
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-PJcVWbv/0/1287ad8b/X2/i-PJcVWbv-X2.jpg" alttext="man playing electic guitar in concert, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-4z6gz7p/0/c125bfc0/X2/i-4z6gz7p-X2.jpg" alttext="electric guitar product photo, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-ztfdDTs/0/841d8d05/X2/i-ztfdDTs-X2.jpg" alttext="portrait of ballet dancer posing on point, taken by Danny Solis")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-cfmMRTC/3/3a066429/M/i-cfmMRTC-M.jpg" alttext="alex jensen modeling lotus concept, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-njpSXcf/0/04fd63c3/XL/i-njpSXcf-XL.jpg" alttext="young lady portrait, taken by Danny Solis")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-Tqtgb24/0/1791412c/M/i-Tqtgb24-M.jpg" alttext="danny solis, professional photographer")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-RbM39J9/0/8f4353bd/M/i-RbM39J9-M.jpg" alttext="professional camera gear photo, taken by Danny Solis")
+    figure.tall
+      img(src="https://photos.smugmug.com/photos/i-h4pH9j6/0/f1c0aadb/X2/i-h4pH9j6-X2.jpg" alttext="professional camera product photo, taken by Danny Solis")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-7Z4XXmF/0/cbca9df7/M/i-7Z4XXmF-M.jpg" alttext="professional camera product photo, taken by Danny Solis")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-RW6Frcz/0/fdfede6f/M/i-RW6Frcz-M.jpg" alttext="portrait of yellow dog, taken by Danny Solis")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-6SGD6ZF/0/3eae1c07/L/i-6SGD6ZF-L.jpg" alttext="portrait of basset hound walking towards you, taken by Danny Solis")
+    figure.wide
+      img(src="https://photos.smugmug.com/photos/i-JQWWqNz/0/d1677ccb/M/i-JQWWqNz-M.jpg" alttext="portrait of rescue dog, taken by Danny Solis")
 block scripts
   script(src='/javascripts/galleryscript.js')

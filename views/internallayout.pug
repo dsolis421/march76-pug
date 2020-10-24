@@ -12,8 +12,19 @@ html
     script(src="/javascripts/march76icons.min.js")
     block links  
   body
-    main
-      block content 
+    main.march76-basic-grid
+      .grid-frame-one
+        a(href='/')
+          h1 march{76}
+        h4 Creative Photography for Personal and Commercial
+        .site-nav-container
+          a.nav-site-link(href='/portfolio') Portfolio
+          a.nav-site-link(href='/about') About Me
+          a.nav-site-link(href='/blog') Blog
+          a.nav-site-link(href='/contact') Contact
+      .grid-frame-two
+        block content
+    include staticfooter.pug
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="/javascripts/script.js")
     block scripts

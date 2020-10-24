@@ -1,4 +1,4 @@
-extends layout
+extends internallayout
 
 block metas
   meta(property="og:title", content=`march76 - Mood Board - ${project.name}`)
@@ -11,6 +11,7 @@ block metas
   meta(name="twitter:image:src", content=`${project.image}`)
 
 block content
+  h1 MOOOOD BOOARD
   section.moodboard
     .moodboard-hero-header(style=`background-image: url(${project.image})`)
       .moodboard-hero-blend

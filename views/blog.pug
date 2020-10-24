@@ -1,4 +1,4 @@
-extends layout
+extends internallayout
 
 block metas
   meta(property="og:url", content=`https://march76.com/blog`)
@@ -9,14 +9,13 @@ block metas
   meta(name="twitter:image:src", content='https://photos.smugmug.com/photos/i-nRmF6sV/0/e9575663/XL/i-nRmF6sV-XL.png')
     
 block content
-  section
-    h1 Blog
-    .blog-section-grid
-      each h in posts
-        .blog-block
-          img(src=`${h.image}`)
-          .headline-block
-            a(href=`/blog/${h.quick}`)
-              h3= h.headline
-            h4= h.desc
-            span= h.date
+  h1 Blog
+  .blog-section-grid
+    each h in posts
+      .blog-block
+        img(src=`${h.image}`)
+        .headline-block
+          a(href=`/blog/${h.quick}`)
+            h3= h.headline
+          h4= h.desc
+          span= h.date
