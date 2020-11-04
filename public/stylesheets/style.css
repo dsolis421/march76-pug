@@ -73,19 +73,19 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
-  font-weight: bold;
-  color: inherit;
-}
-
-h3 {
   font-size: 30px;
   font-weight: bold;
   color: inherit;
 }
 
-h4 {
+h3 {
   font-size: 25px;
+  font-weight: bold;
+  color: inherit;
+}
+
+h4 {
+  font-size: 20px;
   font-weight: bold;
   color: inherit;
 }
@@ -99,7 +99,7 @@ textarea,
 select,
 blockquote,
 .moodboard > span {
-  font-size: 20px;
+  font-size: 18px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -191,6 +191,14 @@ form select {
 
 .grid-frame-ten {
   grid-area: gridframeten;
+}
+
+.nav-toggle {
+  background: #333;
+  border-radius: 100%;
+  color: #fff;
+  display: none;
+  width: 30px;
 }
 
 .landing-splash-container {
@@ -727,20 +735,20 @@ footer {
   }
 
   h1 {
-    font-size: 35px;
+    font-size: 25px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   h3 {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   h4,
   .contact-social {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   a,
@@ -751,7 +759,7 @@ footer {
   textarea,
   .moodboard > span,
   .blog-section article figure figcaption {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .march76-basic-grid {
@@ -779,7 +787,7 @@ footer {
   .contact-page-grid {
     grid-template-areas:
       'gridframeone'
-      'gridframefive'
+      'gridframefour'
       'gridframetwo'
       'gridframethree';
     grid-template-columns: auto;
@@ -813,20 +821,20 @@ footer {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   h4,
   .contact-social {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   a,
@@ -839,7 +847,12 @@ footer {
   textarea,
   .moodboard > span,
   .blog-section article figure figcaption {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin: 20px auto;
   }
 
   .landing-splash-grid {
@@ -855,6 +868,11 @@ footer {
       'gridframeseven'
       'gridframeeight'
       'gridframenine';
+  }
+
+  .march76-basic-grid > .grid-frame-one > .site-nav-container {
+    display: none;
+    background: #fff;
   }
 
   .about-article-grid,
@@ -887,5 +905,12 @@ footer {
   .contact-form-container form input,
   .contact-form-container form textarea{
     width: 100%;
+  }
+
+  footer {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'gridframeone'
+      'gridframetwo';
   }
 }

@@ -1,4 +1,15 @@
-var $togglenav = $('.expanda-nav > .toggle-nav');
+var $navtoggle = $('.nav-toggle');
+
+function togglenavmenu() {
+  if ($navtoggle.hasClass('expanded')) {
+    $('.site-nav-container').fadeOut();
+    $navtoggle.removeClass('expanded');
+  } else {
+    $('.site-nav-container').fadeOut();
+    $navtoggle.addClass('expanded');
+    $('.site-nav-container').fadeIn();
+  }
+}
 
 function clearFormValues() {
   $('form > input, form > textarea').val('');
@@ -6,17 +17,6 @@ function clearFormValues() {
   $('.contact-business-field').fadeOut();
   $('form').trigger("reset");
   $('#contactformsend').empty().text('Send')
-}
-
-function respNavToggle() {
-  if($togglenav.hasClass('expanded')) {
-    //$('.logo-container').fadeOut(400,"swing");
-    $togglenav.removeClass('expanded');
-    $togglenav.fadeOut(400,"swing");
-  } else {
-    $togglenav.addClass('expanded');
-    $togglenav.fadeIn(400,"swing");
-  }
 }
 
 function sendContactData(contactData) {
@@ -31,14 +31,8 @@ function sendContactData(contactData) {
 $(document).ready(function(){
   clearFormValues()
 
-  /*setTimeout(function(){
-    $('.entry-blend').animate({"opacity": "1"}, 1000);
-    $('.entry-logo, #fadein-footer, #entry-header .icon.fadein-icon').fadeIn(1500,"swing");
-    $('#fadein-footer *').animate({"opacity": "1"}, 1500);
-  }, 700);*/
-
-  $('.toggle-nav-down').click(function() {
-    respNavToggle();
+  $('.nav-toggle, .nav-site-link').click(function() {
+    togglenavmenu();
   });
 
   $('#contactphotoreq').change(function(){
