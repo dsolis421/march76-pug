@@ -298,9 +298,11 @@ form select {
 .portfolio-image-grid,
 .portfolio-category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-template-rows: 250px;
+  grid-gap: 15px;
   grid-auto-flow: dense;
+  justify-content: center;
 }
 
 .portfolio-image-grid > figure.tall {
