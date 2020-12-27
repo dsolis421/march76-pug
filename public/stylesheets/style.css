@@ -406,6 +406,10 @@ form select {
   margin-top: 5px;
 }
 
+.blog-section {
+  padding: 3% 10%;
+}
+
 .blog-section h2 {
   text-align: center;
 }
@@ -416,8 +420,10 @@ form select {
 }
 
 .blog-section article figure img {
+  display: block;
   height: auto;
-  width: 100%;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .blog-section article figure figcaption {
@@ -447,10 +453,6 @@ form select {
 .back-to-blog-anchor {
   display: block;
   margin-top: 30px;
-}
-
-.fa-long-arrow-left {
-  margin-right: 10px;
 }
 
 .contact-page-grid {
@@ -491,8 +493,8 @@ form select {
 #contactformsend {
   cursor: pointer;
   display: block;
-  background: #333;
-  color: white;
+  background: #fff;
+  color: #333;
   font-size: 20px;
   font-weight: bold;
   margin-top: 20px;
@@ -608,7 +610,7 @@ form select {
 }
 
 .moodboard-palette > div {
-  border: 1px solid #333;
+  border: 1px solid #fff;
 }
 
 .palette-color {
@@ -639,7 +641,7 @@ form select {
 
 .moodboard-comment-form input,
 .moodboard-comment-form textarea {
-  border: 2px solid #333;
+  border: 2px solid #fff;
   font-family: 'lowerFont', sans-serif;
   width: 600px;
 }
@@ -655,14 +657,14 @@ form select {
 }
 
 .comment-submit {
-  background: #333;
-  color: #fff;
+  background: #fff;
+  color: #333;
   margin-right: 20px;
 }
 
 .comment-submit ,
 .comment-cancel {
-  border: 2px solid #333;
+  border: 2px solid #fff;
   cursor: pointer;
   padding: 5px 10px;
 }
@@ -884,6 +886,17 @@ footer {
   .portfolio-image-grid > figure.wide {
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  .blog-section {
+    padding: 1% 3%;
+  }
+
+  .blog-section article figure img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .contact-page-grid > div:not(.grid-frame-five) {
