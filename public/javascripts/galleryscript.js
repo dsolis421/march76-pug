@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.portfolio-image-grid figure img').click(function(){
-    $('#enlargedImage').attr('src', $(this).attr('src'));
+    $('#enlargedImage').attr('src', $(this).attr('data-largeimage'));
     $('#imageModal').fadeIn(700,"swing");
   });
 
