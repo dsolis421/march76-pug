@@ -252,28 +252,32 @@ form select {
   margin: 10% 0;
 }
 
-.about-article-grid > div > img {
+.about-article-grid .subpage-main-image > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .about-grid-right .subpage-main-text {
-  text-align: left;
-  padding: 0 5%;
+  text-align: right;
+  padding-right: 5%;
+  padding-left: 30%;
 }
 
 .about-grid-left .subpage-main-text {
-  text-align: right;
-  padding: 0 5%;
+  text-align: left;
+  padding-right: 30%;
+  padding-left: 5%;
 }
 
 .about-grid-right {
+  grid-template-columns: 60% 40%;
   grid-template-areas:
     'gridframeone gridframetwo';
 }
 
 .about-grid-left {
+  grid-template-columns: 40% 60%;
   grid-template-areas:
     'gridframetwo gridframeone';
 }
@@ -300,7 +304,7 @@ form select {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   grid-template-rows: 250px;
-  grid-gap: 15px;
+  grid-gap: 10px;
   grid-auto-flow: dense;
   justify-content: center;
 }
@@ -320,7 +324,7 @@ form select {
   cursor: zoom-in;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .gallery-modal {
@@ -439,9 +443,11 @@ form select {
 .blog-section .bio-block {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
-  color: #737373;
+  color: #fff;
   font-style: italic;
+  text-align: center;
   margin: 20px auto;
+  padding: 2% 15%;
 }
 
 .blog-section .bio-block img {
@@ -455,6 +461,10 @@ form select {
 .back-to-blog-anchor {
   display: block;
   margin-top: 30px;
+}
+
+.back-to-blog-anchor > .fa-reply {
+  margin-right: 15px;
 }
 
 .contact-page-grid {
@@ -480,10 +490,12 @@ form select {
 }
 
 .contact-form-container form input {
+  color: #333;
   width: 400px;
 }
 
 .contact-form-container form textarea {
+  color: #333;
   width: 400px;
   height: 200px;
 }
@@ -644,6 +656,7 @@ form select {
 .moodboard-comment-form input,
 .moodboard-comment-form textarea {
   border: 2px solid #fff;
+  color: #333;
   font-family: 'lowerFont', sans-serif;
   width: 600px;
 }
@@ -673,7 +686,7 @@ form select {
 
 .listed-board,
 .moodboard-comment {
-  background: #f2f2f2;
+  /*background: #f2f2f2;*/
   margin: 40px auto;
   padding: 10px;
   text-align: left;

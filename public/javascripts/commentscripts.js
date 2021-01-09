@@ -53,9 +53,9 @@ function setCommentHandlers() {
 }
 
 function flashNewComment() {
-  $('.moodboard-comment:first-of-type').css({'background':'#cce6ff'});
+  $('.moodboard-comment:first-of-type').css({'background':'#000'});
   setTimeout(function(){
-    $('.moodboard-comment:first-of-type').css({'background':'#f2f2f2'})
+    $('.moodboard-comment:first-of-type').css({'background':'#333'})
   },5000);
 }
 
