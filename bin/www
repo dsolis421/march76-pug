@@ -9,11 +9,12 @@ var app = require('../app');
 var debug = require('debug')('march76-pug:server');
 var http = require('http');
 
-/*mongoose connect*/
+/*mongoose connect - not needed right now
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("[mongoose] Connected to MongoDB"))
   .catch(err => console.log("[mongoose] FAILED to connect --> " + err));
+*/
 
 /**
  * Get port from environment and store in Express.

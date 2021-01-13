@@ -4,25 +4,7 @@ const marController = require('../controllers/marController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'march76 - Creative Photography by Danny Solis' });
+  res.render('index', { title: 'march76 - Digital Artistry' });
 });
-
-router.get('/gallery/:collection', marController.getCollectionImages);
-
-router.get('/portfolio', marController.getGalleries);
-
-router.get('/about', marController.getAbout);
-
-router.get('/contact', marController.getContact);
-
-router.get('/blog', marController.getBlog);
-
-router.get('/blog/:quick', marController.getBlogPost);
-
-router.get('/boards/list', marController.getBoardsList);
-
-router.get('/boards/:quick', marController.getMoodboard);
-
-router.post('/boards/:quick', marController.addMoodComment);
 
 module.exports = router;

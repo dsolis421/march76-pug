@@ -4,15 +4,21 @@ html
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="keywords", content="danny solis, austin texas photographer, danny solis photographer, march76, march 76, commercial photography, fashion photography")
     block metas
     title= title
     link(rel="shortcut icon", href="/images/favicon.ico")
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/javascripts/fontawesome-all.min.js")
+    script(src="/javascripts/m76icons.min.js")
+    script(src="/javascripts/m76brandicons.min.js")
+    script(src="/javascripts/m76lighticons.min.js")
+    script(src="/javascripts/m76solidicons.min.js")
     block links  
   body
-    block content
-      
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    include staticheader.pug
+    main
+      block content
+    include staticfooter.pug 
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
     script(src="/javascripts/script.js")
     block scripts
