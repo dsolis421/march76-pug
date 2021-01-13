@@ -15,8 +15,10 @@ html
     script(src="/javascripts/m76solidicons.min.js")
     block links  
   body
+    include staticheader.pug
     main
-      block content 
+      block content
+    include staticfooter.pug 
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
     script(src="/javascripts/script.js")
     block scripts

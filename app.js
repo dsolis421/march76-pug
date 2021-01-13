@@ -6,10 +6,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 /*models*/
-require('./models/blogs');
-require('./models/gallerypics');
-require('./models/boards');
-require('./models/m76galleries');
 
 var app = express();
 
