@@ -11,20 +11,20 @@
   },
   "dependencies": {
     "cookie-parser": "^1.4.4",
-    "debug": "^4.1.1",
-    "dotenv": "^8.2.0",
+    "debug": "^4.3.2",
+    "dotenv": "^8.6.0",
     "express": "^4.16.4",
     "http-errors": "^1.6.2",
-    "mongoose": "^5.2.12",
+    "mongoose": "^5.13.11",
     "morgan": "^1.9.1",
-    "node-mailjet": "^3.3.1",
-    "pug": "^2.0.4",
+    "node-mailjet": "^3.3.4",
+    "pug": "^3.0.2",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.13"
   },
   "proxy": "https://www.march76.com/"
 }
