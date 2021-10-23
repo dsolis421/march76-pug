@@ -54,13 +54,6 @@ body {
   z-index: -1000;
 }
 
-article {
-  width: 90%;
-  padding: 2%;
-  text-align: left;
-  margin: 0 auto;
-}
-
 h1,
 .portfolio-filter-menu-option,
 .logo-container span {
@@ -128,20 +121,22 @@ ul {
 }
 
 header {
+  background: #333;
+  color: #fff;
   height: auto;
   line-height: 80px;
   padding: 0 1%;
-  position: fixed;
   width: 100%;
 }
 
 main {
-  padding: 5%;
+  padding: 3%;
+  height: auto;
 }
 
 .header-grid {
   display: grid;
-  grid-template-columns: auto auto;
+  /* grid-template-columns: auto auto; */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-flow: dense;
 }
@@ -150,7 +145,13 @@ main {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 300px;
+  grid-template-rows: 50%;
+  justify-content: center;
+}
+
+.landing-splash-grid div {
+  grid-column: span 1;
+  grid-row: span 2;
 }
 
 .landing-splash-grid div h4 {
@@ -163,14 +164,22 @@ main {
 
 .grid-one,
 .grid-two {
-  background: #333;
-  color: #fff;
+  color: #333;
   padding: 5%;
+}
+
+.landing-splash-grid div img {
+  display: block;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 footer {
   padding: 1%;
   width: 100%;
+  margin: 20px auto;
 }
 
 .clearfix::after {
@@ -180,10 +189,6 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
-  main {
-    padding: 35% 10% 20% 10%;
-  }
-
   .landing-splash-grid {
     grid-template-columns: 100%;
     grid-template-rows: auto;
