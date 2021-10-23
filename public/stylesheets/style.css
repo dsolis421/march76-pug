@@ -130,7 +130,7 @@ header {
 }
 
 main {
-  padding: 3%;
+  /* padding: 3%; */
   height: auto;
 }
 
@@ -144,7 +144,7 @@ main {
 .landing-splash-grid {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 49% 49%;
   grid-template-rows: 50%;
   justify-content: center;
 }
@@ -152,6 +152,10 @@ main {
 .landing-splash-grid div {
   grid-column: span 1;
   grid-row: span 2;
+}
+
+.landing-splash-grid svg {
+  color: #999;
 }
 
 .landing-splash-grid div h4 {
@@ -171,7 +175,7 @@ main {
 .landing-splash-grid div img {
   display: block;
   width: 100%;
-  height: 75%;
+  height: 70%;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -179,7 +183,7 @@ main {
 footer {
   padding: 1%;
   width: 100%;
-  margin: 20px auto;
+  margin-top: 50px;
 }
 
 .clearfix::after {
