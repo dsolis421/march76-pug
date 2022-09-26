@@ -17,7 +17,7 @@
     "http-errors": "^1.6.2",
     "mongoose": "^5.13.11",
     "morgan": "^1.9.1",
-    "node-mailjet": "^3.3.4",
+    "node-mailjet": "^3.4.1",
     "pug": "^3.0.2",
     "serve-favicon": "^2.5.0"
   },
